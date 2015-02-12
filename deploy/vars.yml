@@ -1,0 +1,7 @@
+---
+repository_url: git@github.com:rikukissa/tyoelamasimulaattori.git
+project_path: /home/riku/tyoelamasimulaattori
+
+locale:
+  LC_CTYPE: fi_FI.UTF-8
+  LANG: en_US.UTF-8

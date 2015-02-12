@@ -1,0 +1,29 @@
+---
+- name: Deploy project
+  hosts: all:!localhost
+  gather_facts: no
+  vars_files:
+    - vars.yml
+  tasks:
+    - name: Deploy from git
+      remote_user: riku
+      action: >
+        git
+        repo="{{ repository_url }}"
+        dest="{{ project_path }}"
+        accept_hostkey=True
+
+    - name: Setup environment config
+      remote_user: riku
+      template: >
+        src=templates/env.j2
+        dest="{{ project_path }}/.env"
+        mode=775
+
+    - name: Install composer dependencies
+      remote_user: riku
+      command: composer install chdir="{{ project_path }}"
+
+    - name: Run migrations
+      remote_user: riku
+      command: php artisan migrate --force chdir="{{ project_path }}"
