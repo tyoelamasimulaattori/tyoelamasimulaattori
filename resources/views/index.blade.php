@@ -6,6 +6,6 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<h1>foofoo</h1>
+	<h1>Minä Muutin tätä!</h1>
 </body>
 </html>
