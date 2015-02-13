@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-Route::get('home', 'HomeController@index');
+Route::group(array('prefix' => 'api'), function() {
+  Route::controllers([
+    'steps' => 'Steps\StepsController'
+  ]);
+});
 
-Route::controllers([
-  'steps' => 'Steps\StepsController',
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::any('{all}', function() {
+  return view('index');
+})->where('all', '.*');
