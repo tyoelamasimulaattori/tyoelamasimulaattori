@@ -11,10 +11,8 @@ class BusServiceProvider extends ServiceProvider {
 	 * @param  \Illuminate\Bus\Dispatcher  $dispatcher
 	 * @return void
 	 */
-	public function boot(Dispatcher $dispatcher)
-	{
-		$dispatcher->mapUsing(function($command)
-		{
+	public function boot(Dispatcher $dispatcher) {
+		$dispatcher->mapUsing(function($command) {
 			return Dispatcher::simpleMapping(
 				$command, 'App\Commands', 'App\Handlers\Commands'
 			);
@@ -26,8 +24,7 @@ class BusServiceProvider extends ServiceProvider {
 	 *
 	 * @return void
 	 */
-	public function register()
-	{
+	public function register() {
 		//
 	}
 

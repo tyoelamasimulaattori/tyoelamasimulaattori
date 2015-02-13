@@ -10,10 +10,8 @@ class CreateStepsTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function up()
-	{
-		Schema::create('steps', function(Blueprint $table)
-		{
+	public function up() {
+		Schema::create('steps', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('title');
 			$table->timestamps();
@@ -25,8 +23,7 @@ class CreateStepsTable extends Migration {
 	 *
 	 * @return void
 	 */
-	public function down()
-	{
+	public function down() {
 		Schema::drop('steps');
 	}
 }
