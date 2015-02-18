@@ -39,7 +39,6 @@ $ php artisan migrate
 Projektissa on nyt käytössä [Stylus](http://learnboost.github.io/stylus/) CSS-preprosessorina ja [Browserify](http://browserify.org/) mahdollistamassa mm. `require()` funktion käytön selainkoodissa. Näistä molemmat täytyy kääntää ennen kuin selain ymmärtää niistä mitään eli `.styl` tiedostot käännetään `resources/styles` hakemistosta `public/css` hakemistoon ja `.js` tiedostot `resources/js` hakemistosta `public/js` hakemistoon.
 
 Taustalla pyörivä [Gulp](https://github.com/gulpjs/gulp) kääntää näitä tiedostoja automaattisesti aina kun joku niistä muuttuu, eikä siitä tarvitse erikseen huolehtia.
-Melkolailla kaikki fronttityökalut toimii [Node.js](http://nodejs.org/):n
 
 # 1.  Asenna [Node.js](http://nodejs.org/)
 
