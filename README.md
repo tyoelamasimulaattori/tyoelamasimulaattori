@@ -35,6 +35,32 @@ Tietokannan skeemojen luominen:
 $ php artisan migrate
 ```
 
+## Fronttityökalujen asentaminen
+Projektissa on nyt käytössä [Stylus](http://learnboost.github.io/stylus/) CSS-preprosessorina ja [Browserify](http://browserify.org/) mahdollistamassa mm. `require()` funktion käytön selainkoodissa. Näistä molemmat täytyy kääntää ennen kuin selain ymmärtää niistä mitään eli `.styl` tiedostot käännetään `resources/styles` hakemistosta `public/css` hakemistoon ja `.js` tiedostot `resources/js` hakemistosta `public/js` hakemistoon.
+
+Taustalla pyörivä [Gulp](https://github.com/gulpjs/gulp) kääntää näitä tiedostoja automaattisesti aina kun joku niistä muuttuu, eikä siitä tarvitse erikseen huolehtia.
+Melkolailla kaikki fronttityökalut toimii [Node.js](http://nodejs.org/):n
+
+# 1.  Asenna [Node.js](http://nodejs.org/)
+
+* **Windows**
+    * Etusivulta **Install**, lataa asennuspaketti ja asenna se.
+* **OSX/Linux**
+    * Lataa NVM https://github.com/creationix/nvm#install-script
+    * `$ nvm install 0.12`
+
+Komentoriviltä pitäisi löytyä nyt komennot `node` ja `npm`
+
+# 2. Asenna projektin JavaScript-riippuvuudet
+* Aja projektihakemistossa `$ npm install`
+
+#3. Käynnistä [Gulp](https://github.com/gulpjs/gulp)
+* `npm start`
+
+**Kaikki tiedostot kääntyy nyt automaattisesti ja voit alkaa koodaamaan. Asenna vielä Chromeen [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) - plugin niin saat selaimen reloadaamaan aina uuden käännöksen valmistuessa.**
+
+---
+
 ## Laravel PHP Framework
 
 [![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
