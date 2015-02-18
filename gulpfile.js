@@ -18,6 +18,9 @@ var config = {
     source: './resources/styles/styles.styl',
     watch: './resources/styles/**/*.styl',
     destination: './public/css/'
+  },
+  templates: {
+    watch: './resources/views/**/*.blade.php'
   }
 };
 
@@ -61,6 +64,9 @@ gulp.task('watch', function() {
   livereload.listen();
 
   gulp.watch(config.styles.watch, ['styles']);
+  gulp.watch(config.templates.watch, function(event) {
+    livereload.changed(event.path);
+  });
 
   var bundle = watchify(browserify({
     entries: [config.scripts.source],
