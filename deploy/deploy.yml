@@ -27,3 +27,23 @@
     - name: Run migrations
       remote_user: riku
       command: php artisan migrate --force chdir="{{ project_path }}"
+
+    - name: Install NVM
+      remote_user: riku
+      action: >
+        git
+        repo="https://github.com/creationix/nvm"
+        dest="{{ nvm_path }}"
+
+    - name: Make sure Node.js is installed and properly aliased
+      remote_user: riku
+      command: >
+        bash -c "source {{ nvm_script }} && nvm install {{ node_version }} && nvm alias {{ project_name }} {{ node_version }}"
+      register: nvm_result
+      changed_when: >
+        "already installed" not in nvm_result.stdout
+
+    - name: Install client NPM dependencies and build assets
+      remote_user: riku
+      command: >
+        bash -c "source {{ nvm_script }} && nvm use {{ project_name }} && cd {{ project_path }} && npm install && NODE_ENV=production npm run build"
