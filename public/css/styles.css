@@ -1,12 +1,34 @@
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300');
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600');
+
+/*
+ * #0E3984 - Tumma sininen
+ * #019DDB - Vaalean sininen
+ */
+
 
 html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
+
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  color: #333;
+  font-size: 14px;
 }
+
+h1 {
+  font-size: 4em;
+  margin: 2rem 0;
+}
+
+p, ul {
+  line-height: 1.7em;
+}
+
+/*
+ * Modal
+ */
 
 .modal, .modal:after {
   width: 100%;
@@ -20,7 +42,8 @@ html, body {
 
 .modal__dialog {
   width: 80%;
-  min-height: 80%;
+  max-width: 900px;
+  min-height: 60%;
   margin: auto;
   position: relative;
   top: 10%;
@@ -29,11 +52,54 @@ html, body {
   z-index: 2;
   overflow: auto;
   box-sizing: border-box;
-  padding: 1em;
+  padding: 1em 3em;
 }
+
+.modal__footer {
+  padding: 1em 0;
+}
+
+.modal h1 {
+  text-align: center;
+  font-weight: 300;
+}
+
+/*
+ * Button
+ */
 
 .btn {
   border: 0;
   padding: 1em 1.5em;
   font-size: 1rem;
+  font: inherit;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: #019DDB;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: #0286ba;
+}
+
+/*
+ * Index view
+ */
+
+.index-view .modal__footer {
+  text-align: center;
+}
+
+.index-view .modal__footer p {
+  font-weight: 600;
+  margin-bottom: 2em;
+}
+
+.index-view .modal__footer .btn {
+  padding: 1.25em 4em;
+  font-size: 1.2em;
 }

@@ -6,9 +6,10 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<div class="modal">
+	<div class="modal index-view">
     <div class="modal__dialog">
       <h1>Tervetuloa</h1>
+
       <p>
         Tämä on PSHP:n työelämäsimulaattori.
         Simulaattorin tavoite on tarjota interaktiivista koulutusta esimiehille, hyödynteän realistisia työelämän ongelmia, joita ratkoa.
@@ -21,8 +22,12 @@
           <li>Lopussa sinulle esitetään  sinun vastaukset ja ideaalisuoritus, jonka jälkeen voit joko lopettaa tai aloittaa uuden tapauksen</li>
         </ul>
       </p>
-      <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
-      <button class="btn">Aloita simulaatio</button>
+
+      <div class="modal__footer">
+        <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
+        <button class="btn btn--primary">Aloita simulaatio</button>
+      </div>
+
     </div>
   </div>
 </body>
