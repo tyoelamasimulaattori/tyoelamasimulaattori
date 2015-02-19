@@ -1,8 +1,11 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,600')
 
 @import "_variables"
+@import "_grid"
+
 @import "modal"
 @import "button"
+@import "disc-selector"
 
 html, body
   width 100%
@@ -22,11 +25,14 @@ p, ul
   line-height 1.7em
 
 
+.subtitle
+  color #ababab
+
 /*
  * Index view
  */
 
-.index-view
+#index-view
   .modal__footer
     text-align center
 

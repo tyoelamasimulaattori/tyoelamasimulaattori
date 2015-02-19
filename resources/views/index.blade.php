@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-	<title>Työelämäsimulaattori KOKEILU</title>
-  <script type="text/javascript" src="js/main.js"></script>
+  <title>Työelämäsimulaattori KOKEILU</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<div class="modal index-view">
+  <div id="index-view" class="modal">
     <div class="modal__dialog">
       <h1>Tervetuloa</h1>
 
@@ -25,10 +24,43 @@
 
       <div class="modal__footer">
         <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
-        <button class="btn btn--primary">Aloita simulaatio</button>
+        <a href="/disc" class="btn btn--primary">Aloita simulaatio</a href="">
       </div>
 
     </div>
   </div>
+
+  <div id="disc-view" class="modal">
+    <div class="modal__dialog">
+      <h1>DiSC-tyypin valinta</h1>
+      <p class="subtitle">Lorem ipsum Eu proident magna deserunt nisi est proident cillum fugiat anim aute labore enim veniam Excepteur do id.</p>
+      <div class="row">
+        <div class="column column1-5">
+          <div class="disc-selector">
+            <label>DiSC-tyypit</label>
+            <input type="text" />
+            <select>
+              <option>CC</option>
+              <option>DC</option>
+              <option>AC</option>
+              <option>QC</option>
+              <option>DE</option>
+              <option>ÅÅ</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="column column4-5">
+          <h2>Olet valinnut CC-tyypin</h2>
+          <p>
+            Lorem ipsum Velit non cillum consectetur et aliquip sint sed voluptate ut aliquip consequat tempor commodo amet anim eiusmod sit ut voluptate nulla occaecat irure Ut nostrud dolore Excepteur occaecat laborum reprehenderit amet magna velit nulla et ut aute in dolore.
+            Lorem ipsum Velit non cillum consectetur et aliquip sint sed voluptate ut aliquip consequat tempor commodo amet anim eiusmod sit ut voluptate nulla occaecat irure Ut nostrud dolore Excepteur occaecat laborum reprehenderit amet magna velit nulla et ut aute in dolore.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
