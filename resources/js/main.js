@@ -1,32 +1,22 @@
-// var page = require('page');
-
-// var indexView = document.getElementById('index-view'),
-//     discView = document.getElementById('disc-view');
-
-// var views = [indexView, discView];
-
-// function showView(view) {
-//   view.classList.add('modal--visible');
-
-//   views.forEach(function(v) {
-//     if(view !== v) {
-//       v.classList.remove('modal--visible');
-//     }
-//   });
-// }
-
-// page('/', function() {
-//   showView(indexView);
-// });
-
-// page('/disc', function() {
-//   showView(discView);
-// });
-
-// page();
-
 var React = require('react');
 var App = require('./app');
+var Router = require('react-router');
+var Route = Router.Route;
+var DefaultRoute = Router.DefaultRoute;
 
-React.render(App(), document.body);
+var StartView = require('views/start');
+var DiscSelectView = require('views/start/disc-select');
+var IntroView = require('views/start/intro');
 
+var routes = (
+  <Route handler={App} path="/">
+    <Route handler={StartView}>
+      <Route name="disc" path="disc" handler={DiscSelectView} />
+      <Route name="intro" path="intro" handler={IntroView} />
+    </Route>
+  </Route>
+);
+
+Router.run(routes, Router.HistoryLocation, function (Handler) {
+  React.render(<Handler/>, document.body);
+});
