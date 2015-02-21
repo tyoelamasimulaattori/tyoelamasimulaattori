@@ -12,11 +12,12 @@ var config = {
   scripts: {
     source: './resources/js/main.js',
     destination: './public/js/',
-    filename: 'main.js'
+    filename: 'main.js',
+    extensions: ['.jsx']
   },
   styles: {
     source: './resources/styles/styles.styl',
-    watch: './resources/styles/**/*.styl',
+    watch: './resources/**/*.styl',
     destination: './public/css/'
   },
   templates: {
