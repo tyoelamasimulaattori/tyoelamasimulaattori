@@ -1,7 +1,0 @@
----
-repository_url: git@github.com:rikukissa/tyoelamasimulaattori.git
-project_path: /home/riku/tyoelamasimulaattori
-nvm_path: /home/riku/nvm
-nvm_script: /home/riku/nvm/nvm.sh
-node_version: 0.12.0
-project_name: tyoelamasimulaattori
