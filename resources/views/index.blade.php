@@ -51,12 +51,18 @@
 
         </div>
         <div class="column column4-5">
-          <h2>Olet valinnut CC-tyypin</h2>
+          <h2>Olet CC - tyyppi</h2>
           <p>
             Lorem ipsum Velit non cillum consectetur et aliquip sint sed voluptate ut aliquip consequat tempor commodo amet anim eiusmod sit ut voluptate nulla occaecat irure Ut nostrud dolore Excepteur occaecat laborum reprehenderit amet magna velit nulla et ut aute in dolore.
             Lorem ipsum Velit non cillum consectetur et aliquip sint sed voluptate ut aliquip consequat tempor commodo amet anim eiusmod sit ut voluptate nulla occaecat irure Ut nostrud dolore Excepteur occaecat laborum reprehenderit amet magna velit nulla et ut aute in dolore.
           </p>
+
+          <p> Tämä on vain yleiskuvaus profiilista, eikä välttämättä kuvaa sinua. Katso tarkennusta tyyppiisi DiSC - materiaaleistasi(?) </p>
         </div>
+      </div>
+
+      <div class="modal__footer">
+        <a href="/disc" class="btn btn--primary">Valitse ja jatka</a href="">
       </div>
     </div>
   </div>
