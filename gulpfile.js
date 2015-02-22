@@ -1,5 +1,7 @@
 'use strict';
 
+process.env.NODE_PATH = 'resources';
+
 var browserify = require('browserify');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
