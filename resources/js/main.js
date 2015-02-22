@@ -1,14 +1,13 @@
-var React = require('react');
-var App = require('./app');
-var Router = require('react-router');
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
+import { default as React } from 'react';
+import { default as App } from './app';
 
-var StartView = require('views/start');
-var DiscSelectView = require('views/start/disc-select');
-var IntroView = require('views/start/intro');
+import { default as Router, Route } from 'react-router';
 
-var routes = (
+import { default as StartView } from 'views/start';
+import { default as DiscSelectView } from 'views/start/disc-select';
+import { default as IntroView } from 'views/start/intro';
+
+const routes = (
   <Route handler={App} path="/">
     <Route handler={StartView}>
       <Route name="disc" path="disc" handler={DiscSelectView} />
@@ -17,6 +16,6 @@ var routes = (
   </Route>
 );
 
-Router.run(routes, Router.HistoryLocation, function (Handler) {
+Router.run(routes, Router.HistoryLocation, (Handler) => {
   React.render(<Handler/>, document.body);
 });

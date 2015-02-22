@@ -1,9 +1,8 @@
-var React = require('react');
+import { default as React } from 'react';
+import { RouteHandler } from 'react-router';
 
-var RouteHandler = require('react-router').RouteHandler;
-
-module.exports = React.createClass({
-  render: function() {
+export default React.createClass({
+  render() {
     return (
       <div id="app">
         <RouteHandler/>

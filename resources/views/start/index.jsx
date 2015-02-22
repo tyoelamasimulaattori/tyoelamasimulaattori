@@ -1,12 +1,10 @@
-var React = require('react');
-var RouteHandler = require('react-router').RouteHandler;
-var Navigation = require('react-router').Navigation;
+import { default as React } from 'react';
+import { RouteHandler, Navigation } from 'react-router';
+import { default as View } from 'components/view';
 
-var View = require('components/view');
-
-module.exports = React.createClass({
+export default React.createClass({
   mixins: [Navigation],
-  render: function() {
+  render() {
     return (
       <View>
         <h1>Valitse kyvykkyystekijä</h1>
@@ -14,7 +12,7 @@ module.exports = React.createClass({
       </View>
     );
   },
-  componentDidMount: function() {
+  componentDidMount() {
     this.transitionTo('intro');
   }
 })
