@@ -9,7 +9,7 @@ module.exports = React.createClass({
   render: function() {
     return (
       <View>
-        <h1>Valitse lähestymisnäkökulma</h1>
+        <h1>Valitse kyvykkyystekijä</h1>
         <RouteHandler/>
       </View>
     );
