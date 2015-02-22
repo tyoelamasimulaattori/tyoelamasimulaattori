@@ -2,15 +2,13 @@
 
 @import "_variables"
 @import "_grid"
-
-@import "modal"
-@import "button"
-@import "disc-selector"
+@import "_components"
 
 html, body
   width 100%
   height 100%
   overflow hidden
+  margin 0
 
   font-family 'Open Sans', sans-serif
   font-weight 400
@@ -31,6 +29,10 @@ p, ul
 /*
  * Index view
  */
+
+#app
+  width 100%
+  height 100%
 
 #index-view
   .modal__footer
