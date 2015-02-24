@@ -19,7 +19,8 @@
         "name": "Anna Matille potkut myöhästelystä.",
         "next_step_id": 4
       }
-    ]
+    ],
+    "tip_id": 1
   },
   {
     "id": 2,
@@ -57,7 +58,8 @@
         "name": "Vaadi tiimiltäsi täsmällisyyttä ja tee Matista esimerkki rankaisemalla häntä myöhästelystä.",
         "next_step_id": 10
       }
-    ]
+    ],
+    "tip-id": 3
   },
   {
     "id": 4,
@@ -171,7 +173,8 @@
         "name": "Vaihda vanhaan aikataulujärjestelmään.",
         "next_step_id": 28
       }
-    ]
+    ],
+    "tag_id": 3
   },
   {
     "id": 10,
