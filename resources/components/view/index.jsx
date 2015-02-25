@@ -1,10 +1,11 @@
-var React = require('react');
+import { default as React } from 'react';
 
-module.exports = React.createClass({
-  render: function() {
+export default React.createClass({
+  render() {
     return (
       <div className="view">
         {this.props.children}
-      </div>);
+      </div>
+    );
   }
 })

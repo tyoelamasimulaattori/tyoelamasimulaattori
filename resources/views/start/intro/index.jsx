@@ -1,9 +1,8 @@
-var React = require('react');
+import { default as React } from 'react';
+import { default as Button } from 'components/button';
 
-var Link = require('react-router').Link;
-
-module.exports = React.createClass({
-  render: function() {
+export default React.createClass({
+  render() {
     return (
       <div id="index-view" className="modal">
         <div className="modal__dialog">
@@ -25,9 +24,9 @@ module.exports = React.createClass({
           <div className="modal__footer">
             <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
 
-            <Link to="disc" className="btn btn--primary">
+            <Button to="disc">
               Aloita simulaatio
-            </Link>
+            </Button>
           </div>
 
         </div>

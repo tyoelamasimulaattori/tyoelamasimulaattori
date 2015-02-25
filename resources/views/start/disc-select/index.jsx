@@ -1,10 +1,9 @@
-var React = require('react');
-var Link = require('react-router').Link;
+import { default as React } from 'react';
+import { default as Button } from 'components/button';
 
-module.exports = React.createClass({
-  render: function() {
+export default React.createClass({
+  render() {
     return (
-
       <div id="disc-view" className="modal">
         <div className="modal__dialog">
           <h1>DiSC-tyypin valinta</h1>
@@ -37,13 +36,12 @@ module.exports = React.createClass({
           </div>
 
           <div className="modal__footer">
-            <Link to="/" className="btn btn--primary">
+            <Button to="/">
               Valitse ja jatka
-            </Link>
+            </Button>
           </div>
         </div>
       </div>
-
     );
   }
-})
+});
