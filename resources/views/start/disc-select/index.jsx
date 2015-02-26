@@ -31,14 +31,12 @@ export default React.createClass({
                 Lorem ipsum Velit non cillum consectetur et aliquip sint sed voluptate ut aliquip consequat tempor commodo amet anim eiusmod sit ut voluptate nulla occaecat irure Ut nostrud dolore Excepteur occaecat laborum reprehenderit amet magna velit nulla et ut aute in dolore.
               </p>
 
-              <p> Tämä on vain yleiskuvaus profiilista, eikä välttämättä kuvaa sinua. Katso tarkennusta tyyppiisi DiSC - materiaaleistasi(?) </p>
-            </div>
-          </div>
 
-          <div className="modal__footer">
-            <Button to="/">
-              Valitse ja jatka
-            </Button>
+              <p> Tämä on vain yleiskuvaus profiilista, eikä välttämättä kuvaa sinua. Katso tarkennusta tyyppiisi DiSC - materiaaleistasi(?) </p>
+              <Button to="/">
+                Valitse ja jatka
+              </Button>
+            </div>
           </div>
         </div>
       </div>
