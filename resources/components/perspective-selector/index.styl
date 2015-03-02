@@ -1,0 +1,51 @@
+.perspective-selector
+  overflow auto
+
+.perspective
+  padding 1em 1.5em
+  padding-bottom 2em
+  height 200px
+  overflow hidden
+  box-sizing border-box
+  float left
+  text-align center
+  position relative
+  text-overflow ellipsis
+  border-left 1px solid primaryColor
+  border-bottom 1px solid primaryColor
+  cursor pointer
+  &:after
+    width 100%
+    height 2em
+    content ''
+    position absolute
+    bottom 0
+    left 0
+    background linear-gradient(to top, rgba(255,255,255, 1) 10%, rgba(0,0,0,0) 100%);
+  &:last-child
+    border-right 1px solid primaryColor
+  p
+    margin 0
+  h3
+    margin-bottom 0.5em
+
+.perspective--selected
+  border-bottom 0
+  cursor default
+
+.perspective__icon
+  width 40px
+  height 40px
+  display inline-block
+  background-size 100% 100%
+
+.perspective--johtaminen .perspective__icon
+  background-image url('http://loremicon.com/i/flat/64/unicycle')
+.perspective--esimiestoiminta .perspective__icon
+  background-image url('http://loremicon.com/i/flat/64/briefcase')
+.perspective--toimintakulttuuri .perspective__icon
+  background-image url('http://loremicon.com/i/flat/64/magicwand')
+.perspective--osaaminen .perspective__icon
+  background-image url('http://loremicon.com/i/flat/64/art')
+.perspective--prosessit .perspective__icon
+  background-image url('http://loremicon.com/i/flat/64/hazard')

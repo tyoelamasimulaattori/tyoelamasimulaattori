@@ -1,20 +1,46 @@
 import { default as React } from 'react';
+import { findWhere } from 'lodash';
 import { RouteHandler, Navigation } from 'react-router';
 import { default as View } from 'components/view';
 import { default as Button } from 'components/button';
+import { default as PerspectiveSelector } from 'components/perspective-selector';
+import { default as CaseSelector } from 'components/case-selector';
+
+// TODO replace with real ones
+import { mockPerspectives } from 'views/start/mock-perspectives';
+
 
 export default React.createClass({
   mixins: [Navigation],
+  getInitialState() {
+    return {
+      perspectives: mockPerspectives
+    };
+  },
+  onPerspectiveSelect(selected) {
+    var oldPerspectives = this.state.perspectives;
+
+    this.setState({
+      perspectives: oldPerspectives.map((perspective) => {
+        perspective.selected = perspective === selected;
+        return perspective;
+      })
+    });
+  },
+  onCaseSelect(selected) {
+  },
   render() {
     return (
       <View>
         <h1>Valitse kyvykkyystekijä</h1>
-        <p>
-          Bacon ipsum dolor amet filet mignon sausage fatback shoulder frankfurter pork loin ribeye. Tenderloin prosciutto ribeye alcatra turducken pancetta leberkas.
-          Picanha alcatra kevin beef pancetta swine frankfurter pastrami shankle ham hock doner.
-          Prosciutto pancetta capicola corned beef bresaola porchetta rump meatball spare ribs jowl ham short ribs sausage swine biltong.
-        </p>
-        <Button to="end">Loppuun</Button>
+
+        <PerspectiveSelector
+          perspectives={this.state.perspectives}
+          onSelect={this.onPerspectiveSelect} />
+
+        <CaseSelector
+          perspective={findWhere(this.state.perspectives, {selected: true})}
+          onSelect={this.onCaseSelect} />
 
         {/* Modals open inside of this RouteHandler */}
         <RouteHandler/>
@@ -23,6 +49,7 @@ export default React.createClass({
     );
   },
   componentDidMount() {
-    this.transitionTo('intro');
+    // TODO Show intro on the first time user loads the application
+    //this.transitionTo('intro');
   }
-})
+});
