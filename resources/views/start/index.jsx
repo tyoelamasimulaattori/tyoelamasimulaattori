@@ -9,15 +9,16 @@ export default React.createClass({
     return (
       <View>
         <h1>Valitse kyvykkyystekijä</h1>
-        <div className = "kyvykkyys_text">
-          <p> Bacon ipsum dolor amet filet mignon sausage fatback shoulder frankfurter pork loin ribeye. Tenderloin prosciutto ribeye alcatra turducken pancetta leberkas. Picanha alcatra kevin beef pancetta swine frankfurter pastrami shankle ham hock doner.
+        <p>
+          Bacon ipsum dolor amet filet mignon sausage fatback shoulder frankfurter pork loin ribeye. Tenderloin prosciutto ribeye alcatra turducken pancetta leberkas.
+          Picanha alcatra kevin beef pancetta swine frankfurter pastrami shankle ham hock doner.
           Prosciutto pancetta capicola corned beef bresaola porchetta rump meatball spare ribs jowl ham short ribs sausage swine biltong.
-          </p>
-          <Button to="end">
-            Loppuun
-          </Button>
+        </p>
+        <Button to="end">Loppuun</Button>
+
+        {/* Modals open inside of this RouteHandler */}
         <RouteHandler/>
-        </div>
+
       </View>
     );
   },
