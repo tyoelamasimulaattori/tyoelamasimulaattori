@@ -7,6 +7,7 @@ import { default as StartView } from 'views/start';
 import { default as DiscSelectView } from 'views/start/disc-select';
 import { default as IntroView } from 'views/start/intro';
 import { default as EndScreen } from 'views/end';
+import { default as CaseView } from 'views/case';
 
 const routes = (
   <Route handler={App} path="/">
@@ -15,6 +16,7 @@ const routes = (
       <Route name="intro" path="intro" handler={IntroView} />
     </Route>
     <Route name="end" path="end" handler={EndScreen} />
+    <Route name="case" path="case/:id" handler={CaseView} />
   </Route>
 );
 
