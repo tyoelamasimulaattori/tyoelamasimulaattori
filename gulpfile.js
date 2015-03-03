@@ -3,8 +3,11 @@
 process.env.NODE_PATH = 'resources';
 
 var browserify = require('browserify');
+var concat = require('gulp-concat');
+var es = require('event-stream');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var less = require('gulp-less');
 var livereload = require('gulp-livereload');
 var source = require('vinyl-source-stream');
 var stylus = require('gulp-stylus');
@@ -19,7 +22,8 @@ var config = {
   },
   styles: {
     source: './resources/styles/styles.styl',
-    watch: './resources/**/*.styl',
+    less: './resources/**/*.less',
+    watch: './resources/**/*.*',
     destination: './public/css/'
   },
   templates: {
@@ -49,15 +53,22 @@ gulp.task('scripts', function() {
 });
 
 /*
- * Builds stylus files from source directory to public directory as .css files
+ * Builds stylus and less files from source directory to public directory as .css files
  */
 
 gulp.task('styles', function() {
-  return gulp.src(config.styles.source)
-  .pipe(stylus({'include css': true}))
+  return es.merge(
+    gulp.src(config.styles.source)
+      .pipe(stylus({'include css': true})),
+
+    gulp.src(config.styles.less)
+    .pipe(less())
+  )
+  .pipe(concat('styles.css'))
   .pipe(gulp.dest(config.styles.destination))
   .pipe(livereload({auto: false}));
 });
+
 
 /*
  * Listens for file changes and runs the tasks defined above
