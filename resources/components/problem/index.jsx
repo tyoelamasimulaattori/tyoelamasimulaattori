@@ -20,10 +20,10 @@ export default React.createClass({
         </div>
         <div className="problem__questions">
           <div className="question">
-            a. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            a. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
           </div>
           <div className="question">
-            b. Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            b. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
           </div>
           <div className="question">
             c. Lorem ipsum dolor sit amet, consectetur adipiscing elit?

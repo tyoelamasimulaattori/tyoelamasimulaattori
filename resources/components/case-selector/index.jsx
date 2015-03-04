@@ -1,5 +1,6 @@
 import { default as React } from 'react/addons';
 import { noop } from 'lodash';
+import { default as Button } from 'components/button';
 const {classSet} = React.addons;
 
 export default React.createClass({
@@ -77,6 +78,10 @@ export default React.createClass({
             </div>
           </div>
         </div>
+
+        <Button to="/case/234">
+          Valitse Case
+        </Button>
       </div>
     );
   }
