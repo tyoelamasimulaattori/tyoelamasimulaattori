@@ -52,11 +52,14 @@ export default React.createClass({
         <div className="sidebar sidebar--right">
           <PersonCard />
 
-          <Button to="intro" onClick={this.onQuit}>
+          <Button to="/" onClick={this.onQuit}>
             Keskeytä case
           </Button>
-          <Button to="intro" onClick={this.onSave}>
+          <Button to="/" onClick={this.onSave}>
             Tallenna ja lopeta
+          </Button>
+          <Button to="/end" onClick={this.onQuit}>
+            Loppuun
           </Button>
         </div>
 
