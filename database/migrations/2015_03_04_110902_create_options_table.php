@@ -14,6 +14,7 @@ class CreateOptionsTable extends Migration {
 		// Vastausvaihtoehdot-taululla on pelkkä id.
 		Schema::create('options', function(Blueprint $table) {
 			$table->increments('id');
+			$table->timestamps();
 		});
 	}
 

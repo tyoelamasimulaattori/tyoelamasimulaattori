@@ -17,6 +17,7 @@ class CreateAnswersTable extends Migration {
 			$table->text('text');
 			$table->integer('options_id')->references('id')->on('options');
 			$table->integer('next_step_id')->references('id')->on('step');
+			$table->timestamps();
 		});
 	}
 
