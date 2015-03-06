@@ -32,6 +32,7 @@ export default React.createClass({
     });
   },
   render() {
+
     var {cases, title} = this.props.perspective;
 
     var caseElements = cases.map((c, i) => {
