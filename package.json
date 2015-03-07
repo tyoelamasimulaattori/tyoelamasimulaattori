@@ -10,7 +10,7 @@
     "prepublish": "bower install",
     "start": "gulp",
     "build": "gulp build",
-    "test": "NODE_PATH=resources:node_modules jest resources/components"
+    "test": "NODE_PATH=resources jest resources/components"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,6 @@
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
     "jest-cli": "^0.4.0",
-    "reactify": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.3.0"
   },
