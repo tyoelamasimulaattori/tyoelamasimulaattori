@@ -46,7 +46,7 @@ export default React.createClass({
       };
 
       return (
-        <div style={style} className={classNames}>
+        <div style={style} className={classNames} key={c.title}>
           <div className="case__container">
             <img className="case__image" src={`http://lorempizza.com/380/240?${title + i}`} />
             <h3>{c.title}</h3>
