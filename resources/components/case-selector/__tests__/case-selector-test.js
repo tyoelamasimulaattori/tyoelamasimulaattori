@@ -5,7 +5,7 @@ jest.dontMock('components/button');
 jest.dontMock('test-utils/stubRouterContext');
 
 import { stubRouterContext } from 'test-utils/stubRouterContext';
-import { default as React } from 'react';
+import { default as React } from 'react/addons';
 import { default as CaseSelector } from 'components/case-selector';
 
 var { TestUtils } = React.addons;
