@@ -1,5 +1,7 @@
 import { default as React } from 'react/addons';
 import { noop } from 'lodash';
+import { Link } from 'react-router';
+
 const {classSet} = React.addons;
 
 export default React.createClass({
@@ -47,10 +49,12 @@ export default React.createClass({
 
       return (
         <div style={style} className={classNames} key={c.title}>
-          <div className="case__container">
-            <img className="case__image" src={`http://lorempizza.com/380/240?${title + i}`} />
-            <h3>{c.title}</h3>
-          </div>
+          <Link to="case" params={{id: 42}}>
+            <div className="case__container">
+              <img className="case__image" src={`http://lorempizza.com/380/240?${title + i}`} />
+              <h3>{c.title}</h3>
+            </div>
+          </Link>
         </div>
       );
     });
@@ -71,6 +75,7 @@ export default React.createClass({
         <div onClick={this.setPrev} className="case-selector__arrow case-selector__arrow--right">
           &gt;&gt;
         </div>
+
 
         <div className="case-selector__cases">
           <div className="case-selector__cases__container">

@@ -2,7 +2,9 @@
 
 jest.dontMock('components/case-selector');
 jest.dontMock('components/button');
+jest.dontMock('test-utils/stubRouterContext');
 
+import { stubRouterContext } from 'test-utils/stubRouterContext';
 import { default as React } from 'react/addons';
 import { default as CaseSelector } from 'components/case-selector';
 
@@ -20,9 +22,19 @@ describe('Case selector', function() {
       {title: 'Case 7'}
     ];
 
+    /*
+     * - Our real application has a router (react-router)
+     * - We don't need a router for our tests so we don't have one here
+     * - Some of our components (like case-selector) include components from react-router (such as Link)
+     * - Link needs a router so it knows how to create URL's and so on.
+     * - We fake that router here so we can test our own components
+     */
+
+    var Stubbed = stubRouterContext(CaseSelector, {cases});
+
     // Render element into a document
     var caseSelector = TestUtils.renderIntoDocument(
-      <CaseSelector cases={cases} />
+      <Stubbed />
     );
 
     // Search all elements from rendered component with class name "case"
@@ -37,8 +49,10 @@ describe('Case selector', function() {
   it('should render a title element when "title" property is given', function() {
     var TITLE = 'Hello world';
 
+    var Stubbed = stubRouterContext(CaseSelector, {title: TITLE});
+
     var caseSelector = TestUtils.renderIntoDocument(
-      <CaseSelector title={TITLE} />
+      <Stubbed />
     );
 
     var titleElement = TestUtils.findRenderedDOMComponentWithTag(
