@@ -11,9 +11,9 @@ export default React.createClass({
     return (
       <div className="problem" style={style}>
         <div className="problem__description">
-          <h3>Lorem ipsum dolor sit amet</h3>
+          <h3>Matin alkoholiongelma</h3>
           <p>
-            TÄMÄ ON VIHJE!! Nappi ei vielä tee mitään.
+            Matilla on alkoholiongelma ja on ilmaantunut töihin lievässä humalassa. Hän häiritsee muita ja käyttäytyy tyhmästi. Miten lähestyt tilannetta?
           </p>
           <Button>Vihje</Button>
         </div>
