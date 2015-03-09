@@ -2,23 +2,24 @@
  * This is needed for stubbing react-router's functionality in our tests
  * https://github.com/rackt/react-router/blob/master/docs/guides/testing.md
  */
-import { default as React } from 'react/addons';
+import { default as React } from 'react';
+var { func } = React.PropTypes;
 import { noop, extend } from 'lodash';
 
 export const stubRouterContext = (Component, props, stubs) => {
   return React.createClass({
     childContextTypes: {
-      makePath: noop,
-      makeHref: noop,
-      transitionTo: noop,
-      replaceWith: noop,
-      goBack: noop,
-      getCurrentPath: noop,
-      getCurrentRoutes: noop,
-      getCurrentPathname: noop,
-      getCurrentParams: noop,
-      getCurrentQuery: noop,
-      isActive: noop
+      makePath: func,
+      makeHref: func,
+      transitionTo: func,
+      replaceWith: func,
+      goBack: func,
+      getCurrentPath: func,
+      getCurrentRoutes: func,
+      getCurrentPathname: func,
+      getCurrentParams: func,
+      getCurrentQuery: func,
+      isActive: func
     },
 
     getChildContext () {

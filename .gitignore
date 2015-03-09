@@ -5,8 +5,4 @@ public/css
 public/js
 npm-debug.log
 bower_components
-composer.json
-composer.lock
-package.json
 .idea
-app/Http/Controllers/Testi.php
