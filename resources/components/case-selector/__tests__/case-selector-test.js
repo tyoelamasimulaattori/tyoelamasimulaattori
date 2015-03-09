@@ -45,21 +45,4 @@ describe('Case selector', function() {
 
     expect(cases.length).toEqual(6);
   });
-
-  it('should render a title element when "title" property is given', function() {
-    var TITLE = 'Hello world';
-
-    var Stubbed = stubRouterContext(CaseSelector, {title: TITLE});
-
-    var caseSelector = TestUtils.renderIntoDocument(
-      <Stubbed />
-    );
-
-    var titleElement = TestUtils.findRenderedDOMComponentWithTag(
-      caseSelector,
-      'h2'
-    );
-
-    expect(titleElement.getDOMNode().textContent).toEqual(TITLE + ' caset');
-  });
 });

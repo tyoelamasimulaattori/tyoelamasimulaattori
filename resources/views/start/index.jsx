@@ -35,7 +35,7 @@ export default React.createClass({
     });
 
     return (
-      <View>
+      <View id="start-view">
         <h1>Valitse kyvykkyystekijä</h1>
 
         <PerspectiveSelector

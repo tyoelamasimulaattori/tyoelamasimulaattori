@@ -40,19 +40,24 @@ export default React.createClass({
     var caseElements = cases.map((c, i) => {
 
       var classNames = classSet({
-        'case': true
+        'case': true,
+        'case--selected': i === this.state.selected
       });
 
       var style = {
         width: `${100 / cases.length}%`
       };
 
+      var backgroundStyle = {
+        backgroundImage: `url(http://lorempizza.com/380/240?${title + i})`
+      };
+
       return (
         <div style={style} className={classNames} key={c.title}>
           <Link to="case" params={{id: 42}}>
             <div className="case__container">
-              <img className="case__image" src={`http://lorempizza.com/380/240?${title + i}`} />
-              <h3>{c.title}</h3>
+              <div className="case__image" style={backgroundStyle}></div>
+              <h3 className="case__title">{c.title}</h3>
             </div>
           </Link>
         </div>
@@ -66,7 +71,6 @@ export default React.createClass({
 
     return (
       <div className="case-selector">
-        <h2>{title} caset</h2>
 
         {/* TODO real icons for arrows */}
         <div onClick={this.setNext} className="case-selector__arrow">
