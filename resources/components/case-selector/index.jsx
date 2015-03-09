@@ -23,7 +23,7 @@ export default React.createClass({
     };
   },
   setNext() {
-    var {cases} = this.props.perspective;
+    var {cases} = this.props;
     this.setState({
       selected: Math.min(this.state.selected + 1, cases.length - 1)
     });
