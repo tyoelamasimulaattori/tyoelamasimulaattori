@@ -65,10 +65,10 @@ export default React.createClass({
         <h2>{title} caset</h2>
 
         {/* TODO real icons for arrows */}
-        <div onClick={this.setPrev} className="case-selector__arrow">
+        <div onClick={this.setNext} className="case-selector__arrow">
           &lt;&lt;
         </div>
-        <div onClick={this.setNext} className="case-selector__arrow case-selector__arrow--right">
+        <div onClick={this.setPrev} className="case-selector__arrow case-selector__arrow--right">
           &gt;&gt;
         </div>
 

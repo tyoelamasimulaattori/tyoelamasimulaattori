@@ -13,20 +13,22 @@ export default React.createClass({
         <div className="problem__description">
           <h3>Lorem ipsum dolor sit amet</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            TÄMÄ ON VIHJE!! Nappi ei vielä tee mitään.
           </p>
           <Button>Vihje</Button>
         </div>
         <div className="problem__questions">
           <div className="question">
-            a. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            a. Auta Mattia
           </div>
           <div className="question">
-            b. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            b. Hauku Mattia
           </div>
           <div className="question">
-            c. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            c. Kiusaa Mattia
+          </div>
+          <div className="question">
+            d. Tue Mattia
           </div>
         </div>
       </div>

@@ -14,8 +14,8 @@ export default React.createClass({
 
           <div className="column column4-5">
             <p>
-              Bacon ipsum dolor amet hamburger sausage andouille shank leberkas filet mignon chicken pig jowl tri-tip. Pancetta turducken strip steak kielbasa sirloin doner pork belly ham corned beef salami. Salami flank strip steak biltong landjaeger venison bresaola, filet mignon ground round picanha pork chop shank pig turducken pork belly. Shank strip steak tenderloin pork chop. Turducken shoulder tongue frankfurter tenderloin fatback shankle leberkas swine bacon.
-              Ground round brisket alcatra, pig tenderloin meatball tongue venison chicken spare ribs. Boudin ribeye fatback frankfurter swine ham hock strip steak jowl alcatra jerky chicken capicola. Sausage pancetta cupim, kielbasa picanha ball tip beef boudin capicola doner jowl ribeye andouille. Ground round short ribs rump leberkas turkey jowl. Ham hock short loin turducken, brisket pancetta sirloin short ribs t-bone kielbasa flank cupim. Brisket pork belly pancetta fatback kielbasa pork chop pig.
+              Teit hyviä valintoja ja sait autettua Matin vaikean elämänvaiheen läpi. Otit huomioon kaiken oleellisen, mutta et unohtanut asemaasi esimiehenä.
+              Tulevaisuudessa voit harkita hiema tiukempaa linjaa. Työntekijät ovat toki ystäviäsi, mutta te olette töissä, ette viettämässä vapaa-aikaa.
             </p>
           </div>
         </div>
