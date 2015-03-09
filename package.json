@@ -37,11 +37,7 @@
     "gulp-stylus": "^2.0.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
-<<<<<<< HEAD
 	"jest-cli": "^0.4.0",
-=======
-	"jest-cli": "^0.4.0"
->>>>>>> 9cdc6765d57e1a32222686e755f9d3737b4c1529
     "reactify": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.3.0"
