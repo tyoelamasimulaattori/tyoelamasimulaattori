@@ -5,3 +5,4 @@ public/css
 public/js
 npm-debug.log
 bower_components
+package.json
