@@ -1,12 +1,12 @@
 import { default as React } from 'react/addons';
 import { noop } from 'lodash';
-import { default as Button } from 'components/button';
 const {classSet} = React.addons;
 
 export default React.createClass({
   getDefaultProps() {
     return {
-      perspective: null,
+      cases: [],
+      title: '',
       onSelect: noop
     };
   },
@@ -33,7 +33,7 @@ export default React.createClass({
   },
   render() {
 
-    var {cases, title} = this.props.perspective;
+    var {cases, title} = this.props;
 
     var caseElements = cases.map((c, i) => {
 
@@ -79,10 +79,6 @@ export default React.createClass({
             </div>
           </div>
         </div>
-
-        <Button to="/case/234">
-          Valitse Case
-        </Button>
       </div>
     );
   }

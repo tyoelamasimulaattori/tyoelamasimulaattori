@@ -30,6 +30,10 @@ export default React.createClass({
   onCaseSelect(selected) {
   },
   render() {
+    var selectedPerspective = findWhere(this.state.perspectives, {
+      selected: true
+    });
+
     return (
       <View>
         <h1>Valitse kyvykkyystekijä</h1>
@@ -39,7 +43,8 @@ export default React.createClass({
           onSelect={this.onPerspectiveSelect} />
 
         <CaseSelector
-          perspective={findWhere(this.state.perspectives, {selected: true})}
+          cases={selectedPerspective.cases}
+          title={selectedPerspective.title}
           onSelect={this.onCaseSelect} />
 
         {/* Modals open inside of this RouteHandler */}
