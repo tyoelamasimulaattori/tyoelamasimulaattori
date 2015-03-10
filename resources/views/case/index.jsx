@@ -68,9 +68,6 @@ export default React.createClass({
           <Button to="/" onClick={this.onSave}>
             Tallenna ja lopeta
           </Button>
-          <Button to="/end" onClick={this.onQuit}>
-            Loppuun
-          </Button>
         </div>
 
 
