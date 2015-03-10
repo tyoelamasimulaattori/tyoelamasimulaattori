@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use App\Answer;
 
 class AnswersTableSeeder extends Seeder {
 
@@ -13,13 +14,13 @@ class AnswersTableSeeder extends Seeder {
   public function run() {
     DB::table('answers')->delete();
 
-    $json = Storage::get('MockCaseNewVersion');
+    $json = Storage::get('MockCaseNewVersion.js');
     $case = json_decode($json);
     $steps = $case[0]->steps;
 
     foreach($steps as $step) {
       $options = $steps[0]->options;
-      foreach($options as $answer) {
+      foreach ($options as $answer) {
         Answer::create([
           'text' => $answer->name,
           'options_id' => $step->id,

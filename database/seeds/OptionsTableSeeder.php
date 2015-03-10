@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use App\Options;
 
 class OptionsTableSeeder extends Seeder {
 
@@ -13,7 +14,7 @@ class OptionsTableSeeder extends Seeder {
   public function run() {
     DB::table('options')->delete();
 
-    $json = Storage::get('MockCaseNewVersion');
+    $json = Storage::get('MockCaseNewVersion.js');
     $gamecase = json_decode($json);
     $steps = $gamecase[0]->steps;
     /* Options id is the same as steps id. */
