@@ -17,11 +17,10 @@ class GamecaseTableSeeder extends Seeder {
 		$json = Storage::get("MockCaseNewVersion.js");
 		$gamecase = json_decode($json);
 		foreach ($gamecase as $object) {
-			Gamecase::create(array(
-				'id' => $object->id,
+			Gamecase::create([
 				'name' => $object->name,
 				'text' => $object->description
-			));
+			]);
 		}
 	}
 }

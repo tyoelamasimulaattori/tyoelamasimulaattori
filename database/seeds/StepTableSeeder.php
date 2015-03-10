@@ -17,16 +17,14 @@ class StepTableSeeder extends Seeder {
 		$json = Storage::get('MockCaseNewVersion.js');
 		$gamecase = json_decode($json);
 		$steps = $gamecase[0]->steps;
-		$options = $steps[0]->options;
 
 		foreach ($steps as $step) {
-			Step::create(array(
+			Step::create([
 				'id' => $step->id,
 				'text' => $step->description,
-				'options_id' => $options->id,
-				'gamecase_id' => $gamecase->id,
+				'options_id' => $step->id,
 				'direction' => $step->direction
-			));
+			]);
 		}
 	}
 }
