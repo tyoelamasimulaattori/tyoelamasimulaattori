@@ -19,13 +19,15 @@ class AnswersTableSeeder extends Seeder {
     $steps = $case[0]->steps;
 
     foreach($steps as $step) {
-      $options = $steps[0]->options;
-      foreach ($options as $answer) {
-        Answer::create([
-          'text' => $answer->name,
-          'options_id' => $step->id,
-          'next_step_id' => $answer->next_step_id,
-        ]);
+      if(isset($step->options)) {
+        $options = $step->options;
+        foreach ($options as $answer) {
+          Answer::create([
+            'text' => $answer->name,
+            'options_id' => $step->id,
+            'next_step_id' => $answer->next_step_id,
+          ]);
+        }
       }
     }
   }
