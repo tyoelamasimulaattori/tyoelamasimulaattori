@@ -11,7 +11,7 @@ class AnswersTableSeeder extends Seeder {
    * @return void
    */
   public function run() {
-    DB::table('options')->delete();
+    DB::table('answers')->delete();
 
     $json = Storage::get('MockCaseNewVersion');
     $case = json_decode($json);
