@@ -26,6 +26,11 @@ var config = {
     watch: './resources/**/*.*',
     destination: './public/css/'
   },
+  assets: {
+    source: ['./resources/assets/**/*.*'],
+    watch: './resources/assets/**/*.*',
+    destination: './public/'
+  },
   templates: {
     watch: './resources/views/**/*.blade.php'
   }
@@ -69,6 +74,14 @@ gulp.task('styles', function() {
   .pipe(livereload({auto: false}));
 });
 
+/*
+ * Copies files from assets directory to public directory
+ */
+
+gulp.task('assets', function() {
+  return gulp.src(config.assets.source).pipe(gulp.dest(config.assets.destination));
+});
+
 
 /*
  * Listens for file changes and runs the tasks defined above
@@ -78,6 +91,7 @@ gulp.task('watch', function() {
   livereload.listen();
 
   gulp.watch(config.styles.watch, ['styles']);
+  gulp.watch(config.assets.watch, ['assets']);
   gulp.watch(config.templates.watch, function(event) {
     livereload.changed(event.path);
   });
@@ -100,5 +114,5 @@ gulp.task('watch', function() {
   }).emit('update');
 });
 
-gulp.task('build', ['scripts', 'styles']);
-gulp.task('default', ['styles', 'watch']);
+gulp.task('build', ['scripts', 'styles', 'assets']);
+gulp.task('default', ['styles', 'assets', 'watch']);
