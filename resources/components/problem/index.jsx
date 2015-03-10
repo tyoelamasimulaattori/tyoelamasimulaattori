@@ -18,18 +18,26 @@ export default React.createClass({
           <Button>Vihje</Button>
         </div>
         <div className="problem__questions">
-          <div className="question">
-            a. Auta Mattia
-          </div>
-          <div className="question">
-            b. Hauku Mattia
-          </div>
-          <div className="question">
-            c. Kiusaa Mattia
-          </div>
-          <div className="question">
-            d. Tue Mattia
-          </div>
+          <a href="/end">
+            <div className="question">
+              a. Auta Mattia
+            </div>
+          </a>
+          <a href="/end">
+            <div className="question">
+              b. Hauku Mattia
+            </div>
+          </a>
+          <a href="/end">
+            <div className="question">
+              c. Kiusaa Mattia
+            </div>
+          </a>
+          <a href="/end">
+            <div className="question">
+              d. Tue Mattia
+            </div>
+          </a>
         </div>
       </div>
     )
