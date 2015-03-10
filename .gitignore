@@ -3,6 +3,7 @@
 .env
 public/css
 public/js
+public/fonts
 npm-debug.log
 bower_components
 .idea

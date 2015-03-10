@@ -74,10 +74,10 @@ export default React.createClass({
 
         {/* TODO real icons for arrows */}
         <div onClick={this.setNext} className="case-selector__arrow">
-          &lt;&lt;
+          <i className="fa fa-arrow-left"></i>
         </div>
         <div onClick={this.setPrev} className="case-selector__arrow case-selector__arrow--right">
-          &gt;&gt;
+          <i className="fa fa-arrow-right"></i>
         </div>
 
 

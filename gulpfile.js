@@ -27,7 +27,7 @@ var config = {
     destination: './public/css/'
   },
   assets: {
-    source: ['./resources/assets/**/*.*'],
+    source: ['./resources/assets/**/*.*', './bower_components/font-awesome/fonts*/*.*'],
     watch: './resources/assets/**/*.*',
     destination: './public/'
   },
