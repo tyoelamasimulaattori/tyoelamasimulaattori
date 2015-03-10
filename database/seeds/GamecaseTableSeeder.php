@@ -20,7 +20,7 @@ class GamecaseTableSeeder extends Seeder {
 			Gamecase::create(array(
 				'id' => $object->id,
 				'name' => $object->name,
-				'text' => $object->text
+				'text' => $object->description
 			));
 		}
 	}
