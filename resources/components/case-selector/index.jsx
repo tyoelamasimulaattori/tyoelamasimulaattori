@@ -1,12 +1,14 @@
 import { default as React } from 'react/addons';
 import { noop } from 'lodash';
-import { default as Button } from 'components/button';
+import { Link } from 'react-router';
+
 const {classSet} = React.addons;
 
 export default React.createClass({
   getDefaultProps() {
     return {
-      perspective: null,
+      cases: [],
+      title: '',
       onSelect: noop
     };
   },
@@ -21,7 +23,7 @@ export default React.createClass({
     };
   },
   setNext() {
-    var {cases} = this.props.perspective;
+    var {cases} = this.props;
     this.setState({
       selected: Math.min(this.state.selected + 1, cases.length - 1)
     });
@@ -33,24 +35,31 @@ export default React.createClass({
   },
   render() {
 
-    var {cases, title} = this.props.perspective;
+    var {cases, title} = this.props;
 
     var caseElements = cases.map((c, i) => {
 
       var classNames = classSet({
-        'case': true
+        'case': true,
+        'case--selected': i === this.state.selected
       });
 
       var style = {
         width: `${100 / cases.length}%`
       };
 
+      var backgroundStyle = {
+        backgroundImage: `url(http://lorempizza.com/380/240?${title + i})`
+      };
+
       return (
         <div style={style} className={classNames} key={c.title}>
-          <div className="case__container">
-            <img className="case__image" src={`http://lorempizza.com/380/240?${title + i}`} />
-            <h3>{c.title}</h3>
-          </div>
+          <Link to="case" params={{id: 42}}>
+            <div className="case__container">
+              <div className="case__image" style={backgroundStyle}></div>
+              <h3 className="case__title">{c.title}</h3>
+            </div>
+          </Link>
         </div>
       );
     });
@@ -62,15 +71,15 @@ export default React.createClass({
 
     return (
       <div className="case-selector">
-        <h2>{title} caset</h2>
 
         {/* TODO real icons for arrows */}
-        <div onClick={this.setPrev} className="case-selector__arrow">
+        <div onClick={this.setNext} className="case-selector__arrow">
           &lt;&lt;
         </div>
-        <div onClick={this.setNext} className="case-selector__arrow case-selector__arrow--right">
+        <div onClick={this.setPrev} className="case-selector__arrow case-selector__arrow--right">
           &gt;&gt;
         </div>
+
 
         <div className="case-selector__cases">
           <div className="case-selector__cases__container">
@@ -79,10 +88,6 @@ export default React.createClass({
             </div>
           </div>
         </div>
-
-        <Button to="/case/234">
-          Valitse Case
-        </Button>
       </div>
     );
   }

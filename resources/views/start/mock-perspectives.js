@@ -2,54 +2,46 @@ export var mockPerspectives = [
   {
     id: 'johtaminen',
     title: 'Johtaminen',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae imperdiet sapien, nec sollicitudin lorem. Proin eleifend malesuada sapien et viverra. Nunc eu porttitor lectus.',
+    description: 'Johtaminen on tavoitesuuntautunutta vuorovaikutteista sosiaalista toimintaa. Johtamisella ohjataan ihmisten toimintaa...',
     cases: [
-      {title: 'Case 1'},
-      {title: 'Case 2'},
-      {title: 'Case 4'},
-      {title: 'Case 5'},
-      {title: 'Case 6'},
-      {title: 'Case 7'}
+      {title: 'Matin alkoholiongelma'},
+      {title: 'Jannen paha mieli'},
+      {title: 'Jaanan jännitys'}
     ]
   },
   {
     id: 'esimiestoiminta',
     title: 'Esimiestoiminta',
-    description: 'Sed nisl eros, posuere at ultricies id, elementum in tellus. Aenean iaculis ligula vel lacus euismod placerat.',
+    description: 'Esimiestoiminnassa edustat ja johdat työntekijöistä muodostettua joukkoa. Olet vastuussa ajankäytöstä ja sen semmoisesta...',
     cases: [
-      {title: 'Case 1'},
-      {title: 'Case 2'},
-      {title: 'Case 4'},
-      {title: 'Case 5'},
-      {title: 'Case 6'},
-      {title: 'Case 7'}
+      {title: 'Kallen kysymykset'},
+      {title: 'Senja vegaanin lounasaika'},
+      {title: 'Deadlinesta jäljessä'},
+      {title: 'Taavetin hukkunut raportti'}
     ]
   },
   {
     id: 'toimintakulttuuri',
     title: 'Toimintakulttuuri',
-    description: 'Pellentesque convallis ultricies augue ac ullamcorper. Sed maximus, lectus sed lacinia efficitur, sapien libero tempor nunc, vitae efficitur nisl ipsum sit amet ante.',
+    description: 'Yritysten sisäinen kulttuuri voi vaihdella hyvinkin paljon yritysten välillä...',
     selected: true,
     cases: [
-      {title: 'Case 1'},
-      {title: 'Case 2'},
-      {title: 'Case 4'},
-      {title: 'Case 5'},
-      {title: 'Case 6'},
-      {title: 'Case 7'}
+      {title: 'Epäkunnioitava alainen'},
+      {title: 'Sopimattomat kommentit'},
+      {title: 'Painostava ilmapiiri'},
+      {title: 'Matin äänekäs työskentely'},
+      {title: 'Developerin kapina'},
+      {title: 'Lomapäivähulluttelu'},
+      {title: 'Tasoitava tekijä'}
     ]
   },
   {
     id: 'prosessit',
     title: 'Prosessit',
-    description: 'Pellentesque convallis ultricies augue ac ullamcorper. Sed maximus, lectus sed lacinia efficitur, sapien libero tempor nunc, vitae efficitur nisl ipsum sit amet ante.',
+    description: 'Latautuvat?',
     cases: [
-      {title: 'Case 1'},
-      {title: 'Case 2'},
-      {title: 'Case 4'},
-      {title: 'Case 5'},
-      {title: 'Case 6'},
-      {title: 'Case 7'}
+      {title: 'Pitkät raportit'},
+      {title: 'Monet käsiparit'}
     ]
   }
 ];

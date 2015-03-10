@@ -24,7 +24,7 @@ export default React.createClass({
           <div className="modal__footer">
             <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
 
-            <Button to="disc">
+            <Button to="/">
               Aloita simulaatio
             </Button>
           </div>

@@ -11,22 +11,24 @@ export default React.createClass({
     return (
       <div className="problem" style={style}>
         <div className="problem__description">
-          <h3>Lorem ipsum dolor sit amet</h3>
+          <h3>Matin alkoholiongelma</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            Matilla on alkoholiongelma ja on ilmaantunut töihin lievässä humalassa. Hän häiritsee muita ja käyttäytyy tyhmästi. Miten lähestyt tilannetta?
           </p>
           <Button>Vihje</Button>
         </div>
         <div className="problem__questions">
           <div className="question">
-            a. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            a. Auta Mattia
           </div>
           <div className="question">
-            b. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            b. Hauku Mattia
           </div>
           <div className="question">
-            c. Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+            c. Kiusaa Mattia
+          </div>
+          <div className="question">
+            d. Tue Mattia
           </div>
         </div>
       </div>

@@ -13,34 +13,28 @@ var { TestUtils } = React.addons;
 describe('Case selector', function() {
 
   it('should render the amount of cases in inputted perspective', function() {
-    var perspective = {
-      id: 'johtaminen',
-      title: 'Johtaminen',
-      description: 'Lorem ipsum',
-      cases: [
-        {title: 'Case 1'},
-        {title: 'Case 2'},
-        {title: 'Case 4'},
-        {title: 'Case 5'},
-        {title: 'Case 6'},
-        {title: 'Case 7'}
-      ]
-    };
+    var cases = [
+      {title: 'Case 1'},
+      {title: 'Case 2'},
+      {title: 'Case 4'},
+      {title: 'Case 5'},
+      {title: 'Case 6'},
+      {title: 'Case 7'}
+    ];
 
     /*
-     * Well have to stub this component since it uses Button component
-     * that includes components from "react-router" library.
-     * Those components are a bit more complex and Jest don't know how to
-     * mock them automatically.
+     * - Our real application has a router (react-router)
+     * - We don't need a router for our tests so we don't have one here
+     * - Some of our components (like case-selector) include components from react-router (such as Link)
+     * - Link needs a router so it knows how to create URL's and so on.
+     * - We fake that router here so we can test our own components
      */
 
-    var StubbedCaseSelector = stubRouterContext(CaseSelector, {
-      perspective
-    });
+    var Stubbed = stubRouterContext(CaseSelector, {cases});
 
     // Render element into a document
     var caseSelector = TestUtils.renderIntoDocument(
-      <StubbedCaseSelector />
+      <Stubbed />
     );
 
     // Search all elements from rendered component with class name "case"
