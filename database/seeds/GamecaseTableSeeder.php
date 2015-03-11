@@ -17,7 +17,7 @@ class GamecaseTableSeeder extends Seeder {
 		$json = Storage::get("MockCaseNewVersion.js");
 		$gamecase = json_decode($json);
 		foreach ($gamecase as $object) {
-			Gamecase::create([
+			GameCase::create([
 				'name' => $object->name,
 				'text' => $object->description
 			]);
