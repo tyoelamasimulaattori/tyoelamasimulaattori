@@ -7,22 +7,22 @@ import { default as Button } from 'components/button';
 
 export default React.createClass({
   onQuit(){
-    if(confirm("Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.")){
-      console.log("true");
+    if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
+      console.log('true');
       return true;
     }
     else{
-      console.log("false");
+      console.log('false');
       return false;
     }
   },
   onSave(){
-    if(confirm("Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.")){
-      console.log("true");
+    if(confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.')){
+      console.log('true');
       return true;
     }
     else{
-      console.log("false");
+      console.log('false');
       return false;
     }
   },
@@ -31,10 +31,10 @@ export default React.createClass({
       <View id="case-view">
         <div className="sidebar">
           <Accordion>
-            <Panel header='Herzbergin vihjeet' eventKey='1'>
-              Attitudes and their connection with industrial mental health are related to Abraham Maslow's theory of motivation. His findings have had a considerable theoretical, as well as a practical, influence on attitudes toward administration.
+            <Panel header="Herzbergin vihjeet" eventKey="1">
+              Attitudes and their connection with industrial mental health are related to Abraham Maslows theory of motivation. His findings have had a considerable theoretical, as well as a practical, influence on attitudes toward administration.
             </Panel>
-            <Panel header='GROW' eventKey='2'>
+            <Panel header="GROW" eventKey="2">
               <p>
                 G 	Goal 	The Goal is the end point, where the client wants to be. The goal has to be defined in such a way that it is very clear to the client when they have achieved it.
               </p>
@@ -47,13 +47,13 @@ export default React.createClass({
               </p>
               W 	Way Forward 	The Options then need to be converted into action steps which will take the client to their goal. These are the Way Forward.
             </Panel>
-            <Panel header='Vihjeet' eventKey='3'>
+            <Panel header="Vihjeet" eventKey="3">
               Harkitse tarkkaan mikä vastaus rauhoittaisi mattia. Katso lisätietoa: Matin Ongelmat (s. 10- 12).
             </Panel>
-            <Panel header='Neuvot' eventKey='4'>
+            <Panel header="Neuvot" eventKey="4">
               Älä ole ikävä.
             </Panel>
-            <Panel header='????' eventKey='5'>
+            <Panel header="????" eventKey="5">
               Valitse a)
             </Panel>
           </Accordion>
