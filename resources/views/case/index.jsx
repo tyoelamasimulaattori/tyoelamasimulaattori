@@ -36,7 +36,7 @@ export default React.createClass({
    var id = this.getParams().id;
    var steps = mockCase[0].steps;
    var currentStep = findWhere(steps, {id: parseInt(id)});
-   console.log(currentStep);
+   console.log("CurrentStep: " + currentStep);
    console.log(steps);
 
     return (
@@ -82,7 +82,7 @@ export default React.createClass({
           </Button>
         </div>
 
-        <Problem />
+        <Problem name = {mockCase[0].name} description = {currentStep.description} options = {currentStep.options} />
 
       </View>
     );

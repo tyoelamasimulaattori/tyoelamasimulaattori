@@ -1,8 +1,13 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
+import { Link } from 'react-router';
 
 export default React.createClass({
+
   render() {
+    var id = function (i, array){
+      return parseInt(array[i].next_step_id);
+    };
 
     var style = {
       backgroundImage: 'url(http://lorempizza.com/1280/1280)'
@@ -11,33 +16,32 @@ export default React.createClass({
     return (
       <div className="problem" style={style}>
         <div className="problem__description">
-          <h3>Matin alkoholiongelma</h3>
-          <p>
-            Matilla on alkoholiongelma ja on ilmaantunut töihin lievässä humalassa. Hän häiritsee muita ja käyttäytyy tyhmästi. Miten lähestyt tilannetta?
-          </p>
+          <h3>{this.props.name}</h3>
+          <p>{this.props.description}</p>
           <Button>Vihje</Button>
         </div>
+
         <div className="problem__questions">
-          <a href="/end">
+          <Link to="case" params={{id: id(0, this.props.options)}}>
             <div className="question">
-              a. Auta Mattia
+              {this.props.options[0].name}
             </div>
-          </a>
-          <a href="/end">
+          </Link>
+          <Link to="case" params={{id: id(1, this.props.options)}}>
             <div className="question">
-              b. Hauku Mattia
+              {this.props.options[1].name}
             </div>
-          </a>
-          <a href="/end">
+          </Link>
+          <Link to="case" params={{id: id(2, this.props.options)}}>
             <div className="question">
-              c. Kiusaa Mattia
+              {this.props.options[2].name}
             </div>
-          </a>
-          <a href="/end">
+          </Link>
+          <Link to="case" params={{id: id(3, this.props.options)}}>
             <div className="question">
-              d. Tue Mattia
+              {this.props.options[3].name}
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     )
