@@ -4,9 +4,21 @@ export var mockPerspectives = [
     title: 'Johtaminen',
     description: 'Johtaminen on tavoitesuuntautunutta vuorovaikutteista sosiaalista toimintaa. Johtamisella ohjataan ihmisten toimintaa...',
     cases: [
-      {title: 'Matin alkoholiongelma'},
-      {title: 'Jannen paha mieli'},
-      {title: 'Jaanan jännitys'}
+      {
+        id: 0,
+        title: 'Matin alkoholiongelma',
+        image: '1.png'
+      },
+      {
+        id: 1,
+        title: 'Jannen paha mieli',
+        image: '2.png'
+      },
+      {
+        id: 2,
+        title: 'Jaanan jännitys',
+        image: '3.png'
+      }
     ]
   },
   {
@@ -14,10 +26,26 @@ export var mockPerspectives = [
     title: 'Esimiestoiminta',
     description: 'Esimiestoiminnassa edustat ja johdat työntekijöistä muodostettua joukkoa. Olet vastuussa ajankäytöstä ja sen semmoisesta...',
     cases: [
-      {title: 'Kallen kysymykset'},
-      {title: 'Senja vegaanin lounasaika'},
-      {title: 'Deadlinesta jäljessä'},
-      {title: 'Taavetin hukkunut raportti'}
+      {
+        id: 0,
+        title: 'Kallen kysymykset',
+        image: '4.png'
+      },
+      {
+        id: 1,
+        title: 'Senja vegaanin lounasaika',
+        image: '5.png'
+      },
+      {
+        id: 2,
+        title: 'Deadlinesta jäljessä',
+        image: '6.png'
+      },
+      {
+        id: 3,
+        title: 'Taavetin hukkunut raportti',
+        image: '7.png'
+      }
     ]
   },
   {
@@ -26,13 +54,41 @@ export var mockPerspectives = [
     description: 'Yritysten sisäinen kulttuuri voi vaihdella hyvinkin paljon yritysten välillä...',
     selected: true,
     cases: [
-      {title: 'Epäkunnioitava alainen'},
-      {title: 'Sopimattomat kommentit'},
-      {title: 'Painostava ilmapiiri'},
-      {title: 'Matin äänekäs työskentely'},
-      {title: 'Developerin kapina'},
-      {title: 'Lomapäivähulluttelu'},
-      {title: 'Tasoitava tekijä'}
+      {
+        id: 0,
+        title: 'Epäkunnioitava alainen',
+        image: '8.png'
+      },
+      {
+        id: 1,
+        title: 'Sopimattomat kommentit',
+        image: '9.png'
+      },
+      {
+        id: 2,
+        title: 'Painostava ilmapiiri',
+        image: '10.png'
+      },
+      {
+        id: 3,
+        title: 'Matin äänekäs työskentely',
+        image: '11.png'
+      },
+      {
+        id: 4,
+        title: 'Developerin kapina',
+        image: '12.png'
+      },
+      {
+        id: 5,
+        title: 'Lomapäivähulluttelu',
+        image: '13.png'
+      },
+      {
+        id: 6,
+        title: 'Tasoitava tekijä',
+        image: '14.png'
+      }
     ]
   },
   {
@@ -40,8 +96,16 @@ export var mockPerspectives = [
     title: 'Prosessit',
     description: 'Latautuvat?',
     cases: [
-      {title: 'Pitkät raportit'},
-      {title: 'Monet käsiparit'}
+      {
+        id: 0,
+        title: 'Pitkät raportit',
+        image: '15.png'
+      },
+      {
+        id: 1,
+        title: 'Monet käsiparit',
+        image: '16.png'
+      }
     ]
   }
 ];

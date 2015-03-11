@@ -9,7 +9,6 @@ import { default as CaseSelector } from 'components/case-selector';
 // TODO replace with real ones
 import { mockPerspectives } from 'views/start/mock-perspectives';
 
-
 export default React.createClass({
   mixins: [Navigation],
   getInitialState() {

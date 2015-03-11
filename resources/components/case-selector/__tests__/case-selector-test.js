@@ -1,8 +1,9 @@
 /* global jest, describe, it */
 
-jest.dontMock('components/case-selector');
-jest.dontMock('components/button');
-jest.dontMock('test-utils/stubRouterContext');
+jest.autoMockOff();
+// jest.dontMock('components/case-selector');
+// jest.dontMock('components/button');
+// jest.dontMock('test-utils/stubRouterContext');
 
 import { stubRouterContext } from 'test-utils/stubRouterContext';
 import { default as React } from 'react/addons';

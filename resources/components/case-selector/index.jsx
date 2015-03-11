@@ -48,8 +48,10 @@ export default React.createClass({
         width: `${100 / cases.length}%`
       };
 
+
+
       var backgroundStyle = {
-        backgroundImage: `url(http://lorempizza.com/380/240?${title + i})`
+        backgroundImage: `url(/images/${c.image})`
       };
 
       return (
