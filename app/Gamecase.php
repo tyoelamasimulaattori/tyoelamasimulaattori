@@ -2,6 +2,6 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class GameCase extends Model {
+class Gamecase extends Model {
 }
 
