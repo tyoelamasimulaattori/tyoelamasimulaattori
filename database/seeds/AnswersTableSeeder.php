@@ -14,7 +14,7 @@ class AnswersTableSeeder extends Seeder {
   public function run() {
     DB::table('answers')->delete();
 
-    $json = Storage::get('MockCaseNewVersion.js');
+    $json = Storage::get('MockCaseNewVersion.json');
     $case = json_decode($json);
     $steps = $case[0]->steps;
 

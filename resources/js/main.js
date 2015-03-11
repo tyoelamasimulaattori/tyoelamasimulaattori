@@ -15,6 +15,7 @@ const routes = (
       <Route name="disc" path="disc" handler={DiscSelectView} />
       <Route name="intro" path="intro" handler={IntroView} />
     </Route>
+    <Route name="step" path="case/:id/step/:step" handler={CaseView} />
     <Route name="end" path="end" handler={EndScreen} />
     <Route name="case" path="case/:id" handler={CaseView} />
   </Route>

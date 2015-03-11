@@ -4,8 +4,13 @@ import { default as Accordion, Panel } from 'components/accordion';
 import { default as PersonCard } from 'components/person-card';
 import { default as Problem } from 'components/problem';
 import { default as Button } from 'components/button';
+import { default as mockCase } from '../../../storage/app/MockCaseNewVersion.json';
+import { default as tips } from '../../../storage/app/Tips.json';
+import { findWhere } from 'lodash';
+import { State } from 'react-router';
 
 export default React.createClass({
+  mixins: [State],
   onQuit(){
     if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
       console.log('true');
@@ -27,6 +32,13 @@ export default React.createClass({
     }
   },
   render() {
+
+   var id = this.getParams().id;
+   var steps = mockCase[0].steps;
+   var currentStep = findWhere(steps, {id: parseInt(id)});
+   console.log(currentStep);
+   console.log(steps);
+
     return (
       <View id="case-view">
         <div className="sidebar">
@@ -54,7 +66,7 @@ export default React.createClass({
               Älä ole ikävä.
             </Panel>
             <Panel header="????" eventKey="5">
-              Valitse a)
+              Tips
             </Panel>
           </Accordion>
         </div>
@@ -69,7 +81,6 @@ export default React.createClass({
             Tallenna ja lopeta
           </Button>
         </div>
-
 
         <Problem />
 

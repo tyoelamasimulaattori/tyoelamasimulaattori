@@ -13,8 +13,8 @@ class StepTableSeeder extends Seeder {
 	 */
 	public function run() {
 		DB::table('steps')->delete();
-		
-		$json = Storage::get('MockCaseNewVersion.js');
+
+		$json = Storage::get('MockCaseNewVersion.json');
 		$gamecase = json_decode($json);
 		$steps = $gamecase[0]->steps;
 

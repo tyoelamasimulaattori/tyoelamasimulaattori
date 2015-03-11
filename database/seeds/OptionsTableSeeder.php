@@ -14,7 +14,7 @@ class OptionsTableSeeder extends Seeder {
   public function run() {
     DB::table('options')->delete();
 
-    $json = Storage::get('MockCaseNewVersion.js');
+    $json = Storage::get('MockCaseNewVersion.json');
     $gamecase = json_decode($json);
     $steps = $gamecase[0]->steps;
     /* Options id is the same as steps id. */
