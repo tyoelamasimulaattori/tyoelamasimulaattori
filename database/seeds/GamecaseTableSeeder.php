@@ -18,6 +18,7 @@ class GamecaseTableSeeder extends Seeder {
 		$gamecase = json_decode($json);
 		foreach ($gamecase as $object) {
 			GameCase::create([
+				'id' => $object->id,
 				'name' => $object->name,
 				'text' => $object->description
 			]);
