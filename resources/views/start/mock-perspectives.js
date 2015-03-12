@@ -107,5 +107,42 @@ export var mockPerspectives = [
         image: '16.png'
       }
     ]
+  },
+  {
+    id: 'osaaminen',
+    title: 'Osaaminen',
+    description: 'Osaamiseen liittyvät monet asiat, kuten osaaminen, osaamus ja osanto.',
+    cases: [
+      {
+        id: 0,
+        title: 'Martinin mehukestit',
+        image: '1.png'
+      },
+      {
+        id: 1,
+        title: 'Juhon juustokestit',
+        image: '15.png'
+      },
+      {
+        id: 2,
+        title: 'Rikun rivitalokestit',
+        image: '14.png'
+      },
+	  {
+        id: 3,
+        title: 'Markon makkarakestit',
+        image: '4.png'
+      },
+	  {
+        id: 4,
+        title: 'Tuulin tuulihattukestit ',
+        image: '3.png'
+      },
+	  {
+        id: 5,
+        title: 'Annin akvaariokestit',
+        image: '6.png'
+      }
+    ]
   }
 ];
