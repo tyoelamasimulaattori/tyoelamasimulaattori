@@ -5,10 +5,6 @@ import { Link } from 'react-router';
 export default React.createClass({
 
   render() {
-    var id = function (i, array){
-      return parseInt(array[i].next_step_id);
-    };
-
     var style = {
       backgroundImage: 'url(http://lorempizza.com/1280/1280)'
     };
@@ -22,22 +18,22 @@ export default React.createClass({
         </div>
 
         <div className="problem__questions">
-          <Link to="case" params={{id: id(0, this.props.options)}}>
+          <Link to="case" params={{ id: this.props.options[0].next_step_id }}>
             <div className="question">
               {this.props.options[0].name}
             </div>
           </Link>
-          <Link to="case" params={{id: id(1, this.props.options)}}>
+          <Link to="case" params={{ id: this.props.options[1].next_step_id }}>
             <div className="question">
               {this.props.options[1].name}
             </div>
           </Link>
-          <Link to="case" params={{id: id(2, this.props.options)}}>
+          <Link to="case" params={{ id: this.props.options[2].next_step_id }}>
             <div className="question">
               {this.props.options[2].name}
             </div>
           </Link>
-          <Link to="case" params={{id: id(3, this.props.options)}}>
+          <Link to="case" params={{ id: this.props.options[3].next_step_id }}>
             <div className="question">
               {this.props.options[3].name}
             </div>
