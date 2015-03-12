@@ -48,8 +48,6 @@ export default React.createClass({
         width: `${100 / cases.length}%`
       };
 
-
-
       var backgroundStyle = {
         backgroundImage: `url(/images/${c.image})`
       };
@@ -75,10 +73,10 @@ export default React.createClass({
       <div className="case-selector">
 
         {/* TODO real icons for arrows */}
-        <div onClick={this.setNext} className="case-selector__arrow">
+        <div onClick={this.setPrev} className="case-selector__arrow">
           <i className="fa fa-arrow-left"></i>
         </div>
-        <div onClick={this.setPrev} className="case-selector__arrow case-selector__arrow--right">
+        <div onClick={this.setNext} className="case-selector__arrow case-selector__arrow--right">
           <i className="fa fa-arrow-right"></i>
         </div>
 
