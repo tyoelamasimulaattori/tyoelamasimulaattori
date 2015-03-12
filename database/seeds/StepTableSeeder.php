@@ -16,6 +16,7 @@ class StepTableSeeder extends Seeder {
 
 		$json = Storage::get('MockCaseNewVersion.json');
 		$gamecase = json_decode($json);
+		$gamecase_id = $gamecase[0]->id;
 		$steps = $gamecase[0]->steps;
 
 		foreach ($steps as $step) {
@@ -23,7 +24,8 @@ class StepTableSeeder extends Seeder {
 				'id' => $step->id,
 				'text' => $step->description,
 				'options_id' => $step->id,
-				'direction' => $step->direction
+				'direction' => $step->direction,
+				'gamecase_id' => $gamecase_id
 			]);
 		}
 	}

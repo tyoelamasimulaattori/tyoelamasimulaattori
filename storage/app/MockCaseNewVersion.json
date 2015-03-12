@@ -1,6 +1,7 @@
 [{
   "name": "mock-case-new",
   "description": "Esimerkki-case.",
+  "id": 1,
   "steps": [
   {
     "id": 1,
