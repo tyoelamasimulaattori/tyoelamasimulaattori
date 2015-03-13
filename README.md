@@ -61,6 +61,9 @@ Komentoriviltä pitäisi löytyä nyt komennot `node` ja `npm`
 ## Palvelimen ajaminen PHP:n omalla kehityspalvelimella
 `$ php -S localhost:8080`
 
+## Frontin testien ajaminen
+`$ npm test`
+
 ---
 
 ## Laravel PHP Framework
