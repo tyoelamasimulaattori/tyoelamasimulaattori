@@ -29,6 +29,7 @@ export default React.createClass({
   onCaseSelect(selected) {
   },
   render() {
+
     var selectedPerspective = findWhere(this.state.perspectives, {
       selected: true
     });
@@ -54,6 +55,6 @@ export default React.createClass({
   },
   componentDidMount() {
     // TODO Show intro on the first time user loads the application
-    //this.transitionTo('intro');
+    // this.transitionTo('intro');
   }
 });

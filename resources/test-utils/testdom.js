@@ -1,0 +1,10 @@
+// http://www.hammerlab.org/2015/02/14/testing-react-web-apps-with-mocha/#mocking-the-dom
+module.exports = function createMockDOM(markup) {
+  if (typeof document !== 'undefined') return;
+  var jsdom = require('jsdom').jsdom;
+  global.document = jsdom(markup || '');
+  global.window = document.parentWindow;
+  global.navigator = {
+    userAgent: 'node.js'
+  };
+}
