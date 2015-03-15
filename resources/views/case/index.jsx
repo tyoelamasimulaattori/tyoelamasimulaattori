@@ -13,21 +13,17 @@ export default React.createClass({
   mixins: [State],
   onQuit(){
     if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
-      console.log('true');
       return true;
     }
     else{
-      console.log('false');
       return false;
     }
   },
   onSave(){
     if(confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.')){
-      console.log('true');
       return true;
     }
     else{
-      console.log('false');
       return false;
     }
   },
@@ -36,8 +32,6 @@ export default React.createClass({
    var id = this.getParams().id;
    var steps = mockCase[0].steps;
    var currentStep = findWhere(steps, {id: parseInt(id)});
-   console.log("CurrentStep: " + currentStep);
-   console.log(steps);
 
     return (
       <View id="case-view">
