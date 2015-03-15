@@ -3,6 +3,7 @@ import { default as mockCase } from '../../../storage/app/MockCaseNewVersion.jso
 import { default as tips } from '../../../storage/app/Tips.json';
 
 import { default as StepView } from 'views/step';
+import { default as EndView } from 'views/end';
 
 import { findWhere } from 'lodash';
 import { State } from 'react-router';
@@ -20,7 +21,7 @@ export default React.createClass({
 
     if(lastStep) {
       return (
-        <h1>TODO Loppunäkymä</h1>
+        <EndView />
       );
     }
     return (
