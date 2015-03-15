@@ -40,13 +40,13 @@ Projektissa on nyt käytössä [Stylus](http://learnboost.github.io/stylus/) CSS
 
 Taustalla pyörivä [Gulp](https://github.com/gulpjs/gulp) kääntää näitä tiedostoja automaattisesti aina kun joku niistä muuttuu, eikä siitä tarvitse erikseen huolehtia.
 
-# 1.  Asenna [Node.js](http://nodejs.org/)
+# 1.  Asenna [io.js](https://iojs.org/fi/index.html)
 
 * **Windows**
-    * Etusivulta **Install**, lataa asennuspaketti ja asenna se.
+    * Lataa asennuspaketti ja asenna se.
 * **OSX/Linux**
     * Lataa NVM https://github.com/creationix/nvm#install-script
-    * `$ nvm install 0.12`
+    * `$ nvm install iojs-v1.1.0`
 
 Komentoriviltä pitäisi löytyä nyt komennot `node` ja `npm`
 
