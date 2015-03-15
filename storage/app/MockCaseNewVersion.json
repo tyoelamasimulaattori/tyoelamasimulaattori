@@ -354,81 +354,97 @@
   {
     "id": 16,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 1 polusta (A-->P-->P-->P-->P)"
   },
   {
     "id": 17,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 2 polusta (A-->P-->P-->P-->N)"
   },
   {
     "id": 18,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 3 polusta (A-->P-->P-->N-->P)"
   },
     {
     "id": 19,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 4 polusta (A-->P-->P-->N-->N)"
   },
     {
     "id": 20,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 5 polusta (A-->P-->N-->P-->P)"
   },
   {
     "id": 21,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 6 polusta (A-->P-->N-->P-->N)"
   },
   {
     "id": 22,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 7 polusta (A-->P-->N-->N-->P)"
   },
   {
     "id": 23,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 8 polusta (A-->P-->N-->N-->N)"
   },
   {
     "id": 24,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 9 polusta (A-->N-->P-->P-->P)"
   },
   {
     "id": 25,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 10 polusta (A-->N-->P-->P-->N)"
   },
     {
     "id": 26,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 11 polusta (A-->N-->P-->N-->P)"
   },
     {
     "id": 27,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 12 polusta (A-->N-->P-->N-->N)"
   },
   {
     "id": 28,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 13 polusta (A-->N-->N-->P-->P)"
   },
     {
     "id": 29,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 14 polusta (A-->N-->N-->P-->N)"
   },
     {
     "id": 30,
     "direction": 1,
+    "end": true,
     "description": "Lopputulos 15 polusta (A-->N-->N-->N-->P)"
   },
     {
     "id": 31,
     "direction": -1,
+    "end": true,
     "description": "Lopputulos 16 polusta (A-->N-->N-->N-->N)"
   }]
 }]
