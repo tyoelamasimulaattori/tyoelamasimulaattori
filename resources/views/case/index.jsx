@@ -29,9 +29,9 @@ export default React.createClass({
   },
   render() {
 
-   var id = this.getParams().id;
-   var steps = mockCase[0].steps;
-   var currentStep = findWhere(steps, {id: parseInt(id)});
+    const {id, step} = this.getParams();
+    const selectedCase = mockCase[0];
+    const currentStep = findWhere(selectedCase.steps, {id: parseInt(id)});
 
     return (
       <View id="case-view">
@@ -76,7 +76,7 @@ export default React.createClass({
           </Button>
         </div>
 
-        <Problem name = {mockCase[0].name} description = {currentStep.description} options = {currentStep.options} />
+        <Problem id={id} name={selectedCase.name} description={currentStep.description} options={currentStep.options} />
 
       </View>
     );

@@ -17,7 +17,6 @@ const routes = (
     </Route>
     <Route name="step" path="case/:id/step/:step" handler={CaseView} />
     <Route name="end" path="end" handler={EndScreen} />
-    <Route name="case" path="case/:id" handler={CaseView} />
   </Route>
 );
 
