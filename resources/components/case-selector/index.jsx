@@ -33,6 +33,9 @@ export default React.createClass({
       selected: Math.max(this.state.selected - 1, 0)
     });
   },
+  componentWillReceiveProps() {
+    this.setState(this.getInitialState());
+  },
   render() {
 
     var {cases, title} = this.props;
