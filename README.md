@@ -2,6 +2,13 @@
 
 [ ![Codeship Status for rikukissa/tyoelamasimulaattori](https://codeship.com/projects/8a6f5bc0-92b6-0132-6084-66933f4492d6/status?branch=master)](https://codeship.com/projects/61972)
 
+#### Työkalut
+**Windows**
+* Komentorivi
+    * [Cmder](http://bliker.github.io/cmder/)
+    * [Cygwin](https://www.cygwin.com/)
+    * [Git Bash](http://git-scm.com/downloads)
+
 #### Asentaminen
 Riippuvuuksien asentaminen
 ```
