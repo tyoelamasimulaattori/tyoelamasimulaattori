@@ -9,19 +9,41 @@ import { findWhere } from 'lodash';
 import { State } from 'react-router';
 
 export default React.createClass({
-  mixins: [State],
-  render() {
-
-    const {id, step} = this.getParams();
+  getInitialState() {
+    return {
+      previousSteps: []
+    };
+  },
+  getCaseState() {
     const currentCase = mockCase[0];
-    const {steps} = currentCase;
+    const {step} = this.props.params;
+    const currentStep = findWhere(currentCase.steps, {
+      id: parseInt(step)
+    });
+    return {currentCase, currentStep};
+  },
+  componentDidMount() {
+    const { currentStep } = this.getCaseState();
 
-    const currentStep = findWhere(steps, {id: parseInt(step)});
-    const lastStep = currentStep.end;
+    this.setState({
+      previousSteps: [currentStep]
+    });
+  },
+  componentWillReceiveProps() {
+    const { currentCase, currentStep } = this.getCaseState();
 
-    if(lastStep) {
+    if(currentStep !== this.state.currentStep) {
+      this.setState({
+        previousSteps: this.state.previousSteps.concat(currentStep)
+      });
+    }
+  },
+  render() {
+    const { currentCase, currentStep } = this.getCaseState();
+
+    if(currentStep.end) {
       return (
-        <EndView />
+        <EndView previousSteps={this.state.previousSteps} />
       );
     }
     return (

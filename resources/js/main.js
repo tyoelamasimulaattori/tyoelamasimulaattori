@@ -20,6 +20,6 @@ const routes = (
   </Route>
 );
 
-Router.run(routes, Router.HistoryLocation, (Handler) => {
-  React.render(<Handler/>, document.body);
+Router.run(routes, Router.HistoryLocation, (Handler, state) => {
+  React.render(<Handler params={state.params} />, document.body);
 });

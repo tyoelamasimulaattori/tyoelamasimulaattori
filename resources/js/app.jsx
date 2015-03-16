@@ -5,7 +5,7 @@ export default React.createClass({
   render() {
     return (
       <div id="app">
-        <RouteHandler/>
+        <RouteHandler {...this.props} />
       </div>
     );
   }
