@@ -10,7 +10,7 @@
     "prepublish": "bower install",
     "start": "gulp",
     "build": "gulp build",
-    "test": "NODE_PATH=resources:node_modules jest resources/components"
+    "test": "NODE_PATH=resources node_modules/.bin/mocha --compilers js:babel/register resources/components/**/__tests__/*.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/rikukissa/tyoelamasimulaattori",
   "devDependencies": {
+    "babel": "^4.7.12",
     "babel-jest": "^4.0.0",
     "babelify": "^5.0.3",
     "bower": "^1.3.12",
@@ -37,7 +38,8 @@
     "gulp-stylus": "^2.0.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.3",
-    "jest-cli": "^0.4.0",
+    "jsdom": "^4.0.2",
+    "mocha": "^2.2.1",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.3.0"
   },
@@ -50,18 +52,6 @@
   "browserify": {
     "transform": [
       "babelify"
-    ]
-  },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react",
-      "<rootDir>/node_modules/lodash"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
     ]
   }
 }

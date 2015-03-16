@@ -33,6 +33,9 @@ export default React.createClass({
       selected: Math.max(this.state.selected - 1, 0)
     });
   },
+  componentWillReceiveProps() {
+    this.setState(this.getInitialState());
+  },
   render() {
 
     var {cases, title} = this.props;
@@ -54,7 +57,7 @@ export default React.createClass({
 
       return (
         <div style={style} className={classNames} key={c.title}>
-          <Link to="case" params={{id: 1}}>
+          <Link to="step" params={{id: 1, step: 1}}>
             <div className="case__container">
               <div className="case__image" style={backgroundStyle}></div>
               <h3 className="case__title">{c.title}</h3>

@@ -1,15 +1,14 @@
-/* global jest, describe, it */
+/* global describe, it */
 
-jest.autoMockOff();
-// jest.dontMock('components/case-selector');
-// jest.dontMock('components/button');
-// jest.dontMock('test-utils/stubRouterContext');
+import { createMockDOM } from 'test-utils/testdom';
+createMockDOM('<html><body></body></html>');
 
+import { equal } from 'assert';
 import { stubRouterContext } from 'test-utils/stubRouterContext';
 import { default as React } from 'react/addons';
 import { default as CaseSelector } from 'components/case-selector';
 
-var { TestUtils } = React.addons;
+var { TestUtils } = React.addons;
 
 describe('Case selector', function() {
 
@@ -17,10 +16,10 @@ describe('Case selector', function() {
     var cases = [
       {title: 'Case 1'},
       {title: 'Case 2'},
+      {title: 'Case 3'},
       {title: 'Case 4'},
       {title: 'Case 5'},
-      {title: 'Case 6'},
-      {title: 'Case 7'}
+      {title: 'Case 6'}
     ];
 
     /*
@@ -44,6 +43,6 @@ describe('Case selector', function() {
       'case'
     );
 
-    expect(cases.length).toEqual(6);
+    equal(cases.length, 6);
   });
 });

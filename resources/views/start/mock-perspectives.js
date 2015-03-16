@@ -94,7 +94,7 @@ export var mockPerspectives = [
   {
     id: 'prosessit',
     title: 'Prosessit',
-    description: 'Latautuvat?',
+    description: 'TODO',
     cases: [
       {
         id: 0,

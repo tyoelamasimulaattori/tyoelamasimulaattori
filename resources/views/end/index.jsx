@@ -27,11 +27,8 @@ export default React.createClass({
           <img src="http://lorempizza.com/1500/400" alt="end_tree"/>
         </div>
 
-        <Button to="intro">
-          Lopeta
-        </Button>
         <Button to="/">
-          Uusi tapaus
+          Lopeta
         </Button>
       </View>
     );
