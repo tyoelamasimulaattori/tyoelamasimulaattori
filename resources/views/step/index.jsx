@@ -75,6 +75,7 @@ export default React.createClass({
           id={this.props.currentCase.id}
           name={this.props.currentCase.name}
           description={this.props.currentStep.description}
+          image={this.props.currentStep.image_name}
           options={this.props.currentStep.options} />
 
       </View>

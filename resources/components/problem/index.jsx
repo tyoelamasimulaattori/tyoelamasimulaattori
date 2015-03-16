@@ -9,10 +9,9 @@ export default React.createClass({
     }
   },
   render() {
-    const style = {
-      backgroundImage: 'url(http://lorempizza.com/1280/1280)'
+    var style = {
+      backgroundImage: `url(/images/${this.props.image})`
     };
-
     const options = this.props.options.map((option) => {
       return (
         <Link to="step" params={{ id: this.props.id, step: option.next_step_id }}>
