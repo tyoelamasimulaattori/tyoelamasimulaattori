@@ -12,7 +12,7 @@ Luo tiedosto `.env` projektihakemiston juureen jonka sisällöksi seuraava:
 ```
 APP_ENV=local
 APP_DEBUG=true
-APP_KEY=[SATUNNAISIA MERKKEJÄ TÄHÄN]
+APP_KEY=kHvcjjxr8hhnFNL5MmF1dOZOtqOyhKOv
 
 DB_HOST=localhost
 DB_DATABASE=tyoelamasimulaattori
