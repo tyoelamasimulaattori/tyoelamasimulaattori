@@ -27,6 +27,10 @@ export default React.createClass({
     });
   },
   onCaseSelect(selected) {
+    this.transitionTo('step', {
+      id: 1,
+      step: 0
+    });
   },
   render() {
 
