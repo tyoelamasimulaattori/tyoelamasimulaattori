@@ -1,7 +1,13 @@
 [{
+  "id": 0,
   "name": "mock-case-new",
   "description": "Esimerkki-case.",
-  "id": 0,
+  "person": {
+    "name": "Katja",
+    "image": "6.png",
+    "title": "Asiantuntijasairaanhoitaja",
+    "description": "Kaijalla on mies ja kaksi kouluikäistä lasta. Vapaa-ajallaan Kaija tykkää käydä tanssimassa salsaa"
+  },
   "steps": [
   {
     "id": 0,

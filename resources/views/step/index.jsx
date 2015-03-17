@@ -6,6 +6,8 @@ import { default as Problem } from 'components/problem';
 import { default as Button } from 'components/button';
 import { default as mockCase } from '../../../storage/app/MockCaseNewVersion.json';
 import { default as tips } from '../../../storage/app/Tips.json';
+
+import { imagePath } from 'filters';
 import { findWhere } from 'lodash';
 import { State } from 'react-router';
 
@@ -28,18 +30,23 @@ export default React.createClass({
     }
   },
   render() {
+    var {name, title, description, image} = this.props.currentCase.person;
     return (
       <View id="step-view">
         <div className="sidebar">
-          <Accordion tips={tips} /> 
+          <Accordion tips={tips} />
         </div>
 
         <div className="sidebar sidebar--right">
-          <PersonCard />
+          <PersonCard name={name}
+                      description={description}
+                      image={imagePath(image)}
+                      title={title} />
 
           <Button to="/" onClick={this.onQuit}>
             Keskeytä case
           </Button>
+
           <Button to="/" onClick={this.onSave}>
             Tallenna ja lopeta
           </Button>
