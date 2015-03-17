@@ -1,5 +1,6 @@
 import { default as React } from 'react/addons';
 import { noop } from 'lodash';
+import { imagePath } from 'filters';
 
 const {classSet} = React.addons;
 
@@ -51,7 +52,7 @@ export default React.createClass({
       };
 
       var backgroundStyle = {
-        backgroundImage: `url(/images/${c.image})`
+        backgroundImage: `url(${imagePath(c.image)})`
       };
 
       return (

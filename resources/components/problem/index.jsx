@@ -1,6 +1,7 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
 import { Link } from 'react-router';
+import { imagePath } from 'filters';
 
 export default React.createClass({
   getDefaultProps() {
@@ -10,7 +11,7 @@ export default React.createClass({
   },
   render() {
     var style = {
-      backgroundImage: `url(/images/${this.props.image})`
+      backgroundImage: `url(${imagePath(this.props.image)})`
     };
     const options = this.props.options.map((option) => {
       return (
