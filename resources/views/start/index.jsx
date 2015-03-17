@@ -40,7 +40,7 @@ export default React.createClass({
 
     return (
       <View id="start-view">
-        <h1>Valitse kyvykkyystekijä</h1>
+        <h1>Valitse näkökulma</h1>
 
         <PerspectiveSelector
           perspectives={this.state.perspectives}
