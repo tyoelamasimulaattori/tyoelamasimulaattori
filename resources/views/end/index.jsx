@@ -11,6 +11,7 @@ export default React.createClass({
         </p>
       )
     });
+
     return (
       <View id="end-view">
         <h1>Loppunäkymä</h1>
@@ -21,8 +22,7 @@ export default React.createClass({
 
           <div className="column column4-5">
             <p>
-              Teit hyviä valintoja ja sait autettua Matin vaikean elämänvaiheen läpi. Otit huomioon kaiken oleellisen, mutta et unohtanut asemaasi esimiehenä.
-              Tulevaisuudessa voit harkita hiema tiukempaa linjaa. Työntekijät ovat toki ystäviäsi, mutta te olette töissä, ette viettämässä vapaa-aikaa.
+            {this.props.currentStep.description}
             </p>
           </div>
         </div>
