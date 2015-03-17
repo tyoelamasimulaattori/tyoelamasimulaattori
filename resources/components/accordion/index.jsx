@@ -11,9 +11,9 @@ export default React.createClass({
     });
 	const tips = this.props.tips.map((tip) => { 
        return (
-         <Panel header = {tip.id} eventKey = {tip.id}>{tip.text}</Panel>
+         <Panel header={tip.id} eventKey ={tip.id}>{tip.text}</Panel>
        )
-    }
+    });
     return (
       <Accordion>{tips}</Accordion>
     );
