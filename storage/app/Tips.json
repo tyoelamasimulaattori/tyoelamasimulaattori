@@ -11,6 +11,37 @@
   },
   {
     "id": 3,
+    "text": "Tarkastele asiaa osaamisen kannalta. Lue materiaalia osaamisesta kyvykkyystekijänä.",
+	"tag": "Osaaminen"
+  },
+  {
+    "id": 4,
+    "text": "Tarkastele asiaa esimieskulttuurin kannalta. Lue materiaalia esimieskulttuurista kyvykkyystekijänä.",
+	"tag": "Esimieskulttuuri"
+  },
+  {
+    "id": 5,
+    "text": "Tarkastele asiaa prosessien kannalta. Lue materiaalia prosesseista kyvykkyystekijänä.",
+	"tag": "Prosessit"
+  },
+  {
+    "id": 6,
     "text": "Mieti miten voisit tehdä kompromissin, joka sopii kaikille osapuolille."
+  },
+  {
+    "id": 7,
+    "text": "Attitudes and their connection with industrial mental health are related to Abraham Maslows theory of motivation. His findings have had a considerable theoretical, as well as a practical, influence on attitudes toward administration."
+  },
+  {
+    "id": 8,
+    "text": "G  Goal  R Reality  O Obstacles Options W Way Forward"
+  },
+  {
+    "id": 9,
+    "text": "Harkitse tarkkaan mikä vastaus rauhoittaisi mattia. Katso lisätietoa: Matin Ongelmat (s. 10- 12)."
+  },
+  {
+    "id": 10,
+    "text": "Älä ole ikävä."
   }
 ]
