@@ -43,7 +43,7 @@ export default React.createClass({
 
     if(currentStep.end) {
       return (
-        <EndView previousSteps={this.state.previousSteps} />
+        <EndView previousSteps={this.state.previousSteps} currentStep={currentStep}/>
       );
     }
     return (
