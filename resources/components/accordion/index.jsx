@@ -9,11 +9,13 @@ export default React.createClass({
     var props = extend(this.props, {
       className: 'accordion'
     });
-
+	const tips = this.props.tips.map((tip) => { 
+       return (
+         <Panel header={tip.id} eventKey ={tip.id}>{tip.text}</Panel>
+       )
+    });
     return (
-      <Accordion {...props}>
-        {this.props.children}
-      </Accordion>
+      <Accordion>{tips}</Accordion>
     );
   }
 });
