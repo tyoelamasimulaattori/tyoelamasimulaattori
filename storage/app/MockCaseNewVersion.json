@@ -384,63 +384,63 @@
     "direction": -1,
     "end": true,
     "description": "Lopputulos 2 polusta (A-->P-->P-->P-->N)",
-    "image_name" : "6.png"
+    "image_name" : "7.png"
   },
   {
     "id": 17,
     "direction": 1,
     "end": true,
     "description": "Lopputulos 3 polusta (A-->P-->P-->N-->P)",
-    "image_name" : "6.png"
+    "image_name" : "8.png"
   },
     {
     "id": 18,
     "direction": -1,
     "end": true,
     "description": "Lopputulos 4 polusta (A-->P-->P-->N-->N)",
-    "image_name" : "6.png"
+    "image_name" : "9.png"
   },
     {
     "id": 19,
     "direction": 1,
     "end": true,
     "description": "Lopputulos 5 polusta (A-->P-->N-->P-->P)",
-    "image_name" : "6.png"
+    "image_name" : "10.png"
   },
   {
     "id": 20,
     "direction": -1,
     "end": true,
     "description": "Lopputulos 6 polusta (A-->P-->N-->P-->N)",
-    "image_name" : "6.png"
+    "image_name" : "1.png"
   },
   {
     "id": 21,
     "direction": 1,
     "end": true,
     "description": "Lopputulos 7 polusta (A-->P-->N-->N-->P)",
-    "image_name" : "6.png"
+    "image_name" : "2.png"
   },
   {
     "id": 22,
     "direction": -1,
     "end": true,
     "description": "Lopputulos 8 polusta (A-->P-->N-->N-->N)",
-    "image_name" : "6.png"
+    "image_name" : "3.png"
   },
   {
     "id": 23,
     "direction": 1,
     "end": true,
     "description": "Lopputulos 9 polusta (A-->N-->P-->P-->P)",
-    "image_name" : "6.png"
+    "image_name" : "4.png"
   },
   {
     "id": 24,
     "direction": -1,
     "end": true,
     "description": "Lopputulos 10 polusta (A-->N-->P-->P-->N)",
-    "image_name" : "6.png"
+    "image_name" : "5.png"
   },
     {
     "id": 25,
@@ -454,34 +454,34 @@
     "direction": -1,
     "end": true,
     "description": "Lopputulos 12 polusta (A-->N-->P-->N-->N)",
-    "image_name" : "6.png"
+    "image_name" : "7.png"
   },
   {
     "id": 27,
     "direction": 1,
     "end": true,
     "description": "Lopputulos 13 polusta (A-->N-->N-->P-->P)",
-    "image_name" : "6.png"
+    "image_name" : "8.png"
   },
     {
     "id": 28,
     "direction": -1,
     "end": true,
     "description": "Lopputulos 14 polusta (A-->N-->N-->P-->N)",
-    "image_name" : "6.png"
+    "image_name" : "9.png"
   },
     {
     "id": 29,
     "direction": 1,
     "end": true,
     "description": "Lopputulos 15 polusta (A-->N-->N-->N-->P)",
-    "image_name" : "6.png"
+    "image_name" : "10.png"
   },
     {
     "id": 30,
     "direction": -1,
     "end": true,
     "description": "Lopputulos 16 polusta (A-->N-->N-->N-->N)",
-    "image_name" : "6.png"
+    "image_name" : "1.png"
   }]
 }]
