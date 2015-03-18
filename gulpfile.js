@@ -63,11 +63,10 @@ gulp.task('scripts', function() {
 
 gulp.task('styles', function() {
   return es.merge(
-    gulp.src(config.styles.source)
-      .pipe(stylus({'include css': true})),
-
     gulp.src(config.styles.less)
-    .pipe(less())
+    .pipe(less()),
+    gulp.src(config.styles.source)
+      .pipe(stylus({'include css': true}))
   )
   .pipe(concat('styles.css'))
   .pipe(gulp.dest(config.styles.destination))
