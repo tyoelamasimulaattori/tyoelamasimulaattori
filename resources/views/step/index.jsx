@@ -44,11 +44,11 @@ export default React.createClass({
                       title={title} />
 
           <Button to="/" onClick={this.onQuit}>
-            Keskeytä case
+            Lopeta tapaus
           </Button>
 
           <Button to="/" onClick={this.onSave}>
-            Tallenna ja lopeta
+            Tallenna ja keskeytä
           </Button>
         </div>
 

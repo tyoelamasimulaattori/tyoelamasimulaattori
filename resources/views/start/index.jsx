@@ -28,7 +28,7 @@ export default React.createClass({
   },
   onCaseSelect(selected) {
     this.transitionTo('step', {
-      id: 1,
+      id: 0,
       step: 0
     });
   },

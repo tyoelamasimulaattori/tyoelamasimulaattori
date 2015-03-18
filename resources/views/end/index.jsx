@@ -1,6 +1,7 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
 import { default as View } from 'components/view';
+import { imagePath } from 'filters';
 
 export default React.createClass({
   render() {
@@ -11,18 +12,19 @@ export default React.createClass({
         </p>
       )
     });
+    var backgroundStyle = {
+      backgroundImage: `url(${imagePath(this.props.currentStep.image_name)})`
+    };
 
     return (
       <View id="end-view">
         <h1>Loppunäkymä</h1>
         <div className="row">
-          <div className="column column1-5">
-            <img src="http://lorempizza.com/i/380/240" alt="end_image" />
-          </div>
+          <div className="column column1-5" style={backgroundStyle} />
 
           <div className="column column4-5">
             <p>
-            {this.props.currentStep.description}
+              {this.props.currentStep.description}
             </p>
           </div>
         </div>

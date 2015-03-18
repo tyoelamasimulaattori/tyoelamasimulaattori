@@ -6,17 +6,17 @@ export var mockPerspectives = [
     cases: [
       {
         id: 0,
-        title: 'Matin alkoholiongelma',
-        image: '1.png'
-      },
-      {
-        id: 1,
-        title: 'Jannen paha mieli',
+        title: 'Maija',
         image: '2.png'
       },
       {
+        id: 1,
+        title: 'Janne',
+        image: '1.png'
+      },
+      {
         id: 2,
-        title: 'Jaanan jännitys',
+        title: 'Jaana',
         image: '3.png'
       }
     ]
@@ -28,22 +28,22 @@ export var mockPerspectives = [
     cases: [
       {
         id: 0,
-        title: 'Kallen kysymykset',
+        title: 'Kalle',
         image: '4.png'
       },
       {
         id: 1,
-        title: 'Senja vegaanin lounasaika',
+        title: 'Senja',
         image: '5.png'
       },
       {
         id: 2,
-        title: 'Deadlinesta jäljessä',
-        image: '6.png'
+        title: 'Deni',
+        image: '15.png'
       },
       {
         id: 3,
-        title: 'Taavetin hukkunut raportti',
+        title: 'Taavetti',
         image: '7.png'
       }
     ]
@@ -56,37 +56,38 @@ export var mockPerspectives = [
     cases: [
       {
         id: 0,
-        title: 'Epäkunnioitava alainen',
-        image: '8.png'
+        title: 'Kaija',
+        image: '6.png'
+
       },
       {
         id: 1,
-        title: 'Sopimattomat kommentit',
+        title: 'Sopi',
         image: '9.png'
       },
       {
         id: 2,
-        title: 'Painostava ilmapiiri',
+        title: 'Pai',
         image: '10.png'
       },
       {
         id: 3,
-        title: 'Matin äänekäs työskentely',
+        title: 'Matti',
         image: '11.png'
       },
       {
         id: 4,
-        title: 'Developerin kapina',
+        title: 'Deve',
         image: '12.png'
       },
       {
         id: 5,
-        title: 'Lomapäivähulluttelu',
+        title: 'Loiri',
         image: '13.png'
       },
       {
         id: 6,
-        title: 'Tasoitava tekijä',
+        title: 'Tassi',
         image: '14.png'
       }
     ]
@@ -98,13 +99,13 @@ export var mockPerspectives = [
     cases: [
       {
         id: 0,
-        title: 'Pitkät raportit',
+        title: 'Pirja',
         image: '15.png'
       },
       {
         id: 1,
-        title: 'Monet käsiparit',
-        image: '16.png'
+        title: 'Moneka',
+        image: '1.png'
       }
     ]
   },
@@ -115,32 +116,32 @@ export var mockPerspectives = [
     cases: [
       {
         id: 0,
-        title: 'Martinin mehukestit',
+        title: 'Martin',
         image: '1.png'
       },
       {
         id: 1,
-        title: 'Juhon juustokestit',
+        title: 'Juho',
         image: '15.png'
       },
       {
         id: 2,
-        title: 'Rikun rivitalokestit',
+        title: 'Riku',
         image: '14.png'
       },
 	  {
         id: 3,
-        title: 'Markon makkarakestit',
+        title: 'Marko',
         image: '4.png'
       },
 	  {
         id: 4,
-        title: 'Tuulin tuulihattukestit ',
+        title: 'Tuuli',
         image: '3.png'
       },
 	  {
         id: 5,
-        title: 'Annin akvaariokestit',
+        title: 'Anni',
         image: '6.png'
       }
     ]
