@@ -46,6 +46,8 @@ export default React.createClass({
           perspectives={this.state.perspectives}
           onSelect={this.onPerspectiveSelect} />
 
+        <h2>Valittavissa olevat {selectedPerspective.title} tapaukset:</h2>
+
         <CaseSelector
           cases={selectedPerspective.cases}
           title={selectedPerspective.title}
