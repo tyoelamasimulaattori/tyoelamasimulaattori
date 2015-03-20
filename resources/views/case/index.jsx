@@ -1,5 +1,5 @@
 import { default as React } from 'react';
-import { default as mockCase } from '../../../storage/app/MockCaseNewVersion.json';
+import { default as mockCase } from '../../../storage/app/MockCaseNewVersion2.json';
 import { default as tips } from '../../../storage/app/Tips.json';
 
 import { default as StepView } from 'views/step';

@@ -1,18 +1,18 @@
 [{
   "id": 0,
-  "name": "mock-case-new",
-  "description": "Esimerkki-case.",
+  "name": "Kaija",
+  "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
   "person": {
-    "name": "Katja",
+    "name": "Kaija",
     "image": "6.png",
     "title": "Asiantuntijasairaanhoitaja",
-    "description": "Kaijalla on mies ja kaksi kouluikäistä lasta. Vapaa-ajallaan Kaija tykkää käydä tanssimassa salsaa"
+    "description": "Kaijalla on mies ja kaksi kouluikäistä lasta. Vapaa-ajallaan Kaija tykkää käydä tanssimassa salsaa."
   },
   "steps": [
   {
     "id": 0,
     "direction": 0,
-    "description": "Esimerkki-casen alkutilanne",
+    "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
     "image_name" : "1.png",
     "options": [
       {

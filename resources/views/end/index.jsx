@@ -30,6 +30,8 @@ export default React.createClass({
         </div>
 
         <div className="row">
+		  <h3>Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.</h3>
+		  <h3>Muistitko ottaa huomioon vastapuolen DiSC-profiilin?</h3>
           <h3>Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit voinut suoriuua vielä paremmin! </h3>
           <hr/>
           <h2> Valintasi pelin aikana: </h2>
