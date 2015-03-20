@@ -2,7 +2,7 @@ export var mockPerspectives = [
   {
     id: 'johtaminen',
     title: 'Johtaminen',
-    description: 'Johtaminen on tavoitesuuntautunutta vuorovaikutteista sosiaalista toimintaa. Johtamisella ohjataan ihmisten toimintaa...',
+    description: 'Johtamisen kulmakivenä johdon ja esimiesten välinen hyvä vuorovaikutus.',
     cases: [
       {
         id: 0,
@@ -24,7 +24,7 @@ export var mockPerspectives = [
   {
     id: 'esimiestoiminta',
     title: 'Esimiestoiminta',
-    description: 'Esimiestoiminnassa edustat ja johdat työntekijöistä muodostettua joukkoa. Olet vastuussa ajankäytöstä ja sen semmoisesta...',
+    description: 'Esimiestoiminnan kulmakivenä rooleihin liittyvän osaamisen kehittäminen.',
     cases: [
       {
         id: 0,
@@ -51,7 +51,7 @@ export var mockPerspectives = [
   {
     id: 'toimintakulttuuri',
     title: 'Toimintakulttuuri',
-    description: 'Yritysten sisäinen kulttuuri voi vaihdella hyvinkin paljon yritysten välillä...',
+    description: 'Toimintakulttuurin kulmakivenä avoin keskustelukulttuuri ja ristiriitoja ratkova kulttuuri.',
     selected: true,
     cases: [
       {
@@ -94,8 +94,8 @@ export var mockPerspectives = [
   },
   {
     id: 'prosessit',
-    title: 'Prosessit',
-    description: 'TODO',
+    title: 'Prosessit ja työtavat',
+    description: 'Prosessien ja työtapojen kulmakivenä työroolien hahmottaminen ja tunnistaminen',
     cases: [
       {
         id: 0,
@@ -112,7 +112,7 @@ export var mockPerspectives = [
   {
     id: 'osaaminen',
     title: 'Osaaminen',
-    description: 'Osaamiseen liittyvät monet asiat, kuten osaaminen, osaamus ja osanto.',
+    description: 'Osaamisen kulmakivenä hyvien käytäntöjen vieminen toimintamalleiksi.',
     cases: [
       {
         id: 0,
