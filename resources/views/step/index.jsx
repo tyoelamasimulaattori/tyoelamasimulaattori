@@ -4,7 +4,7 @@ import { default as Accordion, Panel } from 'components/accordion';
 import { default as PersonCard } from 'components/person-card';
 import { default as Problem } from 'components/problem';
 import { default as Button } from 'components/button';
-import { default as mockCase } from '../../../storage/app/MockCaseNewVersion.json';
+import { default as mockCase } from '../../../storage/app/MockCase.json';
 import { default as tips } from '../../../storage/app/Tips.json';
 
 import { imagePath } from 'filters';

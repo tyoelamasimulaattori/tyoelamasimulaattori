@@ -1,0 +1,86 @@
+[{
+  "id": 0,
+  "name": "Kaija",
+  "description": "Casen valinta",
+  "person": {
+    "name": "Kaija",
+    "image": "6.png",
+    "title": "Asiantuntijasairaanhoitaja",
+    "description": "Kaijalla on mies ja kaksi kouluikäistä lasta. Vapaa-ajallaan Kaija tykkää käydä tanssimassa salsaa."
+  },
+  "steps": [
+    {
+      "id": 0,
+      "direction": 0,
+      "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
+      "image_name" : "1.png",
+      "options": [
+        {
+          "name": "Vastausvaihtoehto 1",
+          "next_step_id": 1
+        },
+        {
+          "name": "Vastausvaihtoehto 2",
+          "next_step_id": 3
+        },
+        {
+          "name": "Vastausvaihtoehto 3",
+          "next_step_id": 3
+        },
+        {
+          "name": "Vastausvaihtoehto 4",
+          "next_step_id": 3
+        }
+      ],
+      "tip_id": 1
+    },
+    {
+      "id": 1,
+      "direction": 1,
+      "description": "Steppi 2",
+      "image_name" : "2.png",
+      "options": [
+        {
+          "name": "Vastausvaihtoehto 1",
+          "next_step_id": 2
+        },
+        {
+          "name": "Vastausvaihtoehto 2",
+          "next_step_id": 3
+        },
+        {
+          "name": "Vastausvaihtoehto 3",
+          "next_step_id": 3
+        }
+      ],
+      "tip_id": 2
+    },
+    {
+      "id": 2,
+      "direction": -1,
+      "description": "Steppi 3",
+      "image_name" : "3.png",
+      "options": [
+        {
+          "name": "Vastausvaihtoehto 1",
+          "next_step_id": 3
+        },
+        {
+          "name": "Vastausvaihtoehto 2",
+          "next_step_id": 3
+        },
+        {
+          "name": "Vastausvaihtoehto 3",
+          "next_step_id": 3
+        }
+      ],
+      "tip-id": 3
+    },
+    {
+      "id": 3,
+      "direction": -1,
+      "end": true,
+      "description": "Lopputulos",
+      "image_name" : "1.png"
+    }]
+}]

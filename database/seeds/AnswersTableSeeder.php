@@ -14,7 +14,7 @@ class AnswersTableSeeder extends Seeder {
   public function run() {
     DB::table('answers')->delete();
 
-    $json = Storage::get('MockCaseNewVersion.json');
+    $json = Storage::get('MockCase.json');
     $case = json_decode($json);
     $steps = $case[0]->steps;
 
@@ -24,7 +24,7 @@ class AnswersTableSeeder extends Seeder {
         foreach ($options as $answer) {
           Answer::create([
             'text' => $answer->name,
-            'options_id' => $step->id,
+            'step_id' => $step->id,
             'next_step_id' => $answer->next_step_id,
           ]);
         }

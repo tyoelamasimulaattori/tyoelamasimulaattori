@@ -15,7 +15,7 @@ class CreateAnswersTable extends Migration {
 		Schema::create('answers', function(Blueprint $table) {
 			$table->increments('id');
 			$table->text('text');
-			$table->integer('options_id')->references('id')->on('options');
+			$table->integer('step_id')->references('id')->on('steps');
 			$table->integer('next_step_id')->references('id')->on('step');
 			$table->timestamps();
 		});
