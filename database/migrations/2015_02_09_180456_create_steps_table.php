@@ -14,6 +14,7 @@ class CreateStepsTable extends Migration {
 		Schema::create('steps', function(Blueprint $table) {
 			$table->integer('id');
 			$table->text('text');
+			$table->string('image');
 			$table->integer('gamecase_id')->references('id')->on('gamecases');
 			$table->integer('options_id')->references('id')->on('options');
 			/* -1 negative, 1 positive */

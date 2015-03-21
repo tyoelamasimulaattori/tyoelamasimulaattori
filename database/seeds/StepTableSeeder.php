@@ -22,6 +22,7 @@ class StepTableSeeder extends Seeder {
 		foreach ($steps as $step) {
 			Step::create([
 				'id' => $step->id,
+				'image' => $step->image_name,
 				'text' => $step->description,
 				'options_id' => $step->id,
 				'direction' => $step->direction,
