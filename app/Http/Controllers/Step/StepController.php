@@ -12,10 +12,6 @@ class StepController extends Controller {
     $step = Step::create(Input::all());
     return $step;
   }
-  public function getStep($stepId) {
-    $step = Step::find($stepId);
-    return $step;
-  }
   public function getOptions($stepId) {
     $answers = Answer::where('step_id', '=', $stepId)->get();
     return $answers;
