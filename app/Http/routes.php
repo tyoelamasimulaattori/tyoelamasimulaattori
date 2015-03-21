@@ -14,7 +14,8 @@
 Route::group(array('prefix' => 'api'), function() {
   Route::controllers([
     'cases' => 'Gamecase\GamecaseController',
-    'steps' => 'Step\StepController'
+    'steps' => 'Step\StepController',
+    'tips' => 'Tips\TipsController'
   ]);
 });
 
