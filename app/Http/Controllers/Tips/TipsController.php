@@ -5,12 +5,12 @@ use App\Tip;
 
 class TipsController extends Controller {
 
-  public function getIndex() {
+  public function index() {
     $tips = Tip::all();
     return $tips;
   }
 
-  public function getTip($tipId) {
+  public function show($tipId) {
     $tip = Tip::find($tipId);
     return $tip;
   }

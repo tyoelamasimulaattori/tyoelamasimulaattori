@@ -12,11 +12,9 @@
 */
 
 Route::group(array('prefix' => 'api'), function() {
-  Route::controllers([
-    'cases' => 'Gamecase\GamecaseController',
-    'steps' => 'Step\StepController',
-    'tips' => 'Tips\TipsController'
-  ]);
+  Route::resource('tips', 'Tips\TipsController');
+  Route::resource('cases', 'Gamecase\GamecaseController');
+  Route::resource('cases.steps', 'Step\StepController');
 });
 
 Route::any('{all}', function() {
