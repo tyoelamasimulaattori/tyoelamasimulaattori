@@ -16,6 +16,7 @@ class CreateGamecasesTable extends Migration {
 		Schema::create('gamecases', function(Blueprint $table) {
 			$table->integer('id');
 			$table->string('name')->unique();
+			$table->string('image');
 			$table->text('text');
 			$table->integer('perspective_id')->references('id')->on('perspectives');
 			$table->timestamps();

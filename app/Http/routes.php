@@ -15,6 +15,7 @@ Route::group(array('prefix' => 'api'), function() {
   Route::resource('tips', 'Tips\TipsController');
   Route::resource('cases', 'Gamecase\GamecaseController');
   Route::resource('cases.steps', 'Step\StepController');
+  Route::resource('perspectives', 'Perspective\PerspectiveController');
 });
 
 Route::any('{all}', function() {

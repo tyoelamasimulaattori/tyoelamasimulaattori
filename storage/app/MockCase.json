@@ -1,7 +1,8 @@
 [{
   "id": 0,
   "name": "Kaija",
-  "perspective_id": 0,
+  "image" : "1.png",
+  "perspective_id": 1,
   "description": "Casen valinta",
   "person": {
     "name": "Kaija",
