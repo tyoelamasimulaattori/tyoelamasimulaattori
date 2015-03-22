@@ -47,7 +47,9 @@
     "lodash": "^3.3.0",
     "react": "^0.13.0",
     "react-bootstrap": "^0.16.0",
-    "react-router": "^0.12.0"
+    "react-router": "^0.12.0",
+    "reflux": "^0.2.7",
+    "superagent": "^1.1.0"
   },
   "browserify": {
     "transform": [
