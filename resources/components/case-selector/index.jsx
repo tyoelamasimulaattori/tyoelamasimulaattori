@@ -59,7 +59,7 @@ export default React.createClass({
         <div style={style} className={classNames} key={c.title} onClick={this.onSelect(c)}>
           <div className="case__container">
             <div className="case__image" style={backgroundStyle}></div>
-            <h3 className="case__title">{c.title}</h3>
+            <h3 className="case__title">{c.name}</h3>
           </div>
         </div>
       );
