@@ -57,7 +57,7 @@ export default React.createClass({
           name={this.props.currentCase.name}
           description={this.props.currentStep.description}
           image={this.props.currentStep.image_name}
-          options={this.props.currentStep.options} />
+          answers={this.props.currentStep.answers} />
 
       </View>
     );
