@@ -12,11 +12,12 @@ class CreateGamecasesTable extends Migration {
 	 */
 	public function up() {
 		// CASE:lla on id, nimi (lyhyt kuvaus
-		// sekä sisältö eli teksti. 
+		// sekä sisältö eli teksti.
 		Schema::create('gamecases', function(Blueprint $table) {
 			$table->integer('id');
 			$table->string('name')->unique();
 			$table->text('text');
+			$table->integer('perspective_id')->references('id')->on('perspectives');
 			$table->timestamps();
 		});
 	}
