@@ -14,7 +14,11 @@ class GamecaseController extends Controller {
   }
 
   public function show($caseId) {
-    $gamecase = Gamecase::find($caseId)->with('steps', 'person')->get();
+
+    $gamecase = Gamecase::with(['steps' => function($query) {
+      $query->with('answers');
+    }])->with('person')->find($caseId);
+
     return $gamecase;
   }
 
