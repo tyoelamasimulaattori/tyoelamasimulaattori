@@ -13,6 +13,7 @@ class CreatePerspectivesTable extends Migration {
 	public function up() {
 		Schema::create('perspectives', function(Blueprint $table) {
 			$table->string('title');
+			$table->string('image');
 			$table->text('description');
 			$table->increments('id');
 			$table->timestamps();
