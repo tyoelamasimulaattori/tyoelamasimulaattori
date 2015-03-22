@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('StepTableSeeder');
 		$this->call('PersonTableSeeder');
 		$this->call('TipsTableSeeder');
+		$this->call('PerspectiveTableSeeder');
 	}
 
 }
