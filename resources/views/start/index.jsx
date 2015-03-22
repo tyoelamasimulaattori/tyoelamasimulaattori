@@ -1,29 +1,33 @@
 import { default as React } from 'react';
-import { findWhere } from 'lodash';
+import { findWhere, extend } from 'lodash';
 import { RouteHandler, Navigation } from 'react-router';
 import { default as View } from 'components/view';
 import { default as Button } from 'components/button';
 import { default as PerspectiveSelector } from 'components/perspective-selector';
 import { default as CaseSelector } from 'components/case-selector';
 
-// TODO replace with real ones
-import { mockPerspectives } from 'views/start/mock-perspectives';
+import { perspectiveActions } from 'actions';
+import { perspectiveStore } from 'stores';
 
 export default React.createClass({
   mixins: [Navigation],
   getInitialState() {
+    let state = this.getState();
+    return extend(state, {
+      selectedPerspective: null
+    });
+  },
+  onDataChange() {
+    this.setState(this.getState());
+  },
+  getState() {
     return {
-      perspectives: mockPerspectives
+      perspectives: perspectiveStore.getPerspectives()
     };
   },
   onPerspectiveSelect(selected) {
-    var oldPerspectives = this.state.perspectives;
-
     this.setState({
-      perspectives: oldPerspectives.map((perspective) => {
-        perspective.selected = perspective === selected;
-        return perspective;
-      })
+      selectedPerspective: selected
     });
   },
   onCaseSelect(selected) {
@@ -34,24 +38,31 @@ export default React.createClass({
   },
   render() {
 
-    var selectedPerspective = findWhere(this.state.perspectives, {
-      selected: true
-    });
+    let { selectedPerspective, perspectives } = this.state;
+    let caseSelector = null;
+
+    if(selectedPerspective) {
+      caseSelector = (
+        <div>
+          <h2>Valittavissa olevat {selectedPerspective.title} tapaukset:</h2>
+          <CaseSelector
+          cases={selectedPerspective.cases}
+          title={selectedPerspective.title}
+          onSelect={this.onCaseSelect} />
+        </div>
+      )
+    }
 
     return (
       <View id="start-view">
         <h1>Valitse näkökulma</h1>
 
         <PerspectiveSelector
-          perspectives={this.state.perspectives}
-          onSelect={this.onPerspectiveSelect} />
+          perspectives={perspectives}
+          onSelect={this.onPerspectiveSelect}
+          selected={selectedPerspective} />
 
-        <h2>Valittavissa olevat {selectedPerspective.title} tapaukset:</h2>
-
-        <CaseSelector
-          cases={selectedPerspective.cases}
-          title={selectedPerspective.title}
-          onSelect={this.onCaseSelect} />
+        {caseSelector}
 
         {/* Modals open inside of this RouteHandler */}
         <RouteHandler/>
@@ -60,7 +71,16 @@ export default React.createClass({
     );
   },
   componentDidMount() {
+    this.unsubscribe = perspectiveStore.listen(this.onDataChange);
     // TODO Show intro on the first time user loads the application
     // this.transitionTo('intro');
+  },
+  componentWillUnmount() {
+    this.unsubscribe();
+  },
+  statics: {
+    willTransitionTo: function () {
+      return perspectiveActions.getPerspectives();
+    }
   }
 });

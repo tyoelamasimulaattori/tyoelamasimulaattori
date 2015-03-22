@@ -24,7 +24,7 @@ export default React.createClass({
 
       var classNames = classSet({
         perspective: true,
-        'perspective--selected': perspective.selected,
+        'perspective--selected': perspective === this.props.selected,
         [`perspective--${perspective.id}`]: true
       });
 
