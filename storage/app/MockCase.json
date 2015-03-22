@@ -16,7 +16,7 @@
       "direction": 0,
       "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
       "end": false,
-      "image_name" : "1.png",
+      "image" : "1.png",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -42,7 +42,7 @@
       "direction": 1,
       "description": "Steppi 2",
       "end": false,
-      "image_name" : "2.png",
+      "image" : "2.png",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -64,7 +64,7 @@
       "direction": -1,
       "description": "Steppi 3",
       "end": false,
-      "image_name" : "3.png",
+      "image" : "3.png",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -86,6 +86,6 @@
       "direction": -1,
       "end": true,
       "description": "Lopputulos",
-      "image_name" : "1.png"
+      "image" : "1.png"
     }]
 }]
