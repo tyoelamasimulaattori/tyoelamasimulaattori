@@ -14,7 +14,7 @@ class GamecaseTableSeeder extends Seeder {
 	public function run() {
 		DB::table('gamecases')->delete();
 
-		$json = Storage::get("MockCaseNewVersion.json");
+		$json = Storage::get("MockCase.json");
 		$gamecase = json_decode($json);
 		foreach ($gamecase as $object) {
 			GameCase::create([

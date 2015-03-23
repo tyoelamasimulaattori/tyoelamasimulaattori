@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOptionsTable extends Migration {
+class CreatePerspectivesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -11,8 +11,9 @@ class CreateOptionsTable extends Migration {
 	 * @return void
 	 */
 	public function up() {
-		// Vastausvaihtoehdot-taululla on pelkkä id.
-		Schema::create('options', function(Blueprint $table) {
+		Schema::create('perspectives', function(Blueprint $table) {
+			$table->string('title');
+			$table->text('description');
 			$table->increments('id');
 			$table->timestamps();
 		});
@@ -24,7 +25,7 @@ class CreateOptionsTable extends Migration {
 	 * @return void
 	 */
 	public function down() {
-		Schema::drop('options');
+		Schema::drop('perspectives');
 	}
 
 }

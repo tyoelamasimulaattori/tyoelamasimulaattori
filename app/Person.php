@@ -2,5 +2,5 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Options extends Model {
+class Person extends Model {
 }

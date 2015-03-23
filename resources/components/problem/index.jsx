@@ -6,18 +6,20 @@ import { imagePath } from 'filters';
 export default React.createClass({
   getDefaultProps() {
     return {
-      options: []
-    }
+      answers: []
+    };
   },
   render() {
+
     var style = {
       backgroundImage: `url(${imagePath(this.props.image)})`
     };
-    const options = this.props.options.map((option) => {
+
+    const answers = this.props.answers.map((option) => {
       return (
         <Link to="step" params={{ id: this.props.id, step: option.next_step_id }}>
           <div className="question">
-            {option.name}
+            {option.text}
           </div>
         </Link>
       )
@@ -32,7 +34,7 @@ export default React.createClass({
         </div>
 
         <div className="problem__questions">
-          {options}
+          {answers}
         </div>
       </div>
     )

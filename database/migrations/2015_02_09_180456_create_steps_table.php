@@ -12,10 +12,11 @@ class CreateStepsTable extends Migration {
 	 */
 	public function up() {
 		Schema::create('steps', function(Blueprint $table) {
-			$table->increments('id');
+			$table->integer('id');
 			$table->text('text');
+			$table->string('image');
+			$table->boolean('end')->default(false);
 			$table->integer('gamecase_id')->references('id')->on('gamecases');
-			$table->integer('options_id')->references('id')->on('options');
 			/* -1 negative, 1 positive */
 			$table->integer('direction');
 			$table->timestamps();

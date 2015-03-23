@@ -14,7 +14,7 @@ class StepTableSeeder extends Seeder {
 	public function run() {
 		DB::table('steps')->delete();
 
-		$json = Storage::get('MockCaseNewVersion.json');
+		$json = Storage::get('MockCase.json');
 		$gamecase = json_decode($json);
 		$gamecase_id = $gamecase[0]->id;
 		$steps = $gamecase[0]->steps;
@@ -22,9 +22,10 @@ class StepTableSeeder extends Seeder {
 		foreach ($steps as $step) {
 			Step::create([
 				'id' => $step->id,
+				'image' => $step->image_name,
 				'text' => $step->description,
-				'options_id' => $step->id,
 				'direction' => $step->direction,
+				'end' => $step->end,
 				'gamecase_id' => $gamecase_id
 			]);
 		}

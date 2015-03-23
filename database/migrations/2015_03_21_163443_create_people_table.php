@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAnswersTable extends Migration {
+class CreatePeopleTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,11 +12,13 @@ class CreateAnswersTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('answers', function(Blueprint $table) {
+		Schema::create('people', function(Blueprint $table) {
 			$table->increments('id');
-			$table->text('text');
-			$table->integer('step_id')->references('id')->on('steps');
-			$table->integer('next_step_id')->references('id')->on('step');
+			$table->string('name');
+			$table->string('image');
+			$table->string('title');
+			$table->text('description');
+			$table->integer('gamecase_id')->references('id')->on('gamecases');
 			$table->timestamps();
 		});
 	}
@@ -28,7 +30,7 @@ class CreateAnswersTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('answers');
+		Schema::drop('people');
 	}
 
 }
