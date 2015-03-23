@@ -20,6 +20,8 @@ class GamecaseTableSeeder extends Seeder {
 			GameCase::create([
 				'id' => $object->id,
 				'name' => $object->name,
+				'image' => $object->image,
+				'perspective_id' => $object->perspective_id,
 				'text' => $object->description
 			]);
 		}

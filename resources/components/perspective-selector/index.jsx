@@ -1,5 +1,6 @@
 import { default as React } from 'react/addons';
 import { noop } from 'lodash';
+import { imagePath } from 'filters';
 const {classSet} = React.addons;
 
 export default React.createClass({
@@ -24,13 +25,13 @@ export default React.createClass({
 
       var classNames = classSet({
         perspective: true,
-        'perspective--selected': perspective.selected,
+        'perspective--selected': perspective === this.props.selected,
         [`perspective--${perspective.id}`]: true
       });
 
       return (
         <div key={perspective.id} style={style} className={classNames} onClick={this.onSelect(perspective)}>
-          <i className="perspective__icon"></i>
+          <img className="perspective__icon" src={imagePath(perspective.image)} />
           <h3>{perspective.title}</h3>
           <p>{perspective.description}</p>
         </div>

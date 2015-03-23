@@ -1,21 +1,26 @@
 [
 {
   "title": "Johtaminen",
-  "description": "Johtamisen kulmakivenä johdon ja esimiesten välinen hyvä vuorovaikutus."
+  "description": "Johtamisen kulmakivenä johdon ja esimiesten välinen hyvä vuorovaikutus.",
+  "image": "johtaminen.png"
 },
 {
   "title": "Esimiestoiminta",
-  "description": "Esimiestoiminnan kulmakivenä rooleihin liittyvän osaamisen kehittäminen."
+  "description": "Esimiestoiminnan kulmakivenä rooleihin liittyvän osaamisen kehittäminen.",
+  "image": "esimiestoiminta.png"
 },
 {
   "title": "Toimintakulttuuri",
-  "description": "Toimintakulttuurin kulmakivenä avoin keskustelukulttuuri ja ristiriitoja ratkova kulttuuri."
+  "description": "Toimintakulttuurin kulmakivenä avoin keskustelukulttuuri ja ristiriitoja ratkova kulttuuri.",
+  "image": "toimintakulttuuri.png"
 },
 {
   "title": "Prosessit ja työtavat",
-  "description": "Prosessien ja työtapojen kulmakivenä työroolien hahmottaminen ja tunnistaminen"
+  "description": "Prosessien ja työtapojen kulmakivenä työroolien hahmottaminen ja tunnistaminen",
+  "image": "prosessit.png"
 },
 {
   "title": "Osaaminen",
-  "description": "Osaamisen kulmakivenä hyvien käytäntöjen vieminen toimintamalleiksi."
+  "description": "Osaamisen kulmakivenä hyvien käytäntöjen vieminen toimintamalleiksi.",
+  "image": "osaaminen.png"
 }]

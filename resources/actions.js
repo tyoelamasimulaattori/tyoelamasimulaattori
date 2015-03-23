@@ -25,3 +25,17 @@ caseActions.getCase.listen(function(id) {
       this.completed(response.body);
     }.bind(this));
 });
+
+export let perspectiveActions = Reflux.createActions({
+  getPerspectives: {
+    asyncResult: true
+  }
+});
+
+perspectiveActions.getPerspectives.listen(function() {
+  get('/api/perspectives')
+    .on('error', this.failed)
+    .end(function(err, response) {
+      this.completed(response.body);
+    }.bind(this));
+});

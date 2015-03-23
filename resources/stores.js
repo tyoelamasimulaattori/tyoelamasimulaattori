@@ -1,7 +1,7 @@
 import { default as Reflux } from 'reflux';
-import { caseActions } from 'actions';
+import { caseActions, perspectiveActions } from 'actions';
 
-let data = {
+let caseData = {
   cases: [],
   currentCase: null
 };
@@ -11,17 +11,35 @@ export const caseStore = Reflux.createStore({
     this.listenToMany(caseActions);
   },
   getCases() {
-    return data.cases;
+    return caseData.cases;
   },
   getCurrentCase() {
-    return data.currentCase;
+    return caseData.currentCase;
   },
   onGetCasesCompleted(cases) {
-    data.cases = cases;
+    caseData.cases = cases;
     this.trigger();
   },
   onGetCaseCompleted(currentCase) {
-    data.currentCase = currentCase;
+    caseData.currentCase = currentCase;
+    this.trigger();
+  }
+});
+
+
+let perspectiveData = {
+  perspectives: []
+};
+
+export const perspectiveStore = Reflux.createStore({
+  init: function() {
+    this.listenToMany(perspectiveActions);
+  },
+  getPerspectives() {
+    return perspectiveData.perspectives;
+  },
+  onGetPerspectivesCompleted(perspectives) {
+    perspectiveData.perspectives = perspectives;
     this.trigger();
   }
 });
