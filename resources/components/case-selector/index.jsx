@@ -72,7 +72,6 @@ export default React.createClass({
 
     return (
       <div className="case-selector">
-
         {/* TODO real icons for arrows */}
         <div onClick={this.setPrev} className="case-selector__arrow">
           <i className="fa fa-arrow-left"></i>

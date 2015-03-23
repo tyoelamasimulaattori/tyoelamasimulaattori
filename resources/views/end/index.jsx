@@ -19,13 +19,6 @@ export default React.createClass({
     });
   },
   render() {
-
-    const route = this.props.currentCase.steps.map((step) => {
-      return (
-        <p>{step.description}</p>
-      )
-    });
-
     const currentStep = findWhere(this.props.currentCase.steps, {
       end: true
     });
@@ -34,10 +27,6 @@ export default React.createClass({
       'modal': true,
       'modal--hidden': !this.state.isModalOpen,
     });
-
-    const backgroundStyle = {
-      backgroundImage: `url(${imagePath(currentStep.image)})`
-    };
 
     const modal = (
       <div className={classNames}>
