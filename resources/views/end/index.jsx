@@ -3,6 +3,8 @@ import { default as Button } from 'components/button';
 import { default as View } from 'components/view';
 import { imagePath } from 'filters';
 
+const {classSet} = React.addons;
+
 export default React.createClass({
   getInitialState() {
     return {
@@ -13,6 +15,7 @@ export default React.createClass({
     this.setState({
       isModalOpen: !this.state.isModalOpen
     });
+    console.log(this.state.isModalOpen);
   },
   render() {
     const route = this.props.previousSteps.map((step) => {
@@ -22,20 +25,30 @@ export default React.createClass({
         </p>
       )
     });
+    var classNames = classSet({
+      'modal': true,
+      'modal--hidden': !this.state.isModalOpen,
+    });
     var modal = null;
 
     if(this.state.isModalOpen) {
-        modal = (<div className="modal">
+        modal = (<div className={classNames}>
           <div className="modal__dialog">
             <h1>Demo on päättynyt</h1>
+            <p>
+              Tämä demo työelämäsimulaattorista loppuu tähän. Lopullisessa pelissä tulee olemaan
+              monta tapausta, joissa askeleita on paljon enemmän.
+            </p>
+
+            <p>
+              Kiitos kun kokeilit demoa! Paina alla olevaa nappian nähdäksesi valintojesi
+              lopputuloksen.
+            </p>
             <Button onClick={this.handleToggle}>
-              Done
+              Loppunäkymään
             </Button>
           </div>
         </div>)
-    }
-    else{
-      modal.classSet("modal-hidden")
     }
     var backgroundStyle = {
       backgroundImage: `url(${imagePath(this.props.currentStep.image_name)})`
