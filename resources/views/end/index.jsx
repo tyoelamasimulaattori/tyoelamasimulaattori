@@ -1,5 +1,6 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
+import { default as Controls } from 'components/controls';
 import { default as View } from 'components/view';
 import { imagePath } from 'filters';
 import { findWhere } from 'lodash';
@@ -80,10 +81,10 @@ export default React.createClass({
           <h3>{route}</h3>
           <img src="http://lorempizza.com/1500/400" alt="end_tree"/>
         </div>
+        <Controls>
+          <Button to="/">Lopeta</Button>
+        </Controls>
 
-        <Button to="/">
-          Lopeta
-        </Button>
         {modal}
       </View>
     );
