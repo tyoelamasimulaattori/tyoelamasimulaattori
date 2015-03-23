@@ -20,19 +20,19 @@
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
-          "next_step_id": 1
+          "correct": false
         },
         {
           "name": "Vastausvaihtoehto 2",
-          "next_step_id": 3
+          "correct": false
         },
         {
           "name": "Vastausvaihtoehto 3",
-          "next_step_id": 3
+          "correct": false
         },
         {
           "name": "Vastausvaihtoehto 4",
-          "next_step_id": 3
+          "correct": true
         }
       ],
       "tip_id": 1
@@ -46,15 +46,15 @@
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
-          "next_step_id": 2
+          "correct": false
         },
         {
           "name": "Vastausvaihtoehto 2",
-          "next_step_id": 3
+          "correct": true
         },
         {
           "name": "Vastausvaihtoehto 3",
-          "next_step_id": 3
+          "correct": false
         }
       ],
       "tip_id": 2
@@ -68,15 +68,15 @@
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
-          "next_step_id": 3
+          "correct": false
         },
         {
           "name": "Vastausvaihtoehto 2",
-          "next_step_id": 3
+          "correct": false
         },
         {
           "name": "Vastausvaihtoehto 3",
-          "next_step_id": 3
+          "correct": true
         }
       ],
       "tip-id": 3

@@ -25,7 +25,7 @@ class AnswersTableSeeder extends Seeder {
           Answer::create([
             'text' => $answer->name,
             'step_id' => $step->id,
-            'next_step_id' => $answer->next_step_id,
+            'correct' => $answer->correct
           ]);
         }
       }

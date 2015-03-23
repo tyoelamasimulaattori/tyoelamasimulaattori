@@ -51,7 +51,7 @@ export default React.createClass({
         </div>)
     }
     var backgroundStyle = {
-      backgroundImage: `url(${imagePath(this.props.currentStep.image_name)})`
+      backgroundImage: `url(${imagePath(this.props.currentStep.image)})`
     };
 
     return (

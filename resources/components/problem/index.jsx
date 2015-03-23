@@ -1,13 +1,17 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
-import { Link } from 'react-router';
 import { imagePath } from 'filters';
+import { noop } from 'lodash';
 
 export default React.createClass({
   getDefaultProps() {
     return {
-      answers: []
+      answers: [],
+      onSelect: noop
     };
+  },
+  onSelect(answer) {
+    return () => this.props.onSelect(answer);
   },
   render() {
 
@@ -17,11 +21,9 @@ export default React.createClass({
 
     const answers = this.props.answers.map((option) => {
       return (
-        <Link to="step" params={{ id: this.props.id, step: option.next_step_id }}>
-          <div className="question">
-            {option.text}
-          </div>
-        </Link>
+        <div className="question" onClick={this.onSelect(option)}>
+          {option.text}
+        </div>
       )
     });
 

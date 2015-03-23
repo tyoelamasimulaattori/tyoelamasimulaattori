@@ -9,10 +9,10 @@ import { default as tips } from '../../../storage/app/Tips.json';
 
 import { imagePath } from 'filters';
 import { findWhere } from 'lodash';
-import { State } from 'react-router';
+import { Navigation } from 'react-router';
 
 export default React.createClass({
-  mixins: [State],
+  mixins: [Navigation],
   onQuit(){
     if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
       return true;
@@ -28,6 +28,17 @@ export default React.createClass({
     else{
       return false;
     }
+  },
+  onSelect(answer) {
+    if(!answer.correct) {
+      return;
+    }
+    let {currentCase, currentStep} = this.props;
+
+    this.transitionTo('step', {
+      id: currentCase.id,
+      step: currentCase.steps.indexOf(currentStep) + 1
+    });
   },
   render() {
     var {name, title, description, image} = this.props.currentCase.person;
@@ -53,12 +64,11 @@ export default React.createClass({
         </div>
 
         <Problem
-          id={this.props.currentCase.id}
           name={this.props.currentCase.name}
           description={this.props.currentStep.description}
-          image={this.props.currentStep.image_name}
-          answers={this.props.currentStep.answers} />
-
+          image={this.props.currentStep.image}
+          answers={this.props.currentStep.answers}
+          onSelect={this.onSelect} />
       </View>
     );
   }
