@@ -2,6 +2,7 @@ import { default as React } from 'react';
 import { default as Button } from 'components/button';
 import { default as View } from 'components/view';
 import { imagePath } from 'filters';
+import { findWhere } from 'lodash';
 
 const {classSet} = React.addons;
 
@@ -18,13 +19,18 @@ export default React.createClass({
     console.log(this.state.isModalOpen);
   },
   render() {
-    const route = this.props.previousSteps.map((step) => {
+    const route = this.props.currentCase.steps.map((step) => {
       return (
         <p>
           {step.description}
         </p>
       )
     });
+
+    const currentStep = findWhere(this.props.currentCase.steps, {
+      end: true
+    });
+
     var classNames = classSet({
       'modal': true,
       'modal--hidden': !this.state.isModalOpen,
@@ -51,7 +57,7 @@ export default React.createClass({
         </div>)
     }
     var backgroundStyle = {
-      backgroundImage: `url(${imagePath(this.props.currentStep.image)})`
+      backgroundImage: `url(${imagePath(currentStep.image)})`
     };
 
     return (
@@ -63,7 +69,7 @@ export default React.createClass({
 
           <div className="column column4-5">
             <p>
-              {this.props.currentStep.description}
+              {currentStep.description}
             </p>
           </div>
         </div>

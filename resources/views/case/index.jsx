@@ -1,7 +1,4 @@
 import { default as React } from 'react';
-import { default as mockCase } from '../../../storage/app/MockCaseNewVersion.json';
-import { default as tips } from '../../../storage/app/Tips.json';
-
 import { default as StepView } from 'views/step';
 import { default as EndView } from 'views/end';
 
@@ -14,7 +11,6 @@ import { State } from 'react-router';
 export default React.createClass({
   getInitialState() {
     return {
-      previousSteps: [],
       tips: [],
       currentCase: caseStore.getCurrentCase()
     };
@@ -43,15 +39,6 @@ export default React.createClass({
   componentWillUnmount() {
     this.unsubscribe();
   },
-  componentWillReceiveProps() {
-    const { currentCase, currentStep } = this.getCaseState();
-
-    if(currentStep !== this.state.currentStep) {
-      this.setState({
-        previousSteps: this.state.previousSteps.concat(currentStep)
-      });
-    }
-  },
   render() {
     const { currentCase, currentStep } = this.getCaseState();
 
@@ -61,7 +48,7 @@ export default React.createClass({
 
     if(currentStep.end) {
       return (
-        <EndView previousSteps={this.state.previousSteps} currentStep={currentStep}/>
+        <EndView currentCase={currentCase}/>
       );
     }
     return (
