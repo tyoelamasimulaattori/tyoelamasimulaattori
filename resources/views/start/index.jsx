@@ -44,7 +44,9 @@ export default React.createClass({
     if(selectedPerspective) {
       caseSelector = (
         <div>
-          <h2>Valitse tapaus näkökulmasta {selectedPerspective.title} </h2>
+          <h2>
+            Valitse tapaus näkökulmasta <strong>{selectedPerspective.title}</strong>
+          </h2>
           <CaseSelector
           cases={selectedPerspective.cases}
           onSelect={this.onCaseSelect} />
@@ -54,7 +56,7 @@ export default React.createClass({
 
     return (
       <View id="start-view">
-        <h1>Valitse näkökulma</h1>
+        <h1 className="view__header">Valitse näkökulma</h1>
 
         <PerspectiveSelector
           perspectives={perspectives}

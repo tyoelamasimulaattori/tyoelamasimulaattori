@@ -41,9 +41,11 @@ export default React.createClass({
             Kiitos kun kokeilit demoa! Paina alla olevaa nappian nähdäksesi valintojesi
             lopputuloksen.
           </p>
-          <Button onClick={this.handleToggle}>
-            Loppunäkymään
-          </Button>
+          <div className="modal__footer">
+            <Button onClick={this.handleToggle}>
+              Loppunäkymään
+            </Button>
+          </div>
         </div>
       </div>
     )
@@ -53,23 +55,21 @@ export default React.createClass({
         <h1>Loppunäkymä</h1>
 
         <div className="row">
-          <div className="column column1-5" style={backgroundStyle} />
+          <div className="column column1-5">
+            <img src={imagePath(currentStep.image)} />
+          </div>
           <div className="column column4-5">
             <p>
               {currentStep.description}
             </p>
+            <p>
+              Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
+              Muistitko ottaa huomioon vastapuolen DiSC-profiilin?
+              Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit voinut suoriuua vielä paremmin!
+            </p>
           </div>
         </div>
 
-        <div className="row">
-          <h3>Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.</h3>
-          <h3>Muistitko ottaa huomioon vastapuolen DiSC-profiilin?</h3>
-          <h3>Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit voinut suoriuua vielä paremmin! </h3>
-          <hr/>
-          <h2> Valintasi pelin aikana: </h2>
-          <h3>{route}</h3>
-          <img src="http://lorempizza.com/1500/400" alt="end_tree"/>
-        </div>
         <Controls>
           <Button to="/">Lopeta</Button>
         </Controls>
