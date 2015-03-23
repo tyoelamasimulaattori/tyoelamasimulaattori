@@ -23,7 +23,7 @@ class StepTableSeeder extends Seeder {
 			Step::create([
 				'id' => $step->id,
 				'image' => $step->image,
-				'text' => $step->description,
+				'description' => $step->description,
 				'direction' => $step->direction,
 				'end' => $step->end,
 				'gamecase_id' => $gamecase_id
