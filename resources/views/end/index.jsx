@@ -2,10 +2,8 @@ import { default as React } from 'react';
 import { default as Button } from 'components/button';
 import { default as View } from 'components/view';
 import { imagePath } from 'filters';
-import { OverlayMixin } from 'react-router';
 
 export default React.createClass({
-  mixins: [OverlayMixin],
   getInitialState() {
     return {
       isModalOpen: true
@@ -15,7 +13,6 @@ export default React.createClass({
     this.setState({
       isModalOpen: !this.state.isModalOpen
     });
-    console.log(this.state.isModalOpen);
   },
   render() {
     const route = this.props.previousSteps.map((step) => {
@@ -25,20 +22,28 @@ export default React.createClass({
         </p>
       )
     });
-    var backgroundStyle = {
-      backgroundImage: `url(${imagePath(this.props.currentStep.image_name)})`
-    };
-    
-    return (
-      <View id="end-view">
-        <div id="disc-view" className="modal">
+    var modal = null;
+
+    if(this.state.isModalOpen) {
+        modal = (<div className="modal">
           <div className="modal__dialog">
             <h1>Demo on päättynyt</h1>
             <Button onClick={this.handleToggle}>
               Done
             </Button>
           </div>
-        </div>
+        </div>)
+    }
+    else{
+      modal.classSet("modal-hidden")
+    }
+    var backgroundStyle = {
+      backgroundImage: `url(${imagePath(this.props.currentStep.image_name)})`
+    };
+
+    return (
+      <View id="end-view">
+        {modal}
         <h1>Loppunäkymä</h1>
         <div className="row">
           <div className="column column1-5" style={backgroundStyle} />
