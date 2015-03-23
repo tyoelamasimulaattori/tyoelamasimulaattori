@@ -1,7 +1,7 @@
 [{
   "id": 0,
   "name": "Kaija",
-  "image" : "1.png",
+  "image" : "6.png",
   "perspective_id": 1,
   "description": "Casen valinta",
   "person": {
@@ -85,7 +85,7 @@
       "id": 3,
       "direction": -1,
       "end": true,
-      "description": "Lopputulos",
+      "description": "Lorem ipsum Proident deserunt commodo anim cillum cillum Ut Ut ut in incididunt sit in fugiat tempor magna esse ex aliquip ad commodo eiusmod quis in dolore voluptate laboris incididunt mollit enim labore id laborum sit amet laborum laborum anim est sunt dolor in anim eu dolore voluptate et ea est tempor enim eu fugiat exercitation ea culpa non sed deserunt officia voluptate culpa in consectetur.",
       "image" : "1.png"
     }]
 }]
