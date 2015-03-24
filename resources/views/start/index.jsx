@@ -1,10 +1,7 @@
 import { default as React } from 'react';
 import { findWhere, extend } from 'lodash';
 import { RouteHandler, Navigation } from 'react-router';
-import { default as View } from 'components/view';
-import { default as Button } from 'components/button';
-import { default as PerspectiveSelector } from 'components/perspective-selector';
-import { default as CaseSelector } from 'components/case-selector';
+import { View, Button, PerspectiveSelector, CaseSelector } from 'components';
 
 import { perspectiveActions } from 'actions';
 import { perspectiveStore } from 'stores';

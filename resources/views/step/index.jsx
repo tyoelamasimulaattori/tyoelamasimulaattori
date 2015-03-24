@@ -1,10 +1,5 @@
 import { default as React } from 'react';
-import { default as View } from 'components/view';
-import { default as Accordion, Panel } from 'components/accordion';
-import { default as Controls } from 'components/controls';
-import { default as PersonCard } from 'components/person-card';
-import { default as Problem } from 'components/problem';
-import { default as Button } from 'components/button';
+import { View, Accordion, Panel, Controls, PersonCard, Problem, Button } from 'components';
 import { default as mockCase } from '../../../storage/app/MockCase.json';
 import { default as tips } from '../../../storage/app/Tips.json';
 

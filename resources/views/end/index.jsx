@@ -1,7 +1,5 @@
 import { default as React } from 'react';
-import { default as Button } from 'components/button';
-import { default as Controls } from 'components/controls';
-import { default as View } from 'components/view';
+import { Button, Controls, View } from 'components';
 import { imagePath } from 'filters';
 import { findWhere } from 'lodash';
 
