@@ -7,5 +7,5 @@ export {
   CaseView as CaseView,
   EndView as EndView,
   MainView as MainView,
-  StepView as StepView,
+  StepView as StepView
 };
