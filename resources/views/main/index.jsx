@@ -3,8 +3,16 @@ import { findWhere, extend } from 'lodash';
 import { RouteHandler, Navigation } from 'react-router';
 import { View, Button, PerspectiveSelector, CaseSelector } from 'components';
 
+import { default as DiscSelectView } from './disc-select';
+import { default as IntroView } from './intro';
+
 import { perspectiveActions } from 'actions';
 import { perspectiveStore } from 'stores';
+
+export {
+  DiscSelectView as DiscSelectView,
+  IntroView as IntroView
+}
 
 export default React.createClass({
   mixins: [Navigation],
