@@ -1,8 +1,8 @@
-import { default as React } from 'react/addons';
+import { default as React } from 'react';
+import { default as classNames } from 'classnames';
 import { noop } from 'lodash';
-import { imagePath } from 'filters';
 
-const {classSet} = React.addons;
+import { imagePath } from 'filters';
 
 export default React.createClass({
   getDefaultProps() {
@@ -42,7 +42,7 @@ export default React.createClass({
 
     var caseElements = cases.map((c, i) => {
 
-      var classNames = classSet({
+      const classes = classNames({
         'case': true,
         'case--selected': i === this.state.selected
       });
@@ -56,7 +56,7 @@ export default React.createClass({
       };
 
       return (
-        <div style={style} className={classNames} key={c.title} onClick={this.onSelect(c)}>
+        <div style={style} className={classes} key={c.id} onClick={this.onSelect(c)}>
           <div className="case__container">
             <div className="case__image" style={backgroundStyle}></div>
             <h3 className="case__title">{c.name}</h3>

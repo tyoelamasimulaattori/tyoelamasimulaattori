@@ -1,5 +1,5 @@
 import { default as React } from 'react';
-import { default as Button } from 'components/button';
+import { Button } from 'components';
 
 export default React.createClass({
   render() {

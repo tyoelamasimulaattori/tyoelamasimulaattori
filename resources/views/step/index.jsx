@@ -1,34 +1,28 @@
 import { default as React } from 'react';
-import { default as View } from 'components/view';
-import { default as Accordion, Panel } from 'components/accordion';
-import { default as Controls } from 'components/controls';
-import { default as PersonCard } from 'components/person-card';
-import { default as Problem } from 'components/problem';
-import { default as Button } from 'components/button';
-import { default as mockCase } from '../../../storage/app/MockCase.json';
-import { default as tips } from '../../../storage/app/Tips.json';
+import { findWhere } from 'lodash';
+
+import {
+  View,
+  Accordion,
+  Panel,
+  Controls,
+  PersonCard,
+  Problem,
+  Button
+} from 'components';
 
 import { imagePath } from 'filters';
-import { findWhere } from 'lodash';
-import { Navigation } from 'react-router';
+import { default as tips } from '../../../storage/app/Tips.json';
 
 export default React.createClass({
-  mixins: [Navigation],
-  onQuit(){
-    if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
-      return true;
-    }
-    else{
-      return false;
-    }
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
   },
-  onSave(){
-    if(confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.')){
-      return true;
-    }
-    else{
-      return false;
-    }
+  onQuit() {
+    return confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.');
+  },
+  onSave() {
+    return confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.');
   },
   onSelect(answer) {
     if(!answer.correct) {
@@ -36,7 +30,7 @@ export default React.createClass({
     }
     let {currentCase, currentStep} = this.props;
 
-    this.transitionTo('step', {
+    this.context.router.transitionTo('step', {
       id: currentCase.id,
       step: currentCase.steps.indexOf(currentStep) + 1
     });

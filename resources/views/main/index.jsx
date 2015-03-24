@@ -1,16 +1,23 @@
 import { default as React } from 'react';
 import { findWhere, extend } from 'lodash';
-import { RouteHandler, Navigation } from 'react-router';
-import { default as View } from 'components/view';
-import { default as Button } from 'components/button';
-import { default as PerspectiveSelector } from 'components/perspective-selector';
-import { default as CaseSelector } from 'components/case-selector';
+import { RouteHandler } from 'react-router';
+import { View, Button, PerspectiveSelector, CaseSelector } from 'components';
+
+import { default as DiscSelectView } from './disc-select';
+import { default as IntroView } from './intro';
 
 import { perspectiveActions } from 'actions';
 import { perspectiveStore } from 'stores';
 
+export {
+  DiscSelectView as DiscSelectView,
+  IntroView as IntroView
+}
+
 export default React.createClass({
-  mixins: [Navigation],
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
   getInitialState() {
     let state = this.getState();
     return extend(state, {
@@ -31,7 +38,7 @@ export default React.createClass({
     });
   },
   onCaseSelect(selected) {
-    this.transitionTo('step', {
+    this.context.router.transitionTo('step', {
       id: 0,
       step: 0
     });
