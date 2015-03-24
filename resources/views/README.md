@@ -16,7 +16,8 @@ export { ExampleView as ExampleView };
 
 
 #### Jos näkymä tarvii custom tyylejä
-Asettelu on melkolailla ainoa asia mihin näkymäkohtaisia tyylejä kannattaa käyttää
+Asettelu on melkolailla ainoa asia mihin näkymäkohtaisia tyylejä kannattaa käyttää.
+
 1. Luo näkymäkomponentin hakemistoon lisäksi `index.styl` tiedosto ja lisää import käsky `resources/styles/_components.styl` tiedostoon.
 ```stylus
 @import "../views/example"
