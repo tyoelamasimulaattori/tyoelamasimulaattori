@@ -1,5 +1,5 @@
 import { default as React } from 'react';
-import { default as Button } from "components/button";
+import { default as Button } from 'components/button';
 import { imagePath } from 'filters';
 import { noop } from 'lodash';
 

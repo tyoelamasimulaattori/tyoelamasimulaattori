@@ -1,29 +1,28 @@
 import { default as React } from 'react';
-import { View, Accordion, Panel, Controls, PersonCard, Problem, Button } from 'components';
-import { default as tips } from '../../../storage/app/Tips.json';
+import { findWhere } from 'lodash';
+
+import {
+  View,
+  Accordion,
+  Panel,
+  Controls,
+  PersonCard,
+  Problem,
+  Button
+} from 'components';
 
 import { imagePath } from 'filters';
-import { findWhere } from 'lodash';
+import { default as tips } from '../../../storage/app/Tips.json';
 
 export default React.createClass({
   contextTypes: {
     router: React.PropTypes.func.isRequired
   },
-  onQuit(){
-    if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
-      return true;
-    }
-    else{
-      return false;
-    }
+  onQuit() {
+    return confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.');
   },
-  onSave(){
-    if(confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.')){
-      return true;
-    }
-    else{
-      return false;
-    }
+  onSave() {
+    return confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.');
   },
   onSelect(answer) {
     if(!answer.correct) {

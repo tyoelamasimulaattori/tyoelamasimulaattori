@@ -1,8 +1,8 @@
 import { default as React } from 'react';
-import { noop } from 'lodash';
-import { imagePath } from 'filters';
-
 import { default as classNames } from 'classnames';
+import { noop } from 'lodash';
+
+import { imagePath } from 'filters';
 
 export default React.createClass({
   getDefaultProps() {
