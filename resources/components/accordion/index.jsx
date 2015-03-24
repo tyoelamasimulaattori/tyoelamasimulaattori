@@ -6,12 +6,13 @@ export { Panel as Panel };
 export default React.createClass({
   render() {
 
-    var props = extend(this.props, {
+    var props = extend({}, this.props, {
       className: 'accordion'
     });
-	const tips = this.props.tips.map((tip) => { 
+
+    const tips = this.props.tips.map((tip) => {
        return (
-         <Panel header={tip.name} eventKey ={tip.id}>{tip.text}</Panel>
+         <Panel header={tip.name} eventKey={tip.id} key={tip.id}>{tip.text}</Panel>
        )
     });
     return (

@@ -21,7 +21,7 @@ export default React.createClass({
 
     const answers = this.props.answers.map((option) => {
       return (
-        <div className="question" onClick={this.onSelect(option)}>
+        <div className="question" key={option.id} onClick={this.onSelect(option)}>
           {option.text}
         </div>
       )

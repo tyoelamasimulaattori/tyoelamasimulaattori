@@ -3,7 +3,7 @@ import { Button, Controls, View } from 'components';
 import { imagePath } from 'filters';
 import { findWhere } from 'lodash';
 
-const {classSet} = React.addons;
+import { default as classNames } from 'classnames';
 
 export default React.createClass({
   getInitialState() {
@@ -21,13 +21,13 @@ export default React.createClass({
       end: true
     });
 
-    const classNames = classSet({
+    const classes = classNames({
       'modal': true,
       'modal--hidden': !this.state.isModalOpen,
     });
 
     const modal = (
-      <div className={classNames}>
+      <div className={classes}>
         <div className="modal__dialog">
           <h1>Demo on päättynyt</h1>
           <p>

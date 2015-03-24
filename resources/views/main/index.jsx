@@ -1,6 +1,6 @@
 import { default as React } from 'react';
 import { findWhere, extend } from 'lodash';
-import { RouteHandler, Navigation } from 'react-router';
+import { RouteHandler } from 'react-router';
 import { View, Button, PerspectiveSelector, CaseSelector } from 'components';
 
 import { default as DiscSelectView } from './disc-select';
@@ -15,7 +15,9 @@ export {
 }
 
 export default React.createClass({
-  mixins: [Navigation],
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
   getInitialState() {
     let state = this.getState();
     return extend(state, {
@@ -36,7 +38,7 @@ export default React.createClass({
     });
   },
   onCaseSelect(selected) {
-    this.transitionTo('step', {
+    this.context.router.transitionTo('step', {
       id: 0,
       step: 0
     });

@@ -4,7 +4,7 @@ import { default as _ } from 'lodash';
 export default React.createClass({
   render() {
 
-    var props = _.extend(this.props, {
+    var props = _.extend({}, this.props, {
       className: 'view'
     });
 

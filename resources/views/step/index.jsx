@@ -1,14 +1,14 @@
 import { default as React } from 'react';
 import { View, Accordion, Panel, Controls, PersonCard, Problem, Button } from 'components';
-import { default as mockCase } from '../../../storage/app/MockCase.json';
 import { default as tips } from '../../../storage/app/Tips.json';
 
 import { imagePath } from 'filters';
 import { findWhere } from 'lodash';
-import { Navigation } from 'react-router';
 
 export default React.createClass({
-  mixins: [Navigation],
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
   onQuit(){
     if(confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.')){
       return true;
@@ -31,7 +31,7 @@ export default React.createClass({
     }
     let {currentCase, currentStep} = this.props;
 
-    this.transitionTo('step', {
+    this.context.router.transitionTo('step', {
       id: currentCase.id,
       step: currentCase.steps.indexOf(currentStep) + 1
     });
