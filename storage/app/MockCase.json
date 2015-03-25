@@ -39,6 +39,14 @@
     },
     {
       "id": 1,
+      "direction": 0,
+      "description": "Hyvin meni! Voit jatkaa eteenpäin!",
+      "end": false,
+      "feedback": true,
+      "image": "1.png"
+    },
+    {
+      "id": 2,
       "direction": 1,
       "description": "Steppi 2",
       "end": false,
@@ -60,11 +68,19 @@
       "tip_id": 2
     },
     {
-      "id": 2,
+      "id": 3,
+      "direction": 0,
+      "description": "Hyvin meni! Voit jatkaa eteenpäin!",
+      "end": false,
+      "feedback": true,
+      "image": "1.png"
+    },
+    {
+      "id": 4,
       "direction": -1,
       "description": "Steppi 3",
       "end": false,
-      "image" : "3.png",
+      "image": "3.png",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -82,7 +98,7 @@
       "tip-id": 3
     },
     {
-      "id": 3,
+      "id": 5,
       "direction": -1,
       "end": true,
       "description": "Lorem ipsum Proident deserunt commodo anim cillum cillum Ut Ut ut in incididunt sit in fugiat tempor magna esse ex aliquip ad commodo eiusmod quis in dolore voluptate laboris incididunt mollit enim labore id laborum sit amet laborum laborum anim est sunt dolor in anim eu dolore voluptate et ea est tempor enim eu fugiat exercitation ea culpa non sed deserunt officia voluptate culpa in consectetur.",
