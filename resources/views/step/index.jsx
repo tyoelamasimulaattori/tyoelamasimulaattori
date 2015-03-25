@@ -25,10 +25,7 @@ export default React.createClass({
   onSave() {
     return confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.');
   },
-  onSelect(answer) {
-    if(!answer.correct) {
-      return;
-    }
+  onNextStep() {
     let {currentCase, currentStep} = this.props;
 
     this.context.router.transitionTo('step', {
@@ -36,21 +33,34 @@ export default React.createClass({
       step: currentCase.steps.indexOf(currentStep) + 1
     });
   },
+  onSelect(answer) {
+    if(!answer.correct) {
+      return;
+    }
+    this.onNextStep();
+  },
   render() {
-    var {name, title, description, image} = this.props.currentCase.person;
+    const {name, title, description, image} = this.props.currentCase.person;
+    const { currentStep } = this.props;
 
-  var stepContent;
-  if (this.props.feedback) {
-     stepContent = <Feedback />
-  }
-  else {
-     stepContent = <Problem
-      name={this.props.currentCase.name}
-      description={this.props.currentStep.description}
-      image={this.props.currentStep.image}
-      answers={this.props.currentStep.answers}
-      onSelect={this.onSelect} />
-  }
+    var problem, feedback;
+
+    if (currentStep.feedback) {
+      feedback = (
+        <Feedback
+          description={currentStep.description}
+          onNextStep={this.onNextStep} />
+      );
+    } else {
+      problem = (
+        <Problem
+          name={this.props.currentCase.name}
+          description={currentStep.description}
+          image={currentStep.image}
+          answers={currentStep.answers}
+          onSelect={this.onSelect} />
+      );
+    }
 
     return (
       <View id="step-view">
@@ -73,7 +83,10 @@ export default React.createClass({
             </Button>
           </Controls>
         </div>
-         {stepContent}
+
+        {problem}
+        {feedback}
+
       </View>
     );
   }
