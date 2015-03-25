@@ -38,20 +38,20 @@ export default React.createClass({
   },
   render() {
     var {name, title, description, image} = this.props.currentCase.person;
-	
-	var stepContent;
-	if (this.props.feedback) {
-	   stepContent = <Feedback />
-	}
-	else {
-	   stepContent = <Problem
-					name={this.props.currentCase.name}
-					description={this.props.currentStep.description}
-					image={this.props.currentStep.image}
-					answers={this.props.currentStep.answers}
-					onSelect={this.onSelect} />
-	}
-	
+
+  var stepContent;
+  if (this.props.feedback) {
+     stepContent = <Feedback />
+  }
+  else {
+     stepContent = <Problem
+      name={this.props.currentCase.name}
+      description={this.props.currentStep.description}
+      image={this.props.currentStep.image}
+      answers={this.props.currentStep.answers}
+      onSelect={this.onSelect} />
+  }
+
     return (
       <View id="step-view">
         <div className="sidebar">
@@ -73,9 +73,7 @@ export default React.createClass({
             </Button>
           </Controls>
         </div>
-		
-		{stepContent}
-		
+         {stepContent}
       </View>
     );
   }

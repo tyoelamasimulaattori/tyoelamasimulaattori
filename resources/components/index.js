@@ -18,6 +18,6 @@ export {
     PersonCard as PersonCard,
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
-	Feedback as Feedback,
+    Feedback as Feedback,
     View as View
 };
