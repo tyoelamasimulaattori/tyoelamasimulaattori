@@ -6,6 +6,7 @@ import { default as Controls } from 'components/controls';
 import { default as PersonCard } from 'components/person-card';
 import { default as PerspectiveSelector } from 'components/perspective-selector';
 import { default as Problem } from 'components/problem';
+import { default as Feedback } from 'components/feedback';
 import { default as View } from 'components/view';
 
 export {
@@ -17,5 +18,6 @@ export {
     PersonCard as PersonCard,
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
+	Feedback as Feedback,
     View as View
 };
