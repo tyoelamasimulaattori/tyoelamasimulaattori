@@ -16,6 +16,7 @@
       "direction": 0,
       "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
       "end": false,
+      "feedback": false,
       "image" : "1.png",
       "options": [
         {
@@ -50,6 +51,7 @@
       "direction": 1,
       "description": "Steppi 2",
       "end": false,
+      "feedback": false,
       "image" : "2.png",
       "options": [
         {
@@ -80,6 +82,7 @@
       "direction": -1,
       "description": "Steppi 3",
       "end": false,
+      "feedback": false,
       "image": "3.png",
       "options": [
         {
@@ -101,6 +104,7 @@
       "id": 5,
       "direction": -1,
       "end": true,
+      "feedback": false,
       "description": "Lorem ipsum Proident deserunt commodo anim cillum cillum Ut Ut ut in incididunt sit in fugiat tempor magna esse ex aliquip ad commodo eiusmod quis in dolore voluptate laboris incididunt mollit enim labore id laborum sit amet laborum laborum anim est sunt dolor in anim eu dolore voluptate et ea est tempor enim eu fugiat exercitation ea culpa non sed deserunt officia voluptate culpa in consectetur.",
       "image" : "1.png"
     }]
