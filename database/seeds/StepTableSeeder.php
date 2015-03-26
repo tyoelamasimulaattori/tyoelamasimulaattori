@@ -24,9 +24,6 @@ class StepTableSeeder extends Seeder {
 				'id' => $step->id,
 				'image' => $step->image,
 				'description' => $step->description,
-				'direction' => $step->direction,
-				'end' => $step->end,
-				'feedback' => $step->feedback,
 				'gamecase_id' => $gamecase_id
 			]);
 		}
