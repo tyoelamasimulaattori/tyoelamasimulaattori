@@ -15,11 +15,8 @@ class CreateStepsTable extends Migration {
 			$table->integer('id');
 			$table->text('description');
 			$table->string('image');
-			$table->boolean('end')->default(false);
-			$table->boolean('feedback')->default(false);
 			$table->integer('gamecase_id')->references('id')->on('gamecases');
 			/* -1 negative, 1 positive */
-			$table->integer('direction');
 			$table->timestamps();
 		});
 	}
