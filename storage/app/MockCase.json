@@ -23,12 +23,12 @@
         },
         {
           "name": "Vastausvaihtoehto 2",
-          "correct": false
+          "correct": false,
 		  "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 3",
-          "correct": false
+          "correct": false,
 		  "feedback": null
         },
         {
@@ -46,7 +46,7 @@
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
-          "correct": false
+          "correct": false,
 		  "feedback": null
         },
         {
@@ -74,12 +74,12 @@
         },
         {
           "name": "Vastausvaihtoehto 2",
-          "correct": false
+          "correct": false,
 		  "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 3",
-          "correct": true
+          "correct": true,
 		  "feedback": "Jes jippii!"
         }
       ],
