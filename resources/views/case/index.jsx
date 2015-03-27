@@ -52,7 +52,7 @@ export default React.createClass({
       );
     }
     return (
-      <StepView currentCase={currentCase} currentStep={currentStep} />
+      <StepView currentCase={currentCase} currentStep={currentStep} params={this.props.params} />
     );
   },
   statics: {
