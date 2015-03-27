@@ -6,6 +6,8 @@ import { caseStore } from 'stores';
 import { caseActions } from 'actions';
 
 import { findWhere } from 'lodash';
+import { findLast } from 'lodash';
+
 import { State } from 'react-router';
 
 export default React.createClass({
@@ -46,9 +48,9 @@ export default React.createClass({
       return null;
     }
 
-    if(currentStep.end) {
+    if(currentStep == findLast(currentCase.steps)) {
       return (
-        <EndView currentCase={currentCase}/>
+        <EndView currentCase={currentCase} />
       );
     }
     return (
