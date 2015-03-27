@@ -1,7 +1,7 @@
 import { default as React } from 'react';
 import { Button, Controls, View } from 'components';
 import { imagePath } from 'filters';
-import { findWhere } from 'lodash';
+import { findLast } from 'lodash';
 
 import { default as classNames } from 'classnames';
 
@@ -17,9 +17,7 @@ export default React.createClass({
     });
   },
   render() {
-    const currentStep = findWhere(this.props.currentCase.steps, {
-      end: true
-    });
+    const currentStep = findLast(this.props.currentCase.steps);
 
     const classes = classNames({
       'modal': true,
