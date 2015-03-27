@@ -12,7 +12,7 @@ export default React.createClass({
     return (
       <div className="feedback">
         <div className="feedback__description">
-          <p>{this.props.description}</p>
+          <p>heipäöiwuejriw</p>
           <Button onClick={this.props.onNextStep}>Jatka</Button>
         </div>
       </div>
