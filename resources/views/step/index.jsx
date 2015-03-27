@@ -25,7 +25,7 @@ export default React.createClass({
   onSave() {
     return confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.');
   },
-  onNextStep() {
+  onNextStep(answer) {
     let {currentCase, currentStep} = this.props;
 
     this.context.router.transitionTo('step', {
@@ -33,11 +33,20 @@ export default React.createClass({
       step: currentCase.steps.indexOf(currentStep) + 1
     });
   },
+  onNextFeedback(answer) {
+    let {currentCase, currentStep} = this.props;
+
+    this.context.router.transitionTo('feedback', {
+      id: currentCase.id,
+      step: currentCase.steps.indexOf(currentStep),
+      option: answer.feedback
+    });
+  },
   onSelect(answer) {
     if(!answer.correct) {
       return;
     }
-    this.onNextStep();
+    this.onNextFeedback(answer);
   },
   render() {
     const {name, title, description, image} = this.props.currentCase.person;
@@ -45,10 +54,9 @@ export default React.createClass({
 
     var problem, feedback;
 
-    if (currentStep.feedback) {
+    if (this.props.params.option) {
       feedback = (
         <Feedback
-          description={currentStep.description}
           onNextStep={this.onNextStep} />
       );
     } else {
