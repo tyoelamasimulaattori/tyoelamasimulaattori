@@ -49,7 +49,7 @@ export default React.createClass({
     this.onNextFeedback(answer);
   },
   render() {
-    const {name, title, description, image} = this.props.currentCase.person;
+    const { name, title, description, image } = this.props.currentCase.person;
     const { currentStep } = this.props;
 
     var problem, feedback;
@@ -57,7 +57,8 @@ export default React.createClass({
     if (this.props.params.option) {
       feedback = (
         <Feedback
-          onNextStep={this.onNextStep} />
+          onNextStep={this.onNextStep}
+          description={this.props.params.option} />
       );
     } else {
       problem = (
