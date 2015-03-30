@@ -25,7 +25,10 @@ export default React.createClass({
             <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
 
             <Button to="/">
-              Aloita simulaatio
+              Kirjaudu sisään
+            </Button>
+            <Button to="/">
+              Rekisteröidy
             </Button>
           </div>
 
