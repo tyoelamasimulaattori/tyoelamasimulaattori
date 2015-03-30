@@ -25,7 +25,14 @@ export default React.createClass({
   onSave() {
     return confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.');
   },
-  onNextStep(answer) {
+  backToStep() {
+    let {currentCase, currentStep} = this.props;
+    this.context.router.transitionTo('step', {
+      id: currentCase.id,
+      step: currentCase.steps.indexOf(currentStep)
+    });
+  },
+  toNextStep() {
     let {currentCase, currentStep} = this.props;
 
     this.context.router.transitionTo('step', {
@@ -33,20 +40,14 @@ export default React.createClass({
       step: currentCase.steps.indexOf(currentStep) + 1
     });
   },
-  onNextFeedback(answer) {
+  showFeedback(answer) {
     let {currentCase, currentStep} = this.props;
 
     this.context.router.transitionTo('feedback', {
       id: currentCase.id,
       step: currentCase.steps.indexOf(currentStep),
-      option: answer.feedback
+      option: answer.id
     });
-  },
-  onSelect(answer) {
-    if(!answer.correct) {
-      return;
-    }
-    this.onNextFeedback(answer);
   },
   render() {
     const { name, title, description, image } = this.props.currentCase.person;
@@ -55,11 +56,16 @@ export default React.createClass({
     var problem, feedback;
 
     if (this.props.params.option) {
+      var answer = findWhere(currentStep.answers, {
+        id: parseInt(this.props.params.option)
+      });
       feedback = (
         <Feedback
-          onNextStep={this.onNextStep}
+          onNextStep={this.toNextStep}
+          onBack={this.backToStep}
           image={currentStep.image}
-          description={this.props.params.option} />
+          text={answer.feedback}
+          correct={answer.correct} />
       );
     } else {
       problem = (
@@ -68,7 +74,7 @@ export default React.createClass({
           description={currentStep.description}
           image={currentStep.image}
           answers={currentStep.answers}
-          onSelect={this.onSelect} />
+          onSelect={this.showFeedback} />
       );
     }
 
