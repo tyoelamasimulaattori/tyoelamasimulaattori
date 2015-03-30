@@ -58,6 +58,7 @@ export default React.createClass({
       feedback = (
         <Feedback
           onNextStep={this.onNextStep}
+          image={currentStep.image}
           description={this.props.params.option} />
       );
     } else {
