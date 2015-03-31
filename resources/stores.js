@@ -1,5 +1,5 @@
 import { default as Reflux } from 'reflux';
-import { caseActions, perspectiveActions } from 'actions';
+import { caseActions, perspectiveActions, tipsActions } from 'actions';
 
 let caseData = {
   cases: [],
@@ -40,6 +40,23 @@ export const perspectiveStore = Reflux.createStore({
   },
   onGetPerspectivesCompleted(perspectives) {
     perspectiveData.perspectives = perspectives;
+    this.trigger();
+  }
+});
+
+let tipsData = {
+  tips: []
+};
+
+export const tipsStore = Reflux.createStore({
+  init: function() {
+    this.listenToMany(tipsActions);
+  },
+  getTips() {
+    return tipsData.tips;
+  },
+  onGetTipsCompleted(tips) {
+    tipsData.tips = tips;
     this.trigger();
   }
 });
