@@ -12,7 +12,7 @@ var { TestUtils } = React.addons;
 
 describe('Problem', function() {
 
-  it('should render a title, description, image and the number of questions, which are related to the given problem, in the inputted perspective', function() {
+  it('should render a problem, the description of the problem and the number of questions, which are related to the given problem, in the inputted perspective.', function() {
     var problem = {
       name: 'Problem 1',
       description: 'Test problem #1 out of ?',
@@ -44,13 +44,13 @@ describe('Problem', function() {
       problemTest,
       'problem'
     );
-    var description = TestUtils.scryRenderedDOMComponentsWithClass(
+    var description = TestUtils.findRenderedDOMComponentWithClass(
       problemTest,
       'problem__description'
     );
-
+    
     equal(problems.length, 1);
-    equal(description, problem.description);
+    equal(problemTest.props.description, problem.description);
     equal(questions.length, 3);
   });
 });
