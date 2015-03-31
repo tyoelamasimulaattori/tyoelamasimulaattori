@@ -40,13 +40,13 @@ perspectiveActions.getPerspectives.listen(function() {
     }.bind(this));
 });
 
-export let tipsActions = Reflux.createActions({
+export let tipActions = Reflux.createActions({
   getTips: {
     asyncResult: true
   }
 });
 
-tipsActions.getTips.listen(function() {
+tipActions.getTips.listen(function() {
   get('/api/tips')
     .on('error', this.failed)
     .end(function(err, response) {
