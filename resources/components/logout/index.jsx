@@ -8,10 +8,11 @@ export default React.createClass({
 
    render() {
       var button;
-      button = <Button onClick={this.props.onLogin}>Kirjaudu sisään</Button>
+      button = <Button onClick={this.props.onLogout}>Kirjaudu ulos</Button>
 	  return (
-         <div className="login">
-            <p> Kirjaudu.</p>
+         <div className="logout">
+            <p> Olet kirjautunut nimellä X.</p>
+			<p> TODO: tähän joku kiva kuva.</p>
             {button}
          </div>
       )
