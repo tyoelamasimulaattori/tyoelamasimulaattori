@@ -11,7 +11,7 @@ import {
   Feedback,
   Button
 } from 'components';
-import { default as Login } from 'components/login';
+import { default as Userbar } from 'components/userbar';
 
 import { imagePath } from 'filters';
 
@@ -88,7 +88,7 @@ export default React.createClass({
         </div>
 
         <div className="sidebar sidebar--right">
-          <Login />
+          <Userbar />
           <PersonCard name={name}
                       description={description}
                       image={imagePath(image)}
