@@ -10,7 +10,8 @@
     "prepublish": "bower install",
     "start": "gulp",
     "build": "gulp build",
-    "test": "NODE_PATH=resources node_modules/.bin/mocha --compilers js:babel/register resources/components/**/__tests__/*.js"
+    "test": "test.bat"
+
   },
   "repository": {
     "type": "git",
