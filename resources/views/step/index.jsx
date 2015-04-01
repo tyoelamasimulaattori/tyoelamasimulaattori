@@ -11,9 +11,12 @@ import {
   Feedback,
   Button
 } from 'components';
+import { default as Login } from 'components/login';
 
 import { imagePath } from 'filters';
-import { default as tips } from '../../../storage/app/Tips.json';
+
+import { tipActions } from 'actions';
+import { tipStore } from 'stores';
 
 export default React.createClass({
   contextTypes: {
@@ -52,7 +55,7 @@ export default React.createClass({
   render() {
     const { name, title, description, image } = this.props.currentCase.person;
     const { currentStep } = this.props;
-
+	
     var problem, feedback;
 
     if (this.props.params.option) {
@@ -81,10 +84,11 @@ export default React.createClass({
     return (
       <View id="step-view">
         <div className="sidebar">
-          <Accordion tips={tips} />
+          <Accordion tips={tipStore.getTips()} />
         </div>
 
         <div className="sidebar sidebar--right">
+          <Login />
           <PersonCard name={name}
                       description={description}
                       image={imagePath(image)}
