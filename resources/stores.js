@@ -56,7 +56,6 @@ export const tipStore = Reflux.createStore({
     return tipData.tips;
   },
   onGetTipsCompleted(tips) {
-    console.log("ongettipscompleted");
     tipData.tips = tips;
     this.trigger();
   }
