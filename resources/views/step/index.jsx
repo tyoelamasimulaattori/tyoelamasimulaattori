@@ -58,6 +58,8 @@ export default React.createClass({
 	
     var problem, feedback;
 
+    var tips = tipStore.getTips();
+
     if (this.props.params.option) {
       var answer = findWhere(currentStep.answers, {
         id: parseInt(this.props.params.option)

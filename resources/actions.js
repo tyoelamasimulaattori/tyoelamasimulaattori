@@ -50,6 +50,7 @@ tipActions.getTips.listen(function() {
   get('/api/tips')
     .on('error', this.failed)
     .end(function(err, response) {
+      console.log("end");
       this.completed(response.body);
     }.bind(this));
 });

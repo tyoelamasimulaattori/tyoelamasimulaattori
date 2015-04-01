@@ -1,6 +1,7 @@
 import { default as React } from 'react';
 import { RouteHandler } from 'react-router';
 import { caseActions } from 'actions';
+import { tipActions } from 'actions';
 
 export default React.createClass({
   render() {
@@ -12,5 +13,6 @@ export default React.createClass({
   },
   componentDidMount() {
     caseActions.getCases();
+    tipActions.getTips();
   }
 })
