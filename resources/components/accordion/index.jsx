@@ -12,7 +12,7 @@ export default React.createClass({
 
     const tips = this.props.tips.map((tip) => {
        return (
-         <Panel header={tip.name} eventKey={tip.id} key={tip.id}>{tip.text}</Panel>
+         <Panel className="tip" header={tip.name} eventKey={tip.id} key={tip.id}>{tip.text}</Panel>
        )
     });
     return (
