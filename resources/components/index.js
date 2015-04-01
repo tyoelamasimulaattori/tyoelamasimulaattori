@@ -10,6 +10,7 @@ import { default as Feedback } from 'components/feedback';
 import { default as View } from 'components/view';
 import { default as Userbar } from 'components/userbar';
 import { default as Login } from 'components/login';
+import { default as Logout } from 'components/logout';
 
 export {
     Accordion as Accordion,
@@ -23,5 +24,6 @@ export {
     Feedback as Feedback,
     Userbar as Userbar,
     Login as Login,
+    Logout as Logout,
     View as View
 };

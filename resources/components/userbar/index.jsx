@@ -1,7 +1,10 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
 import { imagePath } from 'filters';
+
 import { default as Login } from 'components/login';
+import { default as Logout } from 'components/logout';
+
 import { default as classNames } from 'classnames';
 
 export default React.createClass({
@@ -22,14 +25,14 @@ export default React.createClass({
 	  const {loggedIn} = this.state;
 	  
 	  if (loggedIn) {
-		 login = <Login onLogin={this.onLogin} />
+         logout = <Logout onLogout={this.onLogout} />
       } else {
-         logout = <Login onLogin={this.onLogin} />
+         login = <Login onLogin={this.onLogin} />
       }
 
       return (
 	     <div className="userbar"> 
-		    {login}
+            {login}
 			{logout}
          </div>
       )
