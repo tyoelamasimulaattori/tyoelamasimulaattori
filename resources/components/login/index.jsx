@@ -11,7 +11,7 @@ export default React.createClass({
       button = <Button onClick={this.props.onLogin}>Kirjaudu sisään</Button>
 	  return (
          <div className="login">
-            <p> Kirjaudu.</p>
+		    <h3> PSHP:n työelämäsimulaattori </h3>
             {button}
          </div>
       )

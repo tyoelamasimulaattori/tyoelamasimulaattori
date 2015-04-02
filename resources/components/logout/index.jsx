@@ -11,8 +11,7 @@ export default React.createClass({
       button = <Button onClick={this.props.onLogout}>Kirjaudu ulos</Button>
 	  return (
          <div className="logout">
-            <p> Olet kirjautunut nimellä X.</p>
-			<p> TODO: tähän joku kiva kuva.</p>
+            <p> Olet kirjautunut nimellä <strong>Matti Mattinen</strong>.</p>
             {button}
          </div>
       )
