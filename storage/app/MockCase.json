@@ -3,6 +3,7 @@
   "name": "Kaija",
   "image" : "6.png",
   "perspective_id": 3,
+  "disabled": false,
   "description": "Casen valinta",
   "person": {
     "name": "Kaija",
@@ -97,6 +98,7 @@
   "name": "Loiri",
   "image" : "13_b.png",
   "perspective_id": 2,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -107,6 +109,7 @@
   "name": "Bella",
   "image" : "12_b.png",
   "perspective_id": 1,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -117,6 +120,7 @@
   "name": "Verneri",
   "image" : "1_b.png",
   "perspective_id": 2,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -127,6 +131,7 @@
   "name": "Tiina",
   "image" : "2_b.png",
   "perspective_id": 3,
+  "disabled": false,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -137,6 +142,7 @@
   "name": "Martta",
   "image" : "3_b.png",
   "perspective_id": 4,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -147,6 +153,7 @@
   "name": "Timo",
   "image" : "4_b.png",
   "perspective_id": 5,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -157,6 +164,7 @@
   "name": "Anu",
   "image" : "5_b.png",
   "perspective_id": 1,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -167,6 +175,7 @@
   "name": "Rami",
   "image" : "7_b.png",
   "perspective_id": 2,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -177,6 +186,7 @@
   "name": "Simo",
   "image" : "8_b.png",
   "perspective_id": 3,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -187,6 +197,7 @@
   "name": "Tanja",
   "image" : "9_b.png",
   "perspective_id": 4,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -197,6 +208,7 @@
   "name": "Riitta",
   "image" : "10_b.png",
   "perspective_id": 5,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -207,6 +219,7 @@
   "name": "Heikki",
   "image" : "11_b.png",
   "perspective_id": 1,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -217,6 +230,7 @@
   "name": "Petri",
   "image" : "14_b.png",
   "perspective_id": 2,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -227,6 +241,7 @@
   "name": "Annikatri",
   "image" : "16_b.png",
   "perspective_id": 3,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
@@ -237,6 +252,7 @@
   "name": "Bob",
   "image" : "15_b.png",
   "perspective_id": 4,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null

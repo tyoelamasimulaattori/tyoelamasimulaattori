@@ -19,6 +19,7 @@ class CreateGamecasesTable extends Migration {
 			$table->string('image');
 			$table->text('text');
 			$table->integer('perspective_id')->references('id')->on('perspectives');
+			$table->boolean('disabled');
 			$table->timestamps();
 		});
 	}

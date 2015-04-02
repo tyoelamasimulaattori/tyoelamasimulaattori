@@ -22,7 +22,8 @@ class GamecaseTableSeeder extends Seeder {
 				'name' => $object->name,
 				'image' => $object->image,
 				'perspective_id' => $object->perspective_id,
-				'text' => $object->description
+				'text' => $object->description,
+				'disabled' => $object->disabled
 			]);
 		}
 	}

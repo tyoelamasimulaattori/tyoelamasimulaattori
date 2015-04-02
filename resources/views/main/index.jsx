@@ -38,7 +38,7 @@ export default React.createClass({
     });
   },
   onCaseSelect(selected) {
-    if(selected.id == 0){
+    if(!selected.disabled){
       this.context.router.transitionTo('step', {
         id: 0,
         step: 0
