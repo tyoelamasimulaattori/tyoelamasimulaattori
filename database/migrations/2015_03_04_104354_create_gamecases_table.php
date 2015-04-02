@@ -14,7 +14,7 @@ class CreateGamecasesTable extends Migration {
 		// CASE:lla on id, nimi (lyhyt kuvaus
 		// sekä sisältö eli teksti.
 		Schema::create('gamecases', function(Blueprint $table) {
-			$table->integer('id');
+			$table->integer('id')->nullable();
 			$table->string('name')->unique();
 			$table->string('image');
 			$table->text('text');

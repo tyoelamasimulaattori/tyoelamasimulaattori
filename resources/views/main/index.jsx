@@ -38,10 +38,12 @@ export default React.createClass({
     });
   },
   onCaseSelect(selected) {
-    this.context.router.transitionTo('step', {
-      id: 0,
-      step: 0
-    });
+    if(selected.id != null){
+      this.context.router.transitionTo('step', {
+        id: 0,
+        step: 0
+      });
+    }
   },
   render() {
 

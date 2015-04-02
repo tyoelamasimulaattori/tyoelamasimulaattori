@@ -19,22 +19,22 @@
         {
           "name": "Vastausvaihtoehto 1",
           "correct": false,
-		  "feedback": null
+          "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 2",
           "correct": false,
-		  "feedback": null
+          "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 3",
           "correct": false,
-		  "feedback": null
+          "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 4",
           "correct": true,
-		  "feedback": "Hyvin meni!"
+          "feedback": "Hyvin meni!"
         }
       ],
       "tip_id": 1
@@ -47,12 +47,12 @@
         {
           "name": "Vastausvaihtoehto 1",
           "correct": false,
-		  "feedback": null
+          "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 2",
           "correct": true,
-		  "feedback": "Jee jee!"
+          "feedback": "Jee jee!"
         },
         {
           "name": "Vastausvaihtoehto 3",
@@ -70,17 +70,17 @@
         {
           "name": "Vastausvaihtoehto 1",
           "correct": false,
-		  "feedback": null
+          "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 2",
           "correct": false,
-		  "feedback": null
+          "feedback": null
         },
         {
           "name": "Vastausvaihtoehto 3",
           "correct": true,
-		  "feedback": "Jes jippii!"
+          "feedback": "Jes jippii!"
         }
       ],
       "tip-id": 3
@@ -90,4 +90,154 @@
       "description": "Lorem ipsum Proident deserunt commodo anim cillum cillum Ut Ut ut in incididunt sit in fugiat tempor magna esse ex aliquip ad commodo eiusmod quis in dolore voluptate laboris incididunt mollit enim labore id laborum sit amet laborum laborum anim est sunt dolor in anim eu dolore voluptate et ea est tempor enim eu fugiat exercitation ea culpa non sed deserunt officia voluptate culpa in consectetur.",
       "image" : "1.png"
     }]
+},
+
+{
+  "id": null,
+  "name": "Loiri",
+  "image" : "13_b.png",
+  "perspective_id": 2,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Bella",
+  "image" : "12_b.png",
+  "perspective_id": 1,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Verneri",
+  "image" : "1_b.png",
+  "perspective_id": 2,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Tiina",
+  "image" : "2_b.png",
+  "perspective_id": 3,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Martta",
+  "image" : "3_b.png",
+  "perspective_id": 4,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Timo",
+  "image" : "4_b.png",
+  "perspective_id": 5,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Anu",
+  "image" : "5_b.png",
+  "perspective_id": 1,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Rami",
+  "image" : "7_b.png",
+  "perspective_id": 2,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Simo",
+  "image" : "8_b.png",
+  "perspective_id": 3,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Tanja",
+  "image" : "9_b.png",
+  "perspective_id": 4,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Riitta",
+  "image" : "10_b.png",
+  "perspective_id": 5,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Heikki",
+  "image" : "11_b.png",
+  "perspective_id": 1,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Petri",
+  "image" : "14_b.png",
+  "perspective_id": 2,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Annikatri",
+  "image" : "16_b.png",
+  "perspective_id": 3,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
+},
+
+{
+  "id": null,
+  "name": "Bob",
+  "image" : "15_b.png",
+  "perspective_id": 4,
+  "description": "INACTIVE",
+  "person": null,
+  "steps": null
 }]
