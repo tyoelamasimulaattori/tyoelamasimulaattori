@@ -32,7 +32,6 @@ export default React.createClass({
         <div className="problem__description">
           <h3>{this.props.name}</h3>
           <p>{this.props.description}</p>
-          <Button>Vihje</Button>
         </div>
 
         <div className="problem__questions">
