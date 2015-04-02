@@ -93,7 +93,7 @@
 },
 
 {
-  "id": null,
+  "id": 1,
   "name": "Loiri",
   "image" : "13_b.png",
   "perspective_id": 2,
@@ -103,7 +103,7 @@
 },
 
 {
-  "id": null,
+  "id": 2,
   "name": "Bella",
   "image" : "12_b.png",
   "perspective_id": 1,
@@ -113,7 +113,7 @@
 },
 
 {
-  "id": null,
+  "id": 3,
   "name": "Verneri",
   "image" : "1_b.png",
   "perspective_id": 2,
@@ -123,7 +123,7 @@
 },
 
 {
-  "id": null,
+  "id": 4,
   "name": "Tiina",
   "image" : "2_b.png",
   "perspective_id": 3,
@@ -133,7 +133,7 @@
 },
 
 {
-  "id": null,
+  "id": 5,
   "name": "Martta",
   "image" : "3_b.png",
   "perspective_id": 4,
@@ -143,7 +143,7 @@
 },
 
 {
-  "id": null,
+  "id": 6,
   "name": "Timo",
   "image" : "4_b.png",
   "perspective_id": 5,
@@ -153,7 +153,7 @@
 },
 
 {
-  "id": null,
+  "id": 7,
   "name": "Anu",
   "image" : "5_b.png",
   "perspective_id": 1,
@@ -163,7 +163,7 @@
 },
 
 {
-  "id": null,
+  "id": 8,
   "name": "Rami",
   "image" : "7_b.png",
   "perspective_id": 2,
@@ -173,7 +173,7 @@
 },
 
 {
-  "id": null,
+  "id": 9,
   "name": "Simo",
   "image" : "8_b.png",
   "perspective_id": 3,
@@ -183,7 +183,7 @@
 },
 
 {
-  "id": null,
+  "id": 10,
   "name": "Tanja",
   "image" : "9_b.png",
   "perspective_id": 4,
@@ -193,7 +193,7 @@
 },
 
 {
-  "id": null,
+  "id": 11,
   "name": "Riitta",
   "image" : "10_b.png",
   "perspective_id": 5,
@@ -203,7 +203,7 @@
 },
 
 {
-  "id": null,
+  "id": 12,
   "name": "Heikki",
   "image" : "11_b.png",
   "perspective_id": 1,
@@ -213,7 +213,7 @@
 },
 
 {
-  "id": null,
+  "id": 13,
   "name": "Petri",
   "image" : "14_b.png",
   "perspective_id": 2,
@@ -223,7 +223,7 @@
 },
 
 {
-  "id": null,
+  "id": 14,
   "name": "Annikatri",
   "image" : "16_b.png",
   "perspective_id": 3,
@@ -233,7 +233,7 @@
 },
 
 {
-  "id": null,
+  "id": 15,
   "name": "Bob",
   "image" : "15_b.png",
   "perspective_id": 4,
