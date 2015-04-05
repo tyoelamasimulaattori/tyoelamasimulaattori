@@ -25,7 +25,17 @@ export default React.createClass({
     });
   },
   onDataChange() {
-    this.setState(this.getState());
+    let newState = this.getState();
+
+    const { perspectives } = newState;
+
+    // Selects a perspective automatically when data is loaded
+    if(!this.state.selectedPerspective && perspectives.length > 0) {
+      const middleIndex = Math.ceil(perspectives.length/2) - 1;
+      newState.selectedPerspective = perspectives[middleIndex];
+    }
+
+    this.setState(newState);
   },
   getState() {
     return {
