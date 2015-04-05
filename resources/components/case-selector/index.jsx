@@ -40,7 +40,8 @@ export default React.createClass({
 
     var {cases, title} = this.props;
 
-    var caseElements = cases.map((c, i) => {
+    const sortedCases = cases.sort((c) => c.id);
+    const caseElements = sortedCases.map((c, i) => {
 
       const classes = classNames({
         'case': true,
@@ -64,6 +65,8 @@ export default React.createClass({
         </div>
       );
     });
+
+
 
     var style = {
       left: `-${this.state.selected * 100}%`,
