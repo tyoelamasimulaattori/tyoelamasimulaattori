@@ -14,6 +14,9 @@ export {
   IntroView as IntroView
 }
 
+// TODO maybe a better place to store this?
+let introShown = false;
+
 export default React.createClass({
   contextTypes: {
     router: React.PropTypes.func.isRequired
@@ -92,8 +95,10 @@ export default React.createClass({
   },
   componentDidMount() {
     this.unsubscribe = perspectiveStore.listen(this.onDataChange);
-    // TODO Show intro on the first time user loads the application
-    // this.transitionTo('intro');
+    if(!introShown) {
+      this.context.router.transitionTo('intro');
+      introShown = true;
+    }
   },
   componentWillUnmount() {
     this.unsubscribe();
