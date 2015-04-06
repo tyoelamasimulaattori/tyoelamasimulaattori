@@ -12,9 +12,14 @@ export default React.createClass({
       loggedIn: false
     };
   },
+  logIn() {
+    this.setState({
+      loggedIn: true
+    });
+  },
   render() {
     if(!this.state.loggedIn) {
-      return <Login />;
+      return <Login onClick={this.logIn} />;
     }
     return (
       <div className="user-profile">
