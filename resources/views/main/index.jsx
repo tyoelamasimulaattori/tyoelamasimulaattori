@@ -1,7 +1,14 @@
 import { default as React } from 'react';
 import { findWhere, extend } from 'lodash';
 import { RouteHandler } from 'react-router';
-import { View, Button, PerspectiveSelector, CaseSelector } from 'components';
+
+import {
+  View,
+  IconButton,
+  Button,
+  PerspectiveSelector,
+  CaseSelector
+} from 'components';
 
 import { default as DiscSelectView } from './disc-select';
 import { default as IntroView } from './intro';
@@ -78,6 +85,10 @@ export default React.createClass({
 
     return (
       <View id="start-view">
+        <IconButton to="intro">
+          <i className="fa fa-question"></i>
+        </IconButton>
+
         <h1 className="view__header">Valitse näkökulma</h1>
 
         <PerspectiveSelector
