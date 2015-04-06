@@ -1,7 +1,7 @@
 [{
   "id": 0,
   "name": "Kaija",
-  "image" : "6.png",
+  "image": "6.png",
   "perspective_id": 3,
   "disabled": false,
   "description": "Casen valinta",
@@ -15,7 +15,7 @@
     {
       "id": 0,
       "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
-      "image" : "1.png",
+      "image": "office.jpg",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -43,7 +43,7 @@
     {
       "id": 1,
       "description": "Steppi 2",
-      "image" : "2.png",
+      "image": "office.jpg",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -66,7 +66,7 @@
     {
       "id": 2,
       "description": "Steppi 3",
-      "image": "3.png",
+      "image": "office.jpg",
       "options": [
         {
           "name": "Vastausvaihtoehto 1",
@@ -89,14 +89,14 @@
     {
       "id": 3,
       "description": "Lorem ipsum Proident deserunt commodo anim cillum cillum Ut Ut ut in incididunt sit in fugiat tempor magna esse ex aliquip ad commodo eiusmod quis in dolore voluptate laboris incididunt mollit enim labore id laborum sit amet laborum laborum anim est sunt dolor in anim eu dolore voluptate et ea est tempor enim eu fugiat exercitation ea culpa non sed deserunt officia voluptate culpa in consectetur.",
-      "image" : "1.png"
+      "image": "office.jpg"
     }]
 },
 
 {
   "id": 1,
   "name": "Loiri",
-  "image" : "13_b.png",
+  "image": "13_b.png",
   "perspective_id": 2,
   "disabled": true,
   "description": "INACTIVE",
@@ -107,7 +107,7 @@
 {
   "id": 2,
   "name": "Bella",
-  "image" : "12_b.png",
+  "image": "12_b.png",
   "perspective_id": 1,
   "disabled": true,
   "description": "INACTIVE",
@@ -118,7 +118,7 @@
 {
   "id": 3,
   "name": "Verneri",
-  "image" : "1_b.png",
+  "image": "1_b.png",
   "perspective_id": 2,
   "disabled": true,
   "description": "INACTIVE",
@@ -129,7 +129,7 @@
 {
   "id": 4,
   "name": "Tiina",
-  "image" : "2_b.png",
+  "image": "2_b.png",
   "perspective_id": 3,
   "disabled": false,
   "description": "INACTIVE",
@@ -140,7 +140,7 @@
 {
   "id": 5,
   "name": "Martta",
-  "image" : "3_b.png",
+  "image": "3_b.png",
   "perspective_id": 4,
   "disabled": true,
   "description": "INACTIVE",
@@ -151,7 +151,7 @@
 {
   "id": 6,
   "name": "Timo",
-  "image" : "4_b.png",
+  "image": "4_b.png",
   "perspective_id": 5,
   "disabled": true,
   "description": "INACTIVE",
@@ -162,7 +162,7 @@
 {
   "id": 7,
   "name": "Anu",
-  "image" : "5_b.png",
+  "image": "5_b.png",
   "perspective_id": 1,
   "disabled": true,
   "description": "INACTIVE",
@@ -173,7 +173,7 @@
 {
   "id": 8,
   "name": "Rami",
-  "image" : "7_b.png",
+  "image": "7_b.png",
   "perspective_id": 2,
   "disabled": true,
   "description": "INACTIVE",
@@ -184,7 +184,7 @@
 {
   "id": 9,
   "name": "Simo",
-  "image" : "8_b.png",
+  "image": "8_b.png",
   "perspective_id": 3,
   "disabled": true,
   "description": "INACTIVE",
@@ -195,7 +195,7 @@
 {
   "id": 10,
   "name": "Tanja",
-  "image" : "9_b.png",
+  "image": "9_b.png",
   "perspective_id": 4,
   "disabled": true,
   "description": "INACTIVE",
@@ -206,7 +206,7 @@
 {
   "id": 11,
   "name": "Riitta",
-  "image" : "10_b.png",
+  "image": "10_b.png",
   "perspective_id": 5,
   "disabled": true,
   "description": "INACTIVE",
@@ -217,7 +217,7 @@
 {
   "id": 12,
   "name": "Heikki",
-  "image" : "11_b.png",
+  "image": "11_b.png",
   "perspective_id": 1,
   "disabled": true,
   "description": "INACTIVE",
@@ -228,7 +228,7 @@
 {
   "id": 13,
   "name": "Petri",
-  "image" : "14_b.png",
+  "image": "14_b.png",
   "perspective_id": 2,
   "disabled": true,
   "description": "INACTIVE",
@@ -239,7 +239,7 @@
 {
   "id": 14,
   "name": "Annikatri",
-  "image" : "16_b.png",
+  "image": "16_b.png",
   "perspective_id": 3,
   "disabled": true,
   "description": "INACTIVE",
@@ -250,7 +250,7 @@
 {
   "id": 15,
   "name": "Bob",
-  "image" : "15_b.png",
+  "image": "15_b.png",
   "perspective_id": 4,
   "disabled": true,
   "description": "INACTIVE",
