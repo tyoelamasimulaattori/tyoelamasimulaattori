@@ -25,8 +25,8 @@ export default React.createClass({
     }
 
     return (
-      <div className="feedback" style={style}>
-        <div className="feedback__description">
+      <div className="problem" style={style}>
+        <div className="problem__description">
           <p>{this.props.text}</p>
           {button}
         </div>
