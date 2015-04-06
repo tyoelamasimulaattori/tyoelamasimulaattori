@@ -11,6 +11,7 @@ import { default as View } from 'components/view';
 import { default as UserProfile } from 'components/user-profile';
 import { default as Login } from 'components/login';
 import { default as IconButton } from 'components/icon-button';
+import { default as Form } from 'components/form';
 
 export {
     Accordion as Accordion,
@@ -25,5 +26,6 @@ export {
     UserProfile as UserProfile,
     Login as Login,
     View as View,
-    IconButton as IconButton
+    IconButton as IconButton,
+    Form as Form
 };

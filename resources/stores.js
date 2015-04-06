@@ -1,5 +1,11 @@
 import { default as Reflux } from 'reflux';
-import { caseActions, perspectiveActions, tipActions } from 'actions';
+
+import {
+  caseActions,
+  perspectiveActions,
+  tipActions,
+  loginActions
+} from 'actions';
 
 let caseData = {
   cases: [],
@@ -57,6 +63,36 @@ export const tipStore = Reflux.createStore({
   },
   onGetTipsCompleted(tips) {
     tipData.tips = tips;
+    this.trigger();
+  }
+});
+
+let loginData = {
+  loggedIn: false,
+  loginModalOpen: false
+};
+
+export const loginStore = Reflux.createStore({
+  init: function() {
+    this.listenToMany(loginActions);
+  },
+  isLoggedIn() {
+    return loginData.loggedIn;
+  },
+  isLoginModalOpen() {
+    return loginData.loginModalOpen;
+  },
+  onCloseLoginModal() {
+    loginData.loginModalOpen = false;
+    this.trigger();
+  },
+  onShowLoginModal() {
+    loginData.loginModalOpen = true;
+    this.trigger();
+  },
+  onLogin() {
+    loginData.loggedIn = true;
+    loginData.loginModalOpen = false;
     this.trigger();
   }
 });

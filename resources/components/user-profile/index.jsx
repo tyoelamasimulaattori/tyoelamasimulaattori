@@ -1,6 +1,8 @@
 import { default as React } from 'react';
 import { default as Button } from 'components/button';
 import { imagePath } from 'filters';
+import { loginStore } from 'stores';
+import { loginActions } from 'actions';
 
 import { default as Login } from 'components/login';
 
@@ -8,14 +10,24 @@ import { default as classNames } from 'classnames';
 
 export default React.createClass({
   getInitialState() {
+    return this.getState();
+  },
+  getState() {
     return {
-      loggedIn: false
+      loggedIn: loginStore.isLoggedIn()
     };
   },
   logIn() {
-    this.setState({
-      loggedIn: true
-    });
+    loginActions.showLoginModal();
+  },
+  onDataChange() {
+    this.setState(this.getState());
+  },
+  componentDidMount() {
+    this.removeListener = loginStore.listen(this.onDataChange);
+  },
+  componentWillUnmount() {
+    this.removeListener();
   },
   render() {
     if(!this.state.loggedIn) {

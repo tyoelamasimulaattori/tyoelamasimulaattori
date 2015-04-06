@@ -53,3 +53,9 @@ tipActions.getTips.listen(function() {
       this.completed(response.body);
     }.bind(this));
 });
+
+export let loginActions = Reflux.createActions([
+  'login',
+  'closeLoginModal',
+  'showLoginModal'
+]);
