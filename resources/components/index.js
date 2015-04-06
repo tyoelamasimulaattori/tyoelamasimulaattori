@@ -11,6 +11,7 @@ import { default as View } from 'components/view';
 import { default as Userbar } from 'components/userbar';
 import { default as Login } from 'components/login';
 import { default as Logout } from 'components/logout';
+import { default as IconButton } from 'components/icon-button';
 
 export {
     Accordion as Accordion,
@@ -25,5 +26,6 @@ export {
     Userbar as Userbar,
     Login as Login,
     Logout as Logout,
-    View as View
+    View as View,
+    IconButton as IconButton
 };
