@@ -24,7 +24,7 @@ describe('Problem', function() {
       ]
     };
     //stub onClick function
-    var  onSelect = noop;
+    var onSelect = noop;
     // Render element into a document
     var problemTest = TestUtils.renderIntoDocument(
       <Problem
@@ -40,16 +40,12 @@ describe('Problem', function() {
       problemTest,
       'question'
     );
-    var problems = TestUtils.scryRenderedDOMComponentsWithClass(
-      problemTest,
-      'problem'
-    );
+
     var description = TestUtils.findRenderedDOMComponentWithClass(
       problemTest,
       'problem__description'
     );
-    
-    equal(problems.length, 1);
+
     equal(problemTest.props.description, problem.description);
     equal(questions.length, 3);
   });
