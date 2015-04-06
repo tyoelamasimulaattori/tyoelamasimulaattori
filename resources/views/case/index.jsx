@@ -2,8 +2,8 @@ import { default as React } from 'react';
 import { default as StepView } from 'views/step';
 import { default as EndView } from 'views/end';
 
-import { caseStore } from 'stores';
-import { caseActions } from 'actions';
+import { caseStore, tipStore } from 'stores';
+import { caseActions, tipActions } from 'actions';
 
 import { findWhere } from 'lodash';
 import { findLast } from 'lodash';
@@ -36,10 +36,14 @@ export default React.createClass({
   },
   componentDidMount() {
     const {id} = this.props.params;
-    this.unsubscribe = caseStore.listen(this.onDataChange);
+
+    this.listeners = [
+      caseStore.listen(this.onDataChange),
+      tipStore.listen(this.onDataChange)
+    ];
   },
   componentWillUnmount() {
-    this.unsubscribe();
+    this.listeners.forEach((f) => f());
   },
   render() {
     const { currentCase, currentStep } = this.getCaseState();
