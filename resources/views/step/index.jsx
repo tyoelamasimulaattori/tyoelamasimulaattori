@@ -55,7 +55,7 @@ export default React.createClass({
   render() {
     const { name, title, description, image } = this.props.currentCase.person;
     const { currentStep } = this.props;
-	
+
     var problem, feedback;
 
     var tips = tipStore.getTips();
@@ -83,27 +83,28 @@ export default React.createClass({
       );
     }
 
+        // <div className="sidebar sidebar--right">
+        //   <Userbar />
+        // </div>
+            // <Controls>
+            //   <Button warning to="/" onClick={this.onQuit}>
+            //     Lopeta tapaus
+            //   </Button>
+
+            //   <Button to="/" onClick={this.onSave}>
+            //     Tallenna ja keskeytä
+            //   </Button>
+            // </Controls>
+
     return (
       <View id="step-view">
         <div className="sidebar">
-          <Accordion tips={tipStore.getTips()} />
-        </div>
-
-        <div className="sidebar sidebar--right">
-          <Userbar />
           <PersonCard name={name}
                       description={description}
                       image={imagePath(image)}
                       title={title} />
-          <Controls>
-            <Button warning to="/" onClick={this.onQuit}>
-              Lopeta tapaus
-            </Button>
+          <Accordion tips={tipStore.getTips()} />
 
-            <Button to="/" onClick={this.onSave}>
-              Tallenna ja keskeytä
-            </Button>
-          </Controls>
         </div>
 
         {problem}
