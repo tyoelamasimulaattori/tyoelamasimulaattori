@@ -1,11 +1,13 @@
 import { default as React } from 'react';
-import { Button } from 'components';
+import { Button, Modal } from 'components';
+
+const { Dialog, Footer } = Modal;
 
 export default React.createClass({
   render() {
     return (
-      <div id="index-view" className="modal">
-        <div className="modal__dialog">
+      <Modal id="index-view">
+        <Dialog>
           <h1>Tervetuloa</h1>
 
           <p>
@@ -21,7 +23,7 @@ export default React.createClass({
             </ul>
           </p>
 
-          <div className="modal__footer">
+          <Footer>
             <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
             <div className="controls">
               <Button to="/">
@@ -31,10 +33,10 @@ export default React.createClass({
                 Rekisteröidy
               </Button>
             </div>
-          </div>
+          </Footer>
 
-        </div>
-      </div>
+        </Dialog>
+      </Modal>
     );
   }
 })
