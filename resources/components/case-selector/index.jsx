@@ -39,8 +39,8 @@ export default React.createClass({
   render() {
 
     var {cases, title} = this.props;
+    const sortedCases = cases.sort((a, b) => a.id - b.id);
 
-    const sortedCases = cases.sort((c) => c.id);
     const caseElements = sortedCases.map((c, i) => {
 
       const classes = classNames({

@@ -13,12 +13,12 @@ describe('Case selector', function() {
 
   it('should render the amount of cases in inputted perspective', function() {
     var cases = [
-      {title: 'Case 1'},
-      {title: 'Case 2'},
-      {title: 'Case 3'},
-      {title: 'Case 4'},
-      {title: 'Case 5'},
-      {title: 'Case 6'}
+      {name: 'Case 1'},
+      {name: 'Case 2'},
+      {name: 'Case 3'},
+      {name: 'Case 4'},
+      {name: 'Case 5'},
+      {name: 'Case 6'}
     ];
 
     // Render element into a document
@@ -33,5 +33,30 @@ describe('Case selector', function() {
     );
 
     equal(cases.length, 6);
+  });
+
+  it('should render cases ordered by their ids', function() {
+    var cases = [
+      {name: 'Case 2', id: 2},
+      {name: 'Case 1', id: 1},
+      {name: 'Case 5', id: 5},
+      {name: 'Case 3', id: 3},
+      {name: 'Case 4', id: 4},
+      {name: 'Case 6', id: 6}
+    ];
+
+    // Render element into a document
+    var caseSelector = TestUtils.renderIntoDocument(
+      <CaseSelector cases={cases} />
+    );
+
+    // Search all elements from rendered component with class name "case"
+    var cases = TestUtils.scryRenderedDOMComponentsWithClass(
+      caseSelector,
+      'case__title'
+    );
+
+    equal(cases[0].getDOMNode().textContent, 'Case 1');
+    equal(cases[1].getDOMNode().textContent, 'Case 2');
   });
 });
