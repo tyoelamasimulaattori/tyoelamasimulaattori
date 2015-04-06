@@ -9,12 +9,11 @@ import {
   PersonCard,
   Problem,
   Feedback,
+  UserProfile,
   Button
 } from 'components';
-import { default as Userbar } from 'components/userbar';
 
 import { imagePath } from 'filters';
-
 import { tipActions } from 'actions';
 import { tipStore } from 'stores';
 
@@ -68,7 +67,6 @@ export default React.createClass({
         <Feedback
           onNextStep={this.toNextStep}
           onBack={this.backToStep}
-          image={currentStep.image}
           text={answer.feedback}
           correct={answer.correct} />
       );
@@ -77,24 +75,14 @@ export default React.createClass({
         <Problem
           name={this.props.currentCase.name}
           description={currentStep.description}
-          image={currentStep.image}
           answers={currentStep.answers}
           onSelect={this.showFeedback} />
       );
     }
 
-        // <div className="sidebar sidebar--right">
-        //   <Userbar />
-        // </div>
-            // <Controls>
-            //   <Button warning to="/" onClick={this.onQuit}>
-            //     Lopeta tapaus
-            //   </Button>
-
-            //   <Button to="/" onClick={this.onSave}>
-            //     Tallenna ja keskeytä
-            //   </Button>
-            // </Controls>
+    var style = {
+      backgroundImage: `url(${imagePath(currentStep.image)})`
+    };
 
     return (
       <View id="step-view">
@@ -107,9 +95,27 @@ export default React.createClass({
 
         </div>
 
-        {problem}
-        {feedback}
+        <div className="step-view__container" style={style}>
+          <div className="step-view__header">
+            <UserProfile />
+          </div>
 
+          <div className="problem">
+            {problem}
+            {feedback}
+            <div className="problem__footer">
+              <Controls>
+
+                <Button to="/" onClick={this.onSave}>
+                  Tallenna ja keskeytä
+                </Button>
+                <Button warning to="/" onClick={this.onQuit}>
+                  Lopeta tapaus
+                </Button>
+              </Controls>
+            </div>
+          </div>
+        </div>
       </View>
     );
   }

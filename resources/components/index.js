@@ -8,9 +8,8 @@ import { default as PerspectiveSelector } from 'components/perspective-selector'
 import { default as Problem } from 'components/problem';
 import { default as Feedback } from 'components/feedback';
 import { default as View } from 'components/view';
-import { default as Userbar } from 'components/userbar';
+import { default as UserProfile } from 'components/user-profile';
 import { default as Login } from 'components/login';
-import { default as Logout } from 'components/logout';
 import { default as IconButton } from 'components/icon-button';
 
 export {
@@ -23,9 +22,8 @@ export {
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
     Feedback as Feedback,
-    Userbar as Userbar,
+    UserProfile as UserProfile,
     Login as Login,
-    Logout as Logout,
     View as View,
     IconButton as IconButton
 };
