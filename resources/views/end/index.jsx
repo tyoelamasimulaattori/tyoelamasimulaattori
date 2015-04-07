@@ -66,6 +66,15 @@ export default React.createClass({
           </div>
         </div>
 
+        <p>
+          Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
+          Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit
+          voinut suoriuua vielä paremmin! 
+        </p>
+        <hr />
+        <p> Tässä valintasi graaffisessa muodossa: </p>
+        <img src={imagePath("ending.png")} />
+
         <Controls>
           <Button to="/">Lopeta</Button>
         </Controls>

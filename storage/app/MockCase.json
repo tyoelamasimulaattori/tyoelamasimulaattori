@@ -131,7 +131,7 @@
   "name": "Tiina",
   "image": "2_b.png",
   "perspective_id": 3,
-  "disabled": false,
+  "disabled": true,
   "description": "INACTIVE",
   "person": null,
   "steps": null
