@@ -20,17 +20,17 @@
         {
           "name": "Vastausvaihtoehto 1",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
           "name": "Vastausvaihtoehto 2",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
           "name": "Vastausvaihtoehto 3",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
           "name": "Vastausvaihtoehto 4",
@@ -48,7 +48,7 @@
         {
           "name": "Vastausvaihtoehto 1",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 2 jatkaaksesi."
         },
         {
           "name": "Vastausvaihtoehto 2",
@@ -58,7 +58,7 @@
         {
           "name": "Vastausvaihtoehto 3",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 2 jatkaaksesi."
         }
       ],
       "tip_id": 2
@@ -71,12 +71,12 @@
         {
           "name": "Vastausvaihtoehto 1",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 3 jatkaaksesi."
         },
         {
           "name": "Vastausvaihtoehto 2",
           "correct": false,
-          "feedback": null
+          "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 3 jatkaaksesi."
         },
         {
           "name": "Vastausvaihtoehto 3",
