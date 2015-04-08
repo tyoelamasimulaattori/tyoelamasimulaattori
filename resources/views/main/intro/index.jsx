@@ -10,29 +10,25 @@ export default React.createClass({
 
           <p>
             Tämä on PSHP:n työelämäsimulaattori.
-            Simulaattorin tavoite on tarjota interaktiivista koulutusta esimiehille, hyödynteän realistisia työelämän ongelmia, joita ratkoa.
+            Simulaattorin tavoite on tarjota interaktiivista koulutusta esimiehille hyödyntäen realistisia työelämän ongelmia, joita ratkoa.
             Simulaattori etenee seuraavalla tavalla:
             <ul>
-              <li>Ensin syötä käyttäjätietosi ja valitse lähestymisnäkökulmasi annetuista vaihtoehdoista.</li>
-              <li>Simulaattori generoi sinulle kolme tapausta valitsemastasi näkökulmasta, joista voit yhden kokeiltavaksi</li>
-              <li>Tapauksessa sinulle esitetään tilanne ja siihen erilaisia ratkaisutapoja. Hyödytäen vinkkeja ja muuta materiaalia, valitse mielestäsi paras vaihtoehto</li>
-              <li>Valittuasi vaihtoehdon, tapaus etenee seuraavaan vaiheeseen. Jatka vaeihtoehtojen valitsemista kunnes tapaus pääsee loppuun.</li>
-              <li>Lopussa sinulle esitetään  sinun vastaukset ja ideaalisuoritus, jonka jälkeen voit joko lopettaa tai aloittaa uuden tapauksen</li>
+              <li>Ensin rekisteröidy tai kirjaudu sisään, jonka jälkeen valitse lähestymisnäkökulmasi annetuista vaihtoehdoista (Valitse näkökulma).</li>
+              <li>Seuraavaksi valitse tapaus, jonka haluat suorittaa. (Valitse tapaus näkökulmasta ...). HUOMIO! Demoversiossa on vain yksi tapaus (tapaus Kaija), joka löytyy Toimintakulttuuri-näkökulman alta.</li>
+              <li>Tapauksen alkaessa sinulle esitetään alkutilanne ja siihen erilaisia vastausvaihtoehtoja. Valitse mielestäsi paras vaihtoehto hyödytäen vihjeitä ja muuta materiaalia.</li>
+              <li>Valittuasi vaihtoehdon tapaus etenee seuraavaan vaiheeseen. Jatka vaihtoehtojen valitsemista, kunnes pääset tapauksen loppuun.</li>
+              <li>Lopussa sinulle esitetään loppupalaute sekä vastaamasi vastaukset, jonka jälkeen voit joko lopettaa pelin tai aloittaa uuden tapauksen.</li>
             </ul>
           </p>
 
           <div className="modal__footer">
-            <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC - profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
+            <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC-profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
             <div className="controls">
               <Button to="/">
-                Kirjaudu sisään
-              </Button>
-              <Button to="/">
-                Rekisteröidy
+			  Aloita simulaatio
               </Button>
             </div>
           </div>
-
         </div>
       </div>
     );
