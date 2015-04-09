@@ -25,11 +25,9 @@ export default React.createClass({
     }
 
     return (
-      <div className="problem" style={style}>
-        <div className="problem__description">
-          <p>{this.props.text}</p>
-          {button}
-        </div>
+      <div className="problem__description">
+        <p>{this.props.text}</p>
+        {button}
       </div>
     )
   }

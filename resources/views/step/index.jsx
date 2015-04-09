@@ -9,12 +9,11 @@ import {
   PersonCard,
   Problem,
   Feedback,
+  UserProfile,
   Button
 } from 'components';
-import { default as Userbar } from 'components/userbar';
 
 import { imagePath } from 'filters';
-
 import { tipActions } from 'actions';
 import { tipStore } from 'stores';
 
@@ -55,7 +54,7 @@ export default React.createClass({
   render() {
     const { name, title, description, image } = this.props.currentCase.person;
     const { currentStep } = this.props;
-	
+
     var problem, feedback;
 
     var tips = tipStore.getTips();
@@ -68,7 +67,6 @@ export default React.createClass({
         <Feedback
           onNextStep={this.toNextStep}
           onBack={this.backToStep}
-          image={currentStep.image}
           text={answer.feedback}
           correct={answer.correct} />
       );
@@ -77,38 +75,47 @@ export default React.createClass({
         <Problem
           name={this.props.currentCase.name}
           description={currentStep.description}
-          image={currentStep.image}
           answers={currentStep.answers}
           onSelect={this.showFeedback} />
       );
     }
 
+    var style = {
+      backgroundImage: `url(${imagePath(currentStep.image)})`
+    };
+
     return (
       <View id="step-view">
         <div className="sidebar">
-          <Accordion tips={tipStore.getTips()} />
-        </div>
-
-        <div className="sidebar sidebar--right">
-          <Userbar />
           <PersonCard name={name}
                       description={description}
                       image={imagePath(image)}
                       title={title} />
-          <Controls>
-            <Button warning to="/" onClick={this.onQuit}>
-              Lopeta tapaus
-            </Button>
+          <Accordion tips={tipStore.getTips()} />
 
-            <Button to="/" onClick={this.onSave}>
-              Tallenna ja keskeytä
-            </Button>
-          </Controls>
         </div>
 
-        {problem}
-        {feedback}
+        <div className="step-view__container" style={style}>
+          <div className="step-view__header">
+            <UserProfile />
+          </div>
 
+          <div className="problem">
+            {problem}
+            {feedback}
+            <div className="problem__footer">
+              <Controls>
+
+                <Button to="/" onClick={this.onSave}>
+                  Tallenna ja keskeytä
+                </Button>
+                <Button warning to="/" onClick={this.onQuit}>
+                  Lopeta tapaus
+                </Button>
+              </Controls>
+            </div>
+          </div>
+        </div>
       </View>
     );
   }
