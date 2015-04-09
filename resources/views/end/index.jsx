@@ -58,18 +58,13 @@ export default React.createClass({
             <p>
               {currentStep.description}
             </p>
-            <p>
-              Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
-              Muistitko ottaa huomioon vastapuolen DiSC-profiilin?
-              Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit voinut suoriuua vielä paremmin!
-            </p>
           </div>
         </div>
 
         <p>
           Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
           Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit
-          voinut suoriuua vielä paremmin! 
+          voinut suoriutua vielä paremmin!
         </p>
         <hr />
         <p> Tässä valintasi graaffisessa muodossa: </p>
