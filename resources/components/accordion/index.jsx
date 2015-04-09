@@ -1,14 +1,11 @@
 import { default as React } from 'react';
-import { extend, sample } from 'lodash';
+import { sample } from 'lodash';
 import { Accordion, Panel } from 'react-bootstrap';
 
 export { Panel as Panel };
+
 export default React.createClass({
   render() {
-
-    var props = extend({}, this.props, {
-      className: 'accordion'
-    });
 
     var icons = [
       'bomb',
