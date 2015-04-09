@@ -28,7 +28,7 @@ export default React.createClass({
 
             <div className="controls">
               <Button to="/">
-			  Aloita simulaatio
+              Aloita simulaatio
               </Button>
             </div>
           </Footer>
