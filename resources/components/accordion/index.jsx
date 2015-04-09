@@ -1,5 +1,5 @@
 import { default as React } from 'react';
-import { extend } from 'lodash';
+import { extend, sample } from 'lodash';
 import { Accordion, Panel } from 'react-bootstrap';
 
 export { Panel as Panel };
@@ -10,13 +10,43 @@ export default React.createClass({
       className: 'accordion'
     });
 
+    var icons = [
+      'bomb',
+      'building',
+      'bug',
+      'cubes',
+      'diamond',
+      'eye',
+      'heartbeat',
+      'coffee',
+      'plane',
+      'send',
+      'support',
+      'trophy',
+      'wheelchair'
+    ]
+
     const tips = this.props.tips.map((tip) => {
-       return (
-         <Panel className="tip" header={tip.name} eventKey={tip.id} key={tip.id}>{tip.text}</Panel>
+      const header = (
+        <span>
+          <i className={`fa fa-${sample(icons)}`} />
+          {tip.name}
+        </span>
+      );
+
+      return (
+        <Panel
+          header={header}
+          eventKey={tip.id}
+          key={tip.id}>
+          {tip.text}
+         </Panel>
        )
     });
     return (
-      <Accordion>{tips}</Accordion>
+      <div className="accordion">
+        <Accordion>{tips}</Accordion>
+      </div>
     );
   }
 });
