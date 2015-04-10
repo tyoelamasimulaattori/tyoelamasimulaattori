@@ -12,8 +12,8 @@ class GamecaseTest extends TestCase {
         'name' => "Example name",
         'image' => "imagepng",
         'perspective_id' => 1,
-		'text' => "Example text",
-		'disabled' => false
+        'text' => "Example text",
+        'disabled' => false
     ]);
 
     $testGamecase = Gamecase::find($testGamecaseId);
