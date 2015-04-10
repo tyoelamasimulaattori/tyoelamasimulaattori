@@ -1,22 +1,26 @@
 <?php
 
+use App\Answer;
+use Illuminate\Support\Facades\DB as DB;
+
 class AnswerTest extends TestCase {
 
-  function testRightAmountOfAnswersInDemoCaseAfterSeeding() {
+  function testCreatingAndReadingExampleAnswer() {
+    Answer::create([
+      'text' => "Example answer",
+      'step_id' => 0,
+      'correct' => true,
+      'feedback' => "Example feedback"
+    ]);
+
+    $testAnswerId = DB::table('answers')->max('id');
+    $testAnswer = Answer::find($testAnswerId);
+
+    $this->assertEquals($testAnswer->text, "Example answer");
+    $this->assertEquals($testAnswer->step_id, 0);
+    $this->assertEquals($testAnswer->correct, true);
+    $this->assertEquals($testAnswer->feedback, "Example feedback");
+
     $this->seed();
-
-    $response = $this->call('GET', 'api/cases/0');
-    $demoCaseString = $response->getContent();
-    $demoCase = json_decode($demoCaseString);
-    $demoCaseSteps = $demoCase->steps;
-    $demoCaseStep0Answers = $demoCaseSteps[0]->answers;
-    $demoCaseStep1Answers = $demoCaseSteps[1]->answers;
-    $demoCaseStep2Answers = $demoCaseSteps[2]->answers;
-    $demoCaseStep3Answers = $demoCaseSteps[3]->answers;
-
-    $this->assertEquals(count($demoCaseStep0Answers), 4);
-    $this->assertEquals(count($demoCaseStep1Answers), 3);
-    $this->assertEquals(count($demoCaseStep2Answers), 3);
-    $this->assertEmpty($demoCaseStep3Answers);
   }
 }
