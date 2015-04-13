@@ -25,6 +25,7 @@ export default React.createClass({
     return (
       <div>
         <div className="problem__description">
+          <h2>Kuvaus: </h2>
           <h3>{this.props.name}</h3>
           <p>{this.props.description}</p>
         </div>

@@ -91,8 +91,9 @@ export default React.createClass({
                       description={description}
                       image={imagePath(image)}
                       title={title} />
-          <Accordion tips={tipStore.getTips()} />
 
+          <h3>Lisämateriaali: </h3>
+          <Accordion tips={tipStore.getTips()} />
         </div>
 
         <div className="step-view__container" style={style}>
