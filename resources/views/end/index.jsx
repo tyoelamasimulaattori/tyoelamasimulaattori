@@ -59,11 +59,11 @@ export default React.createClass({
 
           <h3>
             Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
-            Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit
+            Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi, miten olisit
             voinut suoriutua vielä paremmin!
           </h3>
           <hr />
-          <h2> Tässä valintasi graaffisessa muodossa: </h2>
+          <h2> Tässä valintasi graafisessa muodossa: </h2>
           <img src={imagePath("ending.png")} />
 
           <Controls>
