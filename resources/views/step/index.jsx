@@ -94,6 +94,7 @@ export default React.createClass({
 
           <h3>Lisämateriaali: </h3>
           <Accordion tips={tipStore.getTips()} />
+          <img src={imagePath("kolmio.png")} />
         </div>
 
         <div className="step-view__container" style={style}>

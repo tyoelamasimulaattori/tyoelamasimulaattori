@@ -1,52 +1,28 @@
 [
   {
     "id": 1,
-	"name": "Johtaminen",
-    "text": "Tarkastele asiaa johtamisen kannalta. Lue materiaalia johtamisesta kyvykkyystekijänä.",
-    "tag": "Johtaminen"
-  },
-  {
-    "id": 2,
-	"name": "Toimintakulttuuri",
+	"name": "Näkökulmavinkki",
     "text": "Tarkastele asiaa toimintakulttuurin kannalta. Lue materiaalia toimintakulttuurista kyvykkyystekijänä.",
     "tag": "Toimintakulttuuri"
   },
   {
-    "id": 3,
-	"name": "Osaaminen",
-    "text": "Tarkastele asiaa osaamisen kannalta. Lue materiaalia osaamisesta kyvykkyystekijänä.",
-	"tag": "Osaaminen"
-  },
-  {
-    "id": 4,
-	"name": "Esimieskulttuuri",
-    "text": "Tarkastele asiaa esimieskulttuurin kannalta. Lue materiaalia esimieskulttuurista kyvykkyystekijänä.",
-	"tag": "Esimieskulttuuri"
-  },
-  {
-    "id": 5,
-	"name": "Prosessit",
-    "text": "Tarkastele asiaa prosessien kannalta. Lue materiaalia prosesseista kyvykkyystekijänä.",
-	"tag": "Prosessit"
-  },
-  {
-    "id": 6,
-	"name": "Herzberg",
+    "id": 2,
+	"name": "Työhyvinvoinnin punos",
     "text": "Attitudes and their connection with industrial mental health are related to Abraham Maslows theory of motivation. His findings have had a considerable theoretical, as well as a practical, influence on attitudes toward administration."
   },
   {
-    "id": 7,
+    "id": 3,
 	"name": "Valmentava johtaminen",
-    "text": "G  Goal  R Reality  O Obstacles Options W Way Forward"
+    "text": "G  Goal R Reality O Obstacles (Options) W Way Forward"
   },
   {
-    "id": 8,
+    "id": 4,
 	"name": "Vihje",
     "text": "Mieti miten voisit tehdä kompromissin, joka sopii kaikille osapuolille."
   },
   {
-    "id": 9,
-	"name": "Pro tip",
-    "text": "Harkitse tarkkaan mikä vastaus rauhoittaisi Kaijaa. Katso lisätietoa: Kaijan Ongelmat (s. 10- 12)."
+    "id": 5,
+	"name": "Intra",
+    "text": "Harkitse tarkkaan mikä saisi Kaijan ymmärtämään tilanteen vakavuuden. Katso lisätietoa: Konflikti ja sen käsittely (s. 10- 12)."
   }
 ]
