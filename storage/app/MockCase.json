@@ -14,49 +14,49 @@
   "steps": [
     {
       "id": 0,
-      "description": "Sinulla on selkkaus asiantuntijasairaanhoitaja-Kaijan kanssa. Mitä teet?",
+      "description":"Asiantuntijasairaanhoitaja Kaija on osastossasi työskentelevän tiimin vetäjä. Välinne ovat olleet kohtuullisen hyvät, eikä Kaija ole tuottanut ongelmia. Eilen Kaija kuitenkin antoi tiiminsä lopettaa työpäivän aikaisin, vaikka se on vastoin firman sääntöjä. Olet kuullut, että muut tiimit ja tiimien vetäjät pitävät tätä epäasiallisen käytöksenä ja toivovat, että Kaijaa nuhdellaan asiata.",
       "image": "office.jpg",
       "options": [
         {
-          "name": "Vastausvaihtoehto 1",
+          "name": "Annan asian olla. Kaijalla on oikeus päättää alaisensa työajoista",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
-          "name": "Vastausvaihtoehto 2",
+          "name": "Pyydän Kaijan toimistooni keskustelemaan asia läpi. Haluan kuulla Kaijan syyt eiliselle.",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
-          "name": "Vastausvaihtoehto 3",
+          "name": "Vaadin, että Kaija korvaa menetetyt työtunnit tulevaisuudessa. Mielestäni ei ole sopivaa mennä vastoin asetettuja sääntöjä.",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
-          "name": "Vastausvaihtoehto 4",
+          "name": "Nostan toissapäiväisen tilanteen keskusteluun. Haluan toimia päättäväisesti ja sen käydä läpi seikkaperäisesti. Tavoitteeni on sopia selkeästi noudatettavasta toimintavasta.",
           "correct": true,
-          "feedback": "Hyvin meni!"
+          "feedback": "Keskustelu eteni, mutta tunnelma oli hieman kireä. Muutosta tilanteessa ei tapahdu."
         }
       ],
       "tip_id": 1
     },
     {
       "id": 1,
-      "description": "Steppi 2",
+      "description": "Tiimi vaikuttaa kyräilevälle. Tiimivetäjä käyttäytyy iloisesti vakuuttaa asian olevan hyvin. Keskusteluvälit ovat hyvät. Osastollasi on kuitenkin levoton ilmapiiri.",
       "image": "office.jpg",
       "options": [
         {
-          "name": "Vastausvaihtoehto 1",
+          "name": "Odotan, että tulee sopiva hetki, jolloin kansliassa muita ei ole hetkeen läsnä. En halua nostaa isoa juttua ja kerronkin huomioni lyhyesti. Keskustelussa edellytän, että Kaija toimii sovitulla tavalla.",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 2 jatkaaksesi."
         },
         {
-          "name": "Vastausvaihtoehto 2",
+          "name": "Otan asian piki miten puheeksi Kaijan kanssa. Nostan muitakin kohdentuvia huomioitani tiimin omasta sähläävästä toiminnasta kuin vain työvuorojakojen muuttamisen.",
           "correct": true,
-          "feedback": "Jee jee!"
+          "feedback": "Tiimi näyttää toimivan näennäisesti sovitulla tavalla. Kyräily jatkuu ja avointa keskustelua kanssasi vältetään."
         },
         {
-          "name": "Vastausvaihtoehto 3",
+          "name": "Otan asian uudelleen puheeksi tiimivetäjän kanssa ja vastuutan häntä. En kerro kyräilyhuomioitani.",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 2 jatkaaksesi."
         }
@@ -65,30 +65,31 @@
     },
     {
       "id": 2,
-      "description": "Steppi 3",
+      "description": "Kaija välttelee myös sinua. Kun keskustelette, hänen vastauksensa ovat hyvin asiallisia, mutta rupattelut ovat vähentyneet. Muiden tiimien kanssa näyttäisi olevan supinoita, jotka hajautuvat tulessasi paikalle.",
       "image": "office.jpg",
       "options": [
         {
-          "name": "Vastausvaihtoehto 1",
+          "name": "Otan asian uudelleen puheeksi tiimivetäjän kanssa ja yritän sopia hänen kanssaan sellaista aikaa, jossa suurin osa tiimiläisistä on läsnä. Vastuutan häntä edelleen tiimivetäjänä.",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 3 jatkaaksesi."
         },
         {
-          "name": "Vastausvaihtoehto 2",
+          "name": "Kutsun ko. päivän kaikki tiimivetäjät yhteiseen palaveriin ja haluan heidän kanssaan yhdessä etsiä ratkaisua. Tarkoitukseni on estää tilanteen leviäminen koko yhteisöön.",
           "correct": false,
           "feedback": "Tämä on demo versio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 3 jatkaaksesi."
         },
         {
-          "name": "Vastausvaihtoehto 3",
+          "name": "Kutsun koko sen päivän tiimiläiset yhteiseen palaveriin välittömästi jo ennen ruokataukoa. Haluan kuulla heidän tämän päivän järjestelystään ja avata muutenkin tilanteen heidän kanssaan.",
           "correct": true,
-          "feedback": "Jes jippii!"
+
+          "feedback": "Tilanteesta tulee avoin tiimissä. Kannanottoja on sekä puolesta ja vastaan. Tiimi puolustaa tiimivetäjää, joka on toiminut heidän toiveidensa mukaan. Keskustellaan tiimin toiminnan suhteessa muihin tiimeihin ja koko osaston työstä. Tilanne alkaa konfliktoitua lisää ja tiimiin syntyy omia klikkejä osa osastohoitajan kannalla, osa tiimivetäjän puolustajia. Nyt molemmat puhuvat vain ja ainoastaan asiasta. Koko yhteisö on tietoinen osastohoitajan ja tiimivetäjän suhteiden kiristymisestä."
         }
       ],
       "tip-id": 3
     },
     {
       "id": 3,
-      "description": "Lorem ipsum Proident deserunt commodo anim cillum cillum Ut Ut ut in incididunt sit in fugiat tempor magna esse ex aliquip ad commodo eiusmod quis in dolore voluptate laboris incididunt mollit enim labore id laborum sit amet laborum laborum anim est sunt dolor in anim eu dolore voluptate et ea est tempor enim eu fugiat exercitation ea culpa non sed deserunt officia voluptate culpa in consectetur.",
+      "description":"Osastohoitaja on huomannut, että tiimin tilanne on ns. keltaisella ja etenemässä oransille, kun tilannetta arvioidaan työyhteisön työhyvinvoinnin tasoilla. Hänen on mietittävä omaa ja tiimivetäjän vuorovaikutustapoja ja mihin on ajauduttu. Hän haluaa yrittää ilman hallinnon johdon apua ja hakee apua vertaisryhmästään. Avukseen hän voi pyytää myös mentoria, jos saa siihen luvan esimieheltään. Vertaisryhmässä ja hallinnon esimiehen kanssa hän voi keskustella muistakin käytettävissä olevista tukimuodoista itselleen.",
       "image": "office.jpg"
     }]
 },
