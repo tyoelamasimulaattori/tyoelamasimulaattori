@@ -43,33 +43,35 @@ export default React.createClass({
 
     return (
       <View id="end-view">
-        <h1>Loppunäkymä</h1>
+        <div className="end-view-content">
+          <h1>Tapauksen lopputulos</h1>
 
-        <div className="row">
-          <div className="column column1-5">
-            <img src={imagePath(currentStep.image)} />
+          <div className="row">
+            <div className="column column1-5">
+              <img src={imagePath(currentStep.image)} />
+            </div>
+            <div className="column column4-5">
+              <p>
+                {currentStep.description}
+              </p>
+            </div>
           </div>
-          <div className="column column4-5">
-            <p>
-              {currentStep.description}
-            </p>
-          </div>
+
+          <h3>
+            Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
+            Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit
+            voinut suoriutua vielä paremmin!
+          </h3>
+          <hr />
+          <h2> Tässä valintasi graaffisessa muodossa: </h2>
+          <img src={imagePath("ending.png")} />
+
+          <Controls>
+            <Button to="/">Lopeta</Button>
+          </Controls>
+
+          {modal}
         </div>
-
-        <p>
-          Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
-          Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi miten olisit
-          voinut suoriutua vielä paremmin!
-        </p>
-        <hr />
-        <p> Tässä valintasi graaffisessa muodossa: </p>
-        <img src={imagePath("ending.png")} />
-
-        <Controls>
-          <Button to="/">Lopeta</Button>
-        </Controls>
-
-        {modal}
       </View>
     );
   }
