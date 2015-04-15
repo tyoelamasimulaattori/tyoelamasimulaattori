@@ -1,5 +1,6 @@
 import { default as React } from 'react';
 import { sample } from 'lodash';
+import { imagePath } from 'filters';
 import { Accordion, Panel } from 'react-bootstrap';
 
 export { Panel as Panel };
@@ -22,7 +23,6 @@ export default React.createClass({
       'trophy',
       'wheelchair'
     ]
-
     const tips = this.props.tips.map((tip) => {
       const header = (
         <span>
@@ -30,15 +30,30 @@ export default React.createClass({
           {tip.name}
         </span>
       );
+      var panel;
 
-      return (
-        <Panel
-          header={header}
-          eventKey={tip.id}
-          key={tip.id}>
-          {tip.text}
-         </Panel>
-       )
+      if(tip.image == null){
+        panel = (
+          <Panel
+            header={header}
+            eventKey={tip.id}
+            key={tip.id}>
+            {tip.text}
+          </Panel>
+        );
+      }
+      else{
+        panel = (
+          <Panel
+            header={header}
+            eventKey={tip.id}
+            key={tip.id}>
+            {tip.text}
+            <img src={imagePath(tip.image)} />
+          </Panel>
+         );
+      }
+      return (panel)
     });
     return (
       <div className="accordion">

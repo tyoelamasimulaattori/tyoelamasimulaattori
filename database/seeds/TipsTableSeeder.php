@@ -24,13 +24,15 @@ class TipsTableSeeder extends Seeder {
           'name' => $tip->name,
           'text' => $tip->text,
           'tag' => $tip->tag,
+          'image' => $tip->image
         ]);
       }
       else {
         Tip::create([
           'id' => $tip->id,
           'name' => $tip->name,
-          'text' => $tip->text
+          'text' => $tip->text,
+          'image' => $tip->image
         ]);
       }
     }

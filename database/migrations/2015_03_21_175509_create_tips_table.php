@@ -17,6 +17,7 @@ class CreateTipsTable extends Migration {
 			$table->string('name');
 			$table->text('text');
 			$table->string('tag')->nullable();
+			$table->string('image')->nullable();
 			$table->timestamps();
 		});
 	}
