@@ -14,7 +14,7 @@
   "steps": [
     {
       "id": 0,
-      "description":"Asiantuntijasairaanhoitaja Kaija on osastossasi työskentelevän tiimin vetäjä. Välinne ovat olleet kohtuullisen hyvät, eikä Kaija ole tuottanut ongelmia. Eilen Kaija kuitenkin antoi tiiminsä lopettaa työpäivän aikaisin, vaikka se on vastoin firman sääntöjä. Olet kuullut, että muut tiimit ja tiimien vetäjät pitävät tätä epäasiallisen käytöksenä ja toivovat, että Kaijaa nuhdellaan asiasta. Mitä teet?",
+      "description":"Asiantuntijasairaanhoitaja Kaija on osastossasi työskentelevän tiimin vetäjä. Välinne ovat olleet kohtuullisen hyvät, eikä Kaija ole tuottanut ongelmia. Eilen Kaija kuitenkin antoi tiiminsä lopettaa työpäivän aikaisin, vaikka se on vastoin sovittuja sääntöjä. Olet kuullut, että muut tiimit ja tiimien vetäjät pitävät tätä epäasiallisen käytöksenä ja toivovat, että Kaijaa nuhdellaan asiasta. Mitä teet?",
       "image": "office.jpg",
       "options": [
         {
