@@ -1,5 +1,6 @@
 import { default as React } from 'react';
 import { findWhere } from 'lodash';
+import { imagePath } from 'filters';
 
 import {
   View,
@@ -9,15 +10,27 @@ import {
   PersonCard,
   Problem,
   Feedback,
+  Modal,
   UserProfile,
   Button
 } from 'components';
 
-import { imagePath } from 'filters';
+const { Dialog, Footer } = Modal;
+
 import { tipActions } from 'actions';
 import { tipStore } from 'stores';
 
 export default React.createClass({
+  getInitialState() {
+    return {
+      isModalOpen: false
+    };
+  },
+  handleToggle: function () {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
+    });
+  },
   contextTypes: {
     router: React.PropTypes.func.isRequired
   },
@@ -57,6 +70,27 @@ export default React.createClass({
 
     var problem, feedback;
 
+    const modal = (
+      <Modal hidden={!this.state.isModalOpen}>
+        <Dialog>
+          <h1>Toimintajärjestelmäkuvio</h1>
+          <p>
+            --Selvitys mikä on Toimintajärjestelmäkuvio tähän--
+          </p>
+          <img src={imagePath("kolmioSelitys.png")} />
+          <p>
+            Tähän tulisi asettaa tarkempi selitys nykyisestä kolmiosta, jotta käyttäjä ymmärtää mitä ihmettä tapahtuu ja miksi.
+          </p>
+          <img src={imagePath("kolmio.png")} />
+          <Footer>
+            <Button onClick={this.handleToggle}>
+              Takaisin
+            </Button>
+          </Footer>
+        </Dialog>
+      </Modal>
+    )
+
     var tips = tipStore.getTips();
 
     if (this.props.params.option) {
@@ -93,7 +127,8 @@ export default React.createClass({
                       title={title} />
 
           <h3>Lisämateriaali: </h3>
-          <Accordion tips={tipStore.getTips()} />
+          <Accordion tips={tipStore.getTips()}
+                     onClick={this.handleToggle}/>
         </div>
 
         <div className="step-view__container" style={style}>
@@ -115,6 +150,7 @@ export default React.createClass({
                 </Button>
               </Controls>
             </div>
+            {modal}
           </div>
         </div>
       </View>

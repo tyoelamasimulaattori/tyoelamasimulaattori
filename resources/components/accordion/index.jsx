@@ -43,13 +43,13 @@ export default React.createClass({
         );
       }
       else{
-        panel = (
+        panel =(
           <Panel
             header={header}
             eventKey={tip.id}
             key={tip.id}>
             {tip.text}
-            <img src={imagePath(tip.image)} />
+            <img src={imagePath(tip.image)} onClick={this.props.onClick} />
           </Panel>
          );
       }
