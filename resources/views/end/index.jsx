@@ -64,7 +64,7 @@ export default React.createClass({
           </h3>
           <hr />
           <h2> Tässä valintasi graafisessa muodossa: </h2>
-          <img src={imagePath("ending.png")} />
+          <img src={imagePath("newEnding.png")} />
 
           <Controls>
             <Button to="/">Lopeta</Button>
