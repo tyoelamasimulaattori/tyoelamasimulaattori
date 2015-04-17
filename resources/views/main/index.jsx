@@ -7,6 +7,7 @@ import {
   IconButton,
   Button,
   PerspectiveSelector,
+  UserProfile,
   CaseSelector
 } from 'components';
 
@@ -85,17 +86,20 @@ export default React.createClass({
 
     return (
       <View id="start-view">
-        <IconButton to="intro">
-          <i className="fa fa-question"></i>
-        </IconButton>
-
         <h1 className="view__header">Valitse näkökulma</h1>
-
         <PerspectiveSelector
           perspectives={perspectives}
           onSelect={this.onPerspectiveSelect}
           selected={selectedPerspective} />
-
+		  
+        <div className="main-view__header">
+           <UserProfile />
+        </div>
+		
+        <IconButton to="intro">
+          <i className="fa fa-question"></i>
+        </IconButton>
+		
         {caseSelector}
 
         {/* Modals open inside of this RouteHandler */}
