@@ -1,5 +1,5 @@
 import { default as React } from 'react';
-import { Modal, Button, Controls, View } from 'components';
+import { Modal, Button, Controls, View, UserProfile } from 'components';
 import { imagePath } from 'filters';
 import { findLast } from 'lodash';
 
@@ -43,6 +43,9 @@ export default React.createClass({
 
     return (
       <View id="end-view">
+        <div className="end-view__header">
+          <UserProfile />
+        </div>
         <div className="end-view-content">
           <h1>Tapauksen lopputulos</h1>
 
