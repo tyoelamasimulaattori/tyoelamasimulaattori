@@ -1,11 +1,13 @@
 import { default as React } from 'react';
+import { noop } from 'lodash';
 import classNames from 'classnames';
 
 const Modal = React.createClass({
   getDefaultProps() {
     return {
       hidden: false,
-      small: false
+      small: false,
+      onCloseIntention: noop
     };
   },
   render() {
@@ -16,7 +18,7 @@ const Modal = React.createClass({
     });
 
     return (
-      <div className={classes}>
+      <div className={classes} onClick={this.props.onCloseIntention}>
         {this.props.children}
       </div>
     );
@@ -34,9 +36,12 @@ Modal.Footer = React.createClass({
 });
 
 Modal.Dialog = React.createClass({
+  stopPropagation(event) {
+    event.stopPropagation();
+  },
   render() {
     return (
-      <div className="modal__dialog">
+      <div className="modal__dialog" onClick={this.stopPropagation}>
         {this.props.children}
       </div>
     );

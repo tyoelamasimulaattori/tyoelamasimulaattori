@@ -31,7 +31,7 @@ export default React.createClass({
   },
   render() {
     return (
-      <Modal small hidden={!this.state.loginModalOpen}>
+      <Modal small hidden={!this.state.loginModalOpen} onCloseIntention={this.cancel}>
         <Dialog>
           <h1>Kirjaudu sisään</h1>
           <p>
