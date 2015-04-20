@@ -24,13 +24,14 @@ export default React.createClass({
         <Dialog>
           <h1>Demo on päättynyt</h1>
           <p>
-            Tämä demo työelämäsimulaattorista loppuu tähän. Lopullisessa pelissä tulee olemaan
-            monta tapausta, joissa askeleita on paljon enemmän.
+            Tämä demo työelämäsimulaattorista loppuu tähän. Lopullisessa pelissä <br />
+            tulee olemaan monta tapausta, joissa askeleita on paljon enemmän.
           </p>
 
           <p>
-            Kiitos kun kokeilit demoa! Paina alla olevaa nappian nähdäksesi valintojesi
-            lopputuloksen.
+            Kiitos kun kokeilit demoa! Paina alla olevaa nappian nähdäksesi<br />
+            valintojesi lopputuloksen. Lopeta-napista simulaattori loppuu ja <br />
+            pääset simulaattorin alkuun, missä voit aloittaa simulaattorin uudelleen.
           </p>
           <Footer>
             <Button onClick={this.handleToggle}>
@@ -51,7 +52,7 @@ export default React.createClass({
 
           <div className="row">
             <div className="column column1-5">
-              <img src={imagePath(currentStep.image)} />
+               <img src={imagePath(currentStep.image)} />
             </div>
             <div className="column column4-5">
               <p>
@@ -59,12 +60,6 @@ export default React.createClass({
               </p>
             </div>
           </div>
-
-          <h3>
-            Olet tullut demovaiheen loppuun, ja valitettavasti demovaiheessa ei voi jatkaa pidemmälle.
-            Muistitko ottaa huomioon vastapuolen DiSC-profiilin? Kokeile uutta tapausta eri näkökulmasta tai pohdi, miten olisit
-            voinut suoriutua vielä paremmin!
-          </h3>
           <hr />
           <h2> Tässä valintasi graafisessa muodossa: </h2>
           <img src={imagePath("newEnding.png")} />
