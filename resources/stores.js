@@ -94,5 +94,9 @@ export const loginStore = Reflux.createStore({
     loginData.loggedIn = true;
     loginData.loginModalOpen = false;
     this.trigger();
+  },
+  onLogout() {
+    loginData.loggedIn = false;
+    this.trigger();
   }
 });

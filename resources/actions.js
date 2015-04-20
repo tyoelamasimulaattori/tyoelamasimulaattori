@@ -56,6 +56,7 @@ tipActions.getTips.listen(function() {
 
 export let loginActions = Reflux.createActions([
   'login',
+  'logout',
   'closeLoginModal',
   'showLoginModal'
 ]);

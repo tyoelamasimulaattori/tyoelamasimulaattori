@@ -21,6 +21,9 @@ export default React.createClass({
   logIn() {
     loginActions.showLoginModal();
   },
+  logOut() {
+    loginActions.logout();
+  },
   onDataChange() {
     this.setState(this.getState());
   },
@@ -46,7 +49,7 @@ export default React.createClass({
             <i className="fa fa-wrench"></i>
             Tehtävä-editori
           </Item>
-          <Item>
+          <Item onClick={this.logOut}>
             <i className="fa fa-sign-out"></i>
             Kirjaudu ulos
           </Item>

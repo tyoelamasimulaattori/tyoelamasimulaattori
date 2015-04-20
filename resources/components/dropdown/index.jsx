@@ -15,7 +15,7 @@ export default React.createClass({
 export const Item = React.createClass({
   render() {
     return (
-      <li>
+      <li {...this.props}>
         {this.props.children}
       </li>
     )
