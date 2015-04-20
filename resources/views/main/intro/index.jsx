@@ -9,9 +9,15 @@ export default React.createClass({
   logIn() {
     loginActions.showLoginModal();
   },
+  onCloseIntention() {
+    this.context.router.transitionTo('/');
+  },
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
   render() {
     return (
-      <Modal id="index-view">
+      <Modal id="index-view" onCloseIntention={this.onCloseIntention}>
         <Dialog>
           <h1>Tervetuloa</h1>
 

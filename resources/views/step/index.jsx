@@ -27,7 +27,7 @@ export default React.createClass({
       isModalOpen: false
     };
   },
-  handleToggle: function () {
+  toggleModal: function () {
     this.setState({
       isModalOpen: !this.state.isModalOpen
     });
@@ -72,7 +72,7 @@ export default React.createClass({
     var problem, feedback;
 
     const modal = (
-      <Modal hidden={!this.state.isModalOpen}>
+      <Modal hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
         <Dialog>
           <h1>Toimintajärjestelmäkuvio</h1>
           <p>
@@ -84,7 +84,7 @@ export default React.createClass({
           </p>
           <img src={imagePath("kolmio.png")} />
           <Footer>
-            <Button onClick={this.handleToggle}>
+            <Button onClick={this.toggleModal}>
               Takaisin
             </Button>
           </Footer>
@@ -129,7 +129,7 @@ export default React.createClass({
 
           <h3>Lisämateriaalit: </h3>
           <Accordion tips={tipStore.getTips()}
-                     onClick={this.handleToggle}/>
+                     onClick={this.toggleModal}/>
         </div>
 
         <div className="step-view__container" style={style}>

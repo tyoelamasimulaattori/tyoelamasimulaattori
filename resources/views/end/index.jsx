@@ -11,7 +11,7 @@ export default React.createClass({
       isModalOpen: true
     };
   },
-  handleToggle: function () {
+  toggleModal: function () {
     this.setState({
       isModalOpen: !this.state.isModalOpen
     });
@@ -20,7 +20,7 @@ export default React.createClass({
     const currentStep = findLast(this.props.currentCase.steps);
 
     const modal = (
-      <Modal hidden={!this.state.isModalOpen}>
+      <Modal hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
         <Dialog>
           <h1>Demo on päättynyt</h1>
           <p>
@@ -34,7 +34,7 @@ export default React.createClass({
             pääset simulaattorin alkuun, missä voit aloittaa simulaattorin uudelleen.
           </p>
           <Footer>
-            <Button onClick={this.handleToggle}>
+            <Button onClick={this.toggleModal}>
               Loppunäkymään
             </Button>
           </Footer>
