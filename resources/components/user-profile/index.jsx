@@ -5,6 +5,7 @@ import { loginStore } from 'stores';
 import { loginActions } from 'actions';
 
 import { default as Login } from 'components/login';
+import { default as Dropdown, Item } from 'components/dropdown';
 
 import { default as classNames } from 'classnames';
 
@@ -35,8 +36,21 @@ export default React.createClass({
     }
     return (
       <div className="user-profile">
-        <img src={imagePath('avatar.png')} />
-        Matti Mattinen
+        <div className="user-profile__wrapper">
+          <img src={imagePath('avatar.png')} />
+          Matti Mattinen
+        </div>
+
+        <Dropdown>
+          <Item>
+            <i className="fa fa-wrench"></i>
+            Tehtävä-editori
+          </Item>
+          <Item>
+            <i className="fa fa-sign-out"></i>
+            Kirjaudu ulos
+          </Item>
+        </Dropdown>
       </div>
     )
   }

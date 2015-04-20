@@ -11,7 +11,6 @@
     "start": "gulp",
     "build": "gulp build",
     "test": "./test.bat"
-
   },
   "repository": {
     "type": "git",
@@ -46,7 +45,6 @@
   },
   "dependencies": {
     "classnames": "^1.2.0",
-    "install": "^0.1.8",
     "lodash": "^3.3.0",
     "npm": "^2.7.3",
     "react": "^0.13.0",

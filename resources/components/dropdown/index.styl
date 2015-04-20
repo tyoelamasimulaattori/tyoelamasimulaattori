@@ -1,0 +1,44 @@
+.dropdown
+  opacity 0
+  pointer-events none
+  width 100%
+  min-width 175px
+  transition opacity 0.2s
+  color textColor
+  line-height normal
+  opacity 0
+  right 0
+  z-index 100
+  ul
+    background #fff
+    border 2px solid primaryColor
+    margin 0
+    list-style none
+    padding 0
+    position relative
+    &:after
+      width 10px
+      height 10px
+      background #fff
+      top -8px
+      right 5px
+      border-top 2px solid primaryColor
+      border-left 2px solid primaryColor
+      transform rotate(45deg)
+      position absolute
+      content ''
+  position absolute
+  border-radius 3px
+  padding-top 3px
+  font-weight 300
+  li
+    padding 0.5em 1em
+    cursor pointer
+    border-bottom 1px solid #ddd
+    &:last-child
+      border-bottom 0
+    i
+      margin-right 1em
+
+.dropdown--visible
+  display block

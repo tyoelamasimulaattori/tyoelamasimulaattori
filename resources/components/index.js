@@ -3,6 +3,7 @@ import { default as Panel } from 'components/accordion';
 import { default as Button } from 'components/button';
 import { default as CaseSelector } from 'components/case-selector';
 import { default as Controls } from 'components/controls';
+import { default as Dropdown } from 'components/dropdown';
 import { default as PersonCard } from 'components/person-card';
 import { default as PerspectiveSelector } from 'components/perspective-selector';
 import { default as Problem } from 'components/problem';
@@ -29,5 +30,6 @@ export {
     View as View,
     IconButton as IconButton,
     Form as Form,
-    Modal as Modal
+    Modal as Modal,
+    Dropdown as Dropdown
 };
