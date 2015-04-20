@@ -5,6 +5,11 @@ import { Accordion, Panel } from 'react-bootstrap';
 
 export { Panel as Panel };
 
+/*
+ * TODO
+ * - <Panel />:it syötetään sieltä missä tätä käytetään
+ */
+
 export default React.createClass({
   render() {
 
