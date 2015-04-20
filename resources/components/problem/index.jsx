@@ -12,6 +12,9 @@ export default React.createClass({
   onSelect(answer) {
     return () => this.props.onSelect(answer);
   },
+  tip() {
+     return confirm ('Mieti, miten voisit tehdä kompromissin, joka sopii kaikille osapuolille.');
+  },
   render() {
 
     const answers = this.props.answers.map((option) => {
@@ -28,6 +31,7 @@ export default React.createClass({
           <h2>Kuvaus: </h2>
           <h3>{this.props.name}</h3>
           <p>{this.props.description}</p>
+          <Button onClick={this.tip}>Vihje</Button>
         </div>
 
         <div className="problem__questions">
