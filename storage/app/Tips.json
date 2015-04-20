@@ -1,38 +1,26 @@
 [
   {
-    "id": 1,
-	"name": "Vihje tapauksen etenemisen avuksi",
-    "text": "Mieti, miten voisit tehdä kompromissin, joka sopii kaikille osapuolille.",
-    "image": null
+  "id": 1,
+  "name": "Toimintajärjestelmä",
+  "text": "--KOLMION SELITYS-- Painamalla oheista kuvaa, saat lisätietoa",
+  "image": "kolmio.png"
   },
   {
     "id": 2,
-	"name": "Näkökulmavihje",
-    "text": "Tarkastele asiaa toimintakulttuurinäkökulman kannalta. Lue materiaalia toimintakulttuurista näkökulmana eli kyvykkyystekijänä.",
-    "tag": "Toimintakulttuuri",
-    "image": null
-  },
-  {
-    "id": 3,
 	"name": "Työhyvinvoinnin punos",
     "text": "Attitudes and their connection with industrial mental health are related to Abraham Maslows theory of motivation. His findings have had a considerable theoretical, as well as a practical, influence on attitudes toward administration.",
     "image": null
   },
   {
-    "id": 4,
+    "id": 3,
 	"name": "Valmentava johtaminen",
     "text": "G  Goal R Reality O Obstacles (Options) W Way Forward",
     "image": null
   },
   {
-    "id": 5,
+    "id": 4,
 	"name": "Intra",
     "text": "Harkitse tarkkaan, mikä saisi Kaijan ymmärtämään tilanteen vakavuuden. Katso lisätietoa Intrasta: Konflikti ja sen käsittely (s. 10- 12).",
     "image": null
-  },
-  {"id": 6,
-"name": "Toimintajärjestelmä",
-  "text": "--KOLMION SELITYS-- Painamalla oheista kuvaa, saat lisätietoa",
-  "image": "kolmio.png"
   }
 ]

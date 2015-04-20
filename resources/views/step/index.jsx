@@ -126,7 +126,7 @@ export default React.createClass({
                       image={imagePath(image)}
                       title={title} />
 
-          <h3>Lisämateriaali: </h3>
+          <h3>Lisämateriaalit: </h3>
           <Accordion tips={tipStore.getTips()}
                      onClick={this.handleToggle}/>
         </div>
