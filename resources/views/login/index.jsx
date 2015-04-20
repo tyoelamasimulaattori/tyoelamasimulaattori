@@ -44,6 +44,7 @@ export default React.createClass({
             <input type="text" />
           </Form>
           <Footer>
+            <a href="#">Rekisteröidy</a>
             <div className="controls">
               <Button onClick={this.login}>
                 Kirjaudu sisään

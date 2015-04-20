@@ -1,9 +1,14 @@
 import { default as React } from 'react';
 import { Button, Modal } from 'components';
+import { loginStore } from 'stores';
+import { loginActions } from 'actions';
 
 const { Dialog, Footer } = Modal;
 
 export default React.createClass({
+  logIn() {
+    loginActions.showLoginModal();
+  },
   render() {
     return (
       <Modal id="index-view">
@@ -27,8 +32,8 @@ export default React.createClass({
             <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC-profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
 
             <div className="controls">
-              <Button to="/">
-              Aloita simulaatio
+              <Button to="/" onClick={this.logIn}>
+                Kirjaudu sisään
               </Button>
             </div>
           </Footer>
