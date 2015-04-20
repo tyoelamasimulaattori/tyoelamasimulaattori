@@ -6,6 +6,7 @@ import {
   View,
   Accordion,
   Panel,
+  IconButton,
   Controls,
   PersonCard,
   Problem,
@@ -134,6 +135,9 @@ export default React.createClass({
         <div className="step-view__container" style={style}>
           <div className="step-view__header">
             <UserProfile />
+            <IconButton>
+              <i className="fa fa-question"></i>
+            </IconButton>
           </div>
 
           <div className="problem">
