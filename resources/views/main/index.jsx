@@ -6,16 +6,19 @@ import {
   View,
   IconButton,
   Button,
+  Modal,
   PerspectiveSelector,
   UserProfile,
   CaseSelector
 } from 'components';
 
+const { Dialog, Footer } = Modal;
+
 import { default as DiscSelectView } from './disc-select';
 import { default as IntroView } from './intro';
 
-import { perspectiveActions } from 'actions';
-import { perspectiveStore } from 'stores';
+import { perspectiveActions, loginActions } from 'actions';
+import { perspectiveStore, loginStore } from 'stores';
 
 export {
   DiscSelectView as DiscSelectView,
@@ -32,7 +35,13 @@ export default React.createClass({
   getInitialState() {
     let state = this.getState();
     return extend(state, {
-      selectedPerspective: null
+      selectedPerspective: null,
+      isModalOpen: false
+    });
+  },
+  toggleModal: function () {
+    this.setState({
+      isModalOpen: !this.state.isModalOpen
     });
   },
   onDataChange() {
@@ -60,16 +69,54 @@ export default React.createClass({
   },
   onCaseSelect(selected) {
     if(!selected.disabled){
-      this.context.router.transitionTo('step', {
-        id: 0,
-        step: 0
-      });
+      if(loginStore.isLoggedIn()){
+        this.setState({
+          isModalOpen: !this.state.isModalOpen
+        });
+      }
+      else{
+        this.onCaseSelectNoLogin();
+      }
     }
+  },
+  onCaseSelectNoLogin() {
+    this.context.router.transitionTo('step', {
+      id: 0,
+      step: 0
+    });
+  },
+  onCaseSelectLogin() {
+    this.context.router.transitionTo('step', {
+      id: 0,
+      step: 2
+    });
   },
   render() {
 
     let { selectedPerspective, perspectives } = this.state;
     let caseSelector = null;
+
+    const modal = (
+      <Modal hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
+        <Dialog>
+          <h3>Keskeytetty istunto</h3>
+          <p>
+            Haluatko jatkaa keskeytettyä istuntoa vai haluatko aloittaa tapauksen uudelleen alusta?
+          </p>
+          <Footer>
+            <Button onClick={this.onCaseSelectLogin}>
+              Jatka tapausta
+            </Button>
+            <Button onClick={this.onCaseSelectNoLogin}>
+              Uusi tapaus
+            </Button>
+            <Button onClick={this.toggleModal}>
+              Peruuta
+            </Button>
+          </Footer>
+        </Dialog>
+      </Modal>
+    );
 
     if(selectedPerspective) {
       caseSelector = (
@@ -91,15 +138,15 @@ export default React.createClass({
           perspectives={perspectives}
           onSelect={this.onPerspectiveSelect}
           selected={selectedPerspective} />
-		  
+
         <div className="main-view__header">
            <UserProfile />
         </div>
-		
+
         <IconButton to="intro">
           <i className="fa fa-question"></i>
         </IconButton>
-		
+        {modal}
         {caseSelector}
 
         {/* Modals open inside of this RouteHandler */}
