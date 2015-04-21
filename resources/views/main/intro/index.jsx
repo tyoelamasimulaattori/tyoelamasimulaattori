@@ -28,9 +28,9 @@ export default React.createClass({
             <ul>
               <li>Ensin rekisteröidy tai kirjaudu sisään, jonka jälkeen valitse lähestymisnäkökulmasi annetuista vaihtoehdoista (Valitse näkökulma).</li>
               <li>Seuraavaksi valitse tapaus, jonka haluat suorittaa. (Valitse tapaus näkökulmasta ...). HUOMIO! Demoversiossa on vain yksi tapaus (tapaus Kaija), joka löytyy Toimintakulttuuri-näkökulman alta.</li>
-              <li>Tapauksen alkaessa sinulle esitetään alkutilanne ja siihen erilaisia vastausvaihtoehtoja. Valitse mielestäsi paras vaihtoehto hyödytäen vihjeitä ja muuta materiaalia.</li>
-              <li>Valittuasi vaihtoehdon tapaus etenee seuraavaan vaiheeseen. Jatka vaihtoehtojen valitsemista, kunnes pääset tapauksen loppuun.</li>
-              <li>Lopussa sinulle esitetään loppupalaute sekä vastaamasi vastaukset, jonka jälkeen voit joko lopettaa pelin tai aloittaa uuden tapauksen.</li>
+              <li>Tapauksen alkaessa sinulle esitetään alkutilanne ja siihen erilaisia vastausvaihtoehtoja. Valitse mielestäsi paras vaihtoehto hyödytäen vihjettä ja lisämateriaalia.</li>
+              <li>Valittuasi vaihtoehdon tapaus etenee palautteeseen ja siitä seuraavaan vaiheeseen. Jatka vaihtoehtojen valitsemista, kunnes pääset tapauksen loppuun.</li>
+              <li>Lopussa sinulle esitetään loppupalaute sekä vastaamasi vastaukset, jonka jälkeen voit joko lopettaa pelin tai aloittaa uuden tapauksen. Valittuasi kumman tahansa pääset simulaattorin aloitussivulle.</li>
             </ul>
           </p>
 
