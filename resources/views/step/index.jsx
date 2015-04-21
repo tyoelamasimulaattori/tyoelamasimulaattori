@@ -24,12 +24,18 @@ import { tipStore } from 'stores';
 export default React.createClass({
   getInitialState() {
     return {
-      isModalOpen: false
+      isModalOpen: false,
+      isHelpModalOpen: false
     };
   },
   toggleModal: function () {
     this.setState({
       isModalOpen: !this.state.isModalOpen
+    });
+  },
+  toggleHelpModal: function () {
+    this.setState({
+      isHelpModalOpen: !this.state.isHelpModalOpen
     });
   },
   contextTypes: {
@@ -91,6 +97,29 @@ export default React.createClass({
         </Dialog>
       </Modal>
     )
+	
+   const helpModal = (
+      <Modal hidden={!this.state.isHelpModalOpen} onCloseIntention={this.toggleHelpModal}>
+        <Dialog>
+          <h1>Näin pelaat Työelämäsimulaattoria</h1>
+          <p>
+            <ul>
+               <li>Lue tilanteen eli stepin kuvaus huolellisesti.</li>
+               <li>Valitse parhaiten sopiva vaihtoehto kuvauksen alla olevista vaihtoehdoista.</li>
+               <li>Vastauksen avuksi voi käyttää vihjettä, joka saat painamalla Vihje-nappulaa kuvauksen alta.</li>
+               <li>Valittuasi vaihtoehdon pääset palautteeseen, joka määrittyy vastaamasi vastauksen mukaan.</li>
+               <li>Lue palaute huolellisesti.</li>
+               <li>Luettuasi palautteen paina Jatka-nappulaa, ja pääset uuteen tilanteeseen eli steppiin.</li>
+            </ul>
+          </p>
+          <Footer>
+            <Button onClick={this.toggleHelpModal}>
+              Jatka simulaattoria
+            </Button>
+          </Footer>
+        </Dialog>
+      </Modal>
+   )
 
     var tips = tipStore.getTips();
 
@@ -134,18 +163,16 @@ export default React.createClass({
 
         <div className="step-view__container" style={style}>
           <div className="step-view__header">
-            <UserProfile />
-            <IconButton>
-              <i className="fa fa-question"></i>
+            <IconButton onClick={this.toggleHelpModal}>
+               <i className="fa fa-question"></i>
             </IconButton>
+            <UserProfile />
           </div>
-
           <div className="problem">
             {problem}
             {feedback}
             <div className="problem__footer">
               <Controls>
-
                 <Button to="/" onClick={this.onSave}>
                   Tallenna ja keskeytä
                 </Button>
@@ -154,6 +181,7 @@ export default React.createClass({
                 </Button>
               </Controls>
             </div>
+            {helpModal}
             {modal}
           </div>
         </div>
