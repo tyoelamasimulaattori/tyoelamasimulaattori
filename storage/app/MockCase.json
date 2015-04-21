@@ -18,22 +18,22 @@
       "image": "office.jpg",
       "options": [
         {
-          "name": "Annan asian olla. Kaijalla on oikeus päättää alaistensa työajoista.",
+          "name": "1. Annan asian olla. Kaijalla on oikeus päättää alaistensa työajoista.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
-          "name": "Pyydän Kaijan toimistooni keskustelemaan asian läpi. Haluan kuulla Kaijan syyt eiliselle.",
+          "name": "2. Pyydän Kaijan toimistooni keskustelemaan asian läpi. Haluan kuulla Kaijan syyt eiliselle.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
-          "name": "Vaadin, että Kaija korvaa menetetyt työtunnit tulevaisuudessa. Mielestäni ei ole sopivaa mennä vastoin asetettuja sääntöjä.",
+          "name": "3. Vaadin, että Kaija korvaa menetetyt työtunnit tulevaisuudessa. Mielestäni ei ole sopivaa mennä vastoin asetettuja sääntöjä.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 4 jatkaaksesi."
         },
         {
-          "name": "Nostan toissapäiväisen tilanteen keskusteluun. Haluan toimia päättäväisesti ja sen käydä läpi seikkaperäisesti. Tavoitteeni on sopia selkeästi noudatettavasta toimintatavasta.",
+          "name": "4. Nostan toissapäiväisen tilanteen keskusteluun. Haluan toimia päättäväisesti ja sen käydä läpi seikkaperäisesti. Tavoitteeni on sopia selkeästi noudatettavasta toimintatavasta.",
           "correct": true,
           "feedback": "Keskustelu eteni, mutta tunnelma oli hieman kireä. Muutosta tilanteessa ei tapahdu."
         }
@@ -46,17 +46,17 @@
       "image": "office.jpg",
       "options": [
         {
-          "name": "Odotan, että tulee sopiva hetki, jolloin kansliassa muita ei ole hetkeen läsnä. En halua nostaa asiasta isoa juttua, ja kerronkin huomioni lyhyesti. Keskustelussa edellytän, että Kaija toimii sovitulla tavalla.",
+          "name": "1. Odotan, että tulee sopiva hetki, jolloin kansliassa muita ei ole hetkeen läsnä. En halua nostaa asiasta isoa juttua, ja kerronkin huomioni lyhyesti. Keskustelussa edellytän, että Kaija toimii sovitulla tavalla.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 2 jatkaaksesi."
         },
         {
-          "name": "Otan asian pikimmiten puheeksi Kaijan kanssa. Nostan muitakin kohdentuvia huomioitani tiimin omasta sähläävästä toiminnasta kuin vain työvuorojakojen muuttamisen.",
+          "name": "2. Otan asian pikimmiten puheeksi Kaijan kanssa. Nostan muitakin kohdentuvia huomioitani tiimin omasta sähläävästä toiminnasta kuin vain työvuorojakojen muuttamisen.",
           "correct": true,
           "feedback": "Tiimi näyttää toimivan näennäisesti sovitulla tavalla. Kyräily jatkuu ja avointa keskustelua kanssasi vältetään."
         },
         {
-          "name": "Otan asian uudelleen puheeksi tiimivetäjän kanssa ja vastuutan häntä. En kerro kyräilyhuomioitani.",
+          "name": "3. Otan asian uudelleen puheeksi tiimivetäjän kanssa ja vastuutan häntä. En kerro kyräilyhuomioitani.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 2 jatkaaksesi."
         }
@@ -69,17 +69,17 @@
       "image": "office.jpg",
       "options": [
         {
-          "name": "Otan asian uudelleen puheeksi tiimivetäjän kanssa, ja yritän sopia hänen kanssaan sellaista aikaa, jossa suurin osa tiimiläisistä on läsnä. Vastuutan häntä edelleen tiimivetäjänä.",
+          "name": "1. Otan asian uudelleen puheeksi tiimivetäjän kanssa, ja yritän sopia hänen kanssaan sellaista aikaa, jossa suurin osa tiimiläisistä on läsnä. Vastuutan häntä edelleen tiimivetäjänä.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 3 jatkaaksesi."
         },
         {
-          "name": "Kutsun ko. päivän kaikki tiimivetäjät yhteiseen palaveriin ja haluan etsiä heidän kanssaan yhdessä ratkaisua. Tarkoitukseni on estää tilanteen leviäminen koko yhteisöön.",
+          "name": "2. Kutsun ko. päivän kaikki tiimivetäjät yhteiseen palaveriin ja haluan etsiä heidän kanssaan yhdessä ratkaisua. Tarkoitukseni on estää tilanteen leviäminen koko yhteisöön.",
           "correct": false,
           "feedback": "Tämä on demoversio työelämäsimulaattorista. Lopullisessa versiossa tämä vaihtoehto veisi seuraavaan askeleeseen, mutta nyt se ei ole toiminnassa. Ole hyvä ja valitse vaihtoehto 3 jatkaaksesi."
         },
         {
-          "name": "Kutsun koko sen päivän tiimiläiset yhteiseen palaveriin välittömästi jo ennen ruokataukoa. Haluan kuulla heidän tämän päivän järjestelystään ja avata muutenkin tilanteen heidän kanssaan.",
+          "name": "3. Kutsun koko sen päivän tiimiläiset yhteiseen palaveriin välittömästi jo ennen ruokataukoa. Haluan kuulla heidän tämän päivän järjestelystään ja avata muutenkin tilanteen heidän kanssaan.",
           "correct": true,
           "feedback": "Tilanteesta tulee avoin tiimissä. Kannanottoja on sekä puolesta ja vastaan. Tiimi puolustaa tiiminvetäjää, joka on toiminut heidän toiveidensa mukaan. Keskustellaan tiimin toiminnan suhteessa muihin tiimeihin ja koko osaston työstä. Tilanne alkaa konfliktoitua lisää ja tiimiin syntyy omia klikkejä - osa on osastohoitajan kannalla, osa on tiimivetäjän puolustajia. Nyt molemmat puhuvat vain ja ainoastaan asiasta. Koko yhteisö on tietoinen osastohoitajan ja tiimivetäjän suhteiden kiristymisestä."
         }
