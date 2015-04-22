@@ -149,7 +149,7 @@ export default React.createClass({
         </IconButton>
         {modal}
         {caseSelector}
-        <PerspectiveInfo />
+        <PerspectiveInfo hidden={this.state.selectedPerspective != null}/>
 
         {/* Modals open inside of this RouteHandler */}
         <RouteHandler/>
