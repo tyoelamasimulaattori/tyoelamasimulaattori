@@ -15,13 +15,13 @@ export default React.createClass({
     return (
       <div className ={classes}>
         <h2> Näkökulmavalikon käyttö </h2>
-        <p>
-          Tämän tekstin yläpuolella olevat vaihtoehdot Johtaminen, esimiestoiminta, toimintakulttuuri, prosessit ja työtavat, ja osaaminen,
-          ovat näkökulmia, joiden mukaan simulaattorin tapaukset ovat jaettu. Painamalla yhtä näkökulmista, sinulle esitetään joukko tehtäviä, joista voit valita yhden pelattavaksi.
-          Jos tapauksen kuvakkeen päällä on lukko, se tarkoittaa, ettei tapaus ole vielä auennut pelattavaksi.
+       <p>
+          Tämän tekstin yläpuolella olevat vaihtoehdot Johtaminen, Esimiestoiminta, Toimintakulttuuri, Prosessit ja työtavat sekä Osaaminen
+          ovat näkökulmia, joiden mukaan simulaattorin tapaukset ovat jaettu. Painamalla yhtä näkökulmista sinulle esitetään joukko tapauksia,
+          joista voit valita yhden pelattavaksi. Jos tapauksen kuvakkeen päällä on lukko, se tarkoittaa, ettei tapaus ole vielä auennut pelattavaksi.
         </p>
 
-        <p> Kun olet mielestäsi valmis, ole hyvä ja valitse yksi näkökulmista. Hyviä pelihetkiä! </p>
+        <p> Kun olet mielestäsi valmis, ole hyvä ja valitse yksi näkökulmista, ja sen jälkeen haluamasi tapaus. Hyviä pelihetkiä! </p>
       </div>
     )
   }
