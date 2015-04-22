@@ -98,7 +98,7 @@ export default React.createClass({
     let caseSelector = null;
 
     const modal = (
-      <Modal hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
+      <Modal className="conf-modal"hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
         <Dialog>
           <h3>Keskeytetty istunto</h3>
           <p>
