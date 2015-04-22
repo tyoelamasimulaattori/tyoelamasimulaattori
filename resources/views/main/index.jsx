@@ -7,6 +7,7 @@ import {
   IconButton,
   Button,
   Modal,
+  PerspectiveInfo,
   PerspectiveSelector,
   UserProfile,
   CaseSelector
@@ -50,10 +51,10 @@ export default React.createClass({
     const { perspectives } = newState;
 
     // Selects a perspective automatically when data is loaded
-    if(!this.state.selectedPerspective && perspectives.length > 0) {
+    /*if(!this.state.selectedPerspective && perspectives.length > 0) {
       const middleIndex = Math.ceil(perspectives.length/2) - 1;
       newState.selectedPerspective = perspectives[middleIndex];
-    }
+    }*/
 
     this.setState(newState);
   },
@@ -148,6 +149,7 @@ export default React.createClass({
         </IconButton>
         {modal}
         {caseSelector}
+        <PerspectiveInfo />
 
         {/* Modals open inside of this RouteHandler */}
         <RouteHandler/>

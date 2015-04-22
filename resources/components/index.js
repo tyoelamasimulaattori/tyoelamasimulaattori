@@ -5,6 +5,7 @@ import { default as CaseSelector } from 'components/case-selector';
 import { default as Controls } from 'components/controls';
 import { default as Dropdown } from 'components/dropdown';
 import { default as PersonCard } from 'components/person-card';
+import { default as PerspectiveInfo } from 'components/perspective-info';
 import { default as PerspectiveSelector } from 'components/perspective-selector';
 import { default as Problem } from 'components/problem';
 import { default as Feedback } from 'components/feedback';
@@ -22,6 +23,7 @@ export {
     CaseSelector as CaseSelector,
     Controls as Controls,
     PersonCard as PersonCard,
+    PerspectiveInfo as PerspectiveInfo,
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
     Feedback as Feedback,
