@@ -1,26 +1,26 @@
 [
   {
-  "id": 1,
-  "name": "Toimintajärjestelmä",
-  "text": "--KOLMION SELITYS-- Painamalla oheista kuvaa, saat lisätietoa",
-  "image": "kolmio.png"
+    "id": 1,
+    "name": "Toimintajärjestelmä",
+    "text": "Paina kuvaa saadaksesi lisätietoja toimintajärjestelmästä.",
+    "image": "kolmio.png"
   },
   {
     "id": 2,
 	"name": "Työhyvinvoinnin punos",
-    "text": "Attitudes and their connection with industrial mental health are related to Abraham Maslows theory of motivation. His findings have had a considerable theoretical, as well as a practical, influence on attitudes toward administration.",
+    "text": "Herzberg-kuva aukeamaan tästä.",
     "image": null
   },
   {
     "id": 3,
 	"name": "Valmentava johtaminen",
-    "text": "G  Goal R Reality O Obstacles (Options) W Way Forward",
+    "text": "Linkki GROW-materiaaliin tähän.",
     "image": null
   },
   {
     "id": 4,
 	"name": "Intra",
-    "text": "Harkitse tarkkaan, mikä saisi Kaijan ymmärtämään tilanteen vakavuuden. Katso lisätietoa Intrasta: Konflikti ja sen käsittely (s. 10- 12).",
+    "text": "Linkki Intra-materiaaliin tähän.",
     "image": null
   }
 ]
