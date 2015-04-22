@@ -16,6 +16,24 @@ export default React.createClass({
     router: React.PropTypes.func.isRequired
   },
   render() {
+
+    var button;
+    
+    if(loginStore.isLoggedIn()){
+      button = (
+        <Button to="/">
+          Takaisin
+        </Button>
+      );
+    }
+    else{
+      button = (
+        <Button to="/" onClick={this.logIn}>
+          Kirjaudu sisään
+        </Button>
+      );
+    }
+
     return (
       <Modal id="index-view" onCloseIntention={this.onCloseIntention}>
         <Dialog>
@@ -38,9 +56,7 @@ export default React.createClass({
             <p>Ennen kuin aloitat simulaattorin, varmista, että sinulla on oma DiSC-profiili, sillä tulet tarvitsemaan sitä simulaatiossa.</p>
 
             <div className="controls">
-              <Button to="/" onClick={this.logIn}>
-                Kirjaudu sisään
-              </Button>
+              {button}
             </div>
           </Footer>
         </Dialog>
