@@ -24,7 +24,8 @@ class TipsTableSeeder extends Seeder {
           'name' => $tip->name,
           'text' => $tip->text,
           'tag' => $tip->tag,
-          'image' => $tip->image
+          'image' => $tip->image,
+          'link' => $tip->link
         ]);
       }
       else {
@@ -32,7 +33,8 @@ class TipsTableSeeder extends Seeder {
           'id' => $tip->id,
           'name' => $tip->name,
           'text' => $tip->text,
-          'image' => $tip->image
+          'image' => $tip->image,
+          'link' => $tip->link
         ]);
       }
     }

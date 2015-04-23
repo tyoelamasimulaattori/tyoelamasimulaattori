@@ -33,6 +33,9 @@ export default React.createClass({
       isModalOpen: !this.state.isModalOpen
     });
   },
+  popup(resource) {
+    window.open(imagePath(resource));
+  },
   toggleHelpModal: function () {
     this.setState({
       isHelpModalOpen: !this.state.isHelpModalOpen
@@ -158,7 +161,8 @@ export default React.createClass({
 
           <h3>Lisämateriaalit: </h3>
           <Accordion tips={tipStore.getTips()}
-                     onClick={this.toggleModal}/>
+                     onClick={this.toggleModal}
+                     popup={this.popup}/>
         </div>
 
         <div className="step-view__container" style={style}>
