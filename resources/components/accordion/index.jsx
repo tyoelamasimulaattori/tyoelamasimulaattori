@@ -37,7 +37,7 @@ export default React.createClass({
       );
       var panel;
 
-      if(tip.image == null){
+      if(tip.image == null && tip.link == null){
         panel = (
           <Panel
             header={header}
@@ -47,8 +47,8 @@ export default React.createClass({
           </Panel>
         );
       }
-      else{
-        panel =(
+      else if(tip.link == null){
+        panel = (
           <Panel
             header={header}
             eventKey={tip.id}
@@ -57,6 +57,17 @@ export default React.createClass({
             <img src={imagePath(tip.image)} onClick={this.props.onClick} />
           </Panel>
          );
+      }
+      else {
+        panel = (
+          <Panel
+            header={header}
+            eventKey={tip.id}
+            key={tip.id}>
+            {tip.text}
+            <img src={imagePath(tip.link)} onClick={this.props.popup.bind(this,tip.link)} />
+          </Panel>
+        )
       }
       return (panel)
     });

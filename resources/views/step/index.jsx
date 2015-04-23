@@ -25,7 +25,8 @@ export default React.createClass({
   getInitialState() {
     return {
       isModalOpen: false,
-      isHelpModalOpen: false
+      isHelpModalOpen: false,
+      isConfModalOpen: false
     };
   },
   toggleModal: function () {
@@ -33,9 +34,17 @@ export default React.createClass({
       isModalOpen: !this.state.isModalOpen
     });
   },
+  popup(resource) {
+    window.open(imagePath(resource));
+  },
   toggleHelpModal: function () {
     this.setState({
       isHelpModalOpen: !this.state.isHelpModalOpen
+    });
+  },
+  toggleConfModal: function () {
+    this.setState({
+      isConfModalOpen: !this.state.isConfModalOpen
     });
   },
   contextTypes: {
@@ -120,6 +129,27 @@ export default React.createClass({
         </Dialog>
       </Modal>
    )
+    const confModal = (
+      <Modal className="conf-modal"hidden={!this.state.isConfModalOpen} onCloseIntention={this.toggleConfModal}>
+        <Dialog>
+          <h3>Lopeta peli</h3>
+          <p>
+            Haluatko tallentaa pelin?
+          </p>
+          <Footer>
+            <Button to="/">
+              Tallenna
+            </Button>
+            <Button to="/">
+              Älä tallenna
+            </Button>
+            <Button onClick={this.toggleConfModal}>
+              Peruuta
+            </Button>
+          </Footer>
+        </Dialog>
+      </Modal>
+    );
 
     var tips = tipStore.getTips();
 
@@ -159,7 +189,8 @@ export default React.createClass({
 
           <h3>Lisämateriaalit: </h3>
           <Accordion tips={tipStore.getTips()}
-                     onClick={this.toggleModal}/>
+                     onClick={this.toggleModal}
+                     popup={this.popup}/>
         </div>
 
         <div className="step-view__container" style={style}>
@@ -174,14 +205,12 @@ export default React.createClass({
             {feedback}
             <div className="problem__footer">
               <Controls>
-                <Button to="/" onClick={this.onSave}>
-                  Tallenna ja keskeytä
-                </Button>
-                <Button warning to="/" onClick={this.onQuit}>
-                  Lopeta tapaus
-                </Button>
+                 <Button warning onClick={this.toggleConfModal}>
+                    Lopeta
+                 </Button>
               </Controls>
             </div>
+            {confModal}
             {helpModal}
             {modal}
           </div>

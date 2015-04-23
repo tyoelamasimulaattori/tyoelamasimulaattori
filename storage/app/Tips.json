@@ -3,24 +3,28 @@
     "id": 1,
     "name": "Toimintajärjestelmä",
     "text": "Paina kuvaa saadaksesi lisätietoja toimintajärjestelmästä.",
-    "image": "kolmio.png"
+    "image": "kolmio.png",
+    "link": null
   },
   {
     "id": 2,
-	"name": "Työhyvinvoinnin punos",
+	  "name": "Työhyvinvoinnin punos",
     "text": "Herzberg-kuva aukeamaan tästä.",
-    "image": null
+    "image": null,
+    "link": "herzberg.png"
   },
   {
     "id": 3,
-	"name": "Valmentava johtaminen",
+	  "name": "Valmentava johtaminen",
     "text": "Linkki GROW-materiaaliin tähän.",
-    "image": null
+    "image": null,
+    "link": null
   },
   {
     "id": 4,
-	"name": "Intra",
+	  "name": "Intra",
     "text": "Linkki Intra-materiaaliin tähän.",
-    "image": null
+    "image": null,
+    "link": null
   }
 ]
