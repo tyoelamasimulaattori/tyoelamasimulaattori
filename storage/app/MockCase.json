@@ -14,7 +14,7 @@
   "steps": [
     {
       "id": 0,
-      "description":"Asiantuntijasairaanhoitaja Kaija on osastossasi työskentelevän tiimin vetäjä. Välinne ovat olleet kohtuullisen hyvät, eikä Kaija ole tuottanut ongelmia. Eilen Kaija kuitenkin antoi tiiminsä lopettaa työpäivän aikaisin, vaikka se on vastoin sovittuja sääntöjä. Olet kuullut, että muut tiimit ja tiimien vetäjät pitävät tätä epäasiallisen käytöksenä ja toivovat, että Kaijaa nuhdellaan asiasta. Mitä teet?",
+      "description":" Kaija, yhteisön 2. tiimin työntekijä, joka on ns. epävirallinen johtaja koko yhteisössä, ja sinun välillä on tilanneselvitys, jossa haluat selventää yhteisiä toiminnan pelisääntöjä. Tiimissä on toimittu vastoin tekemääsi työvuoron työjakoa. Miten käynnistät keskustelun tilanteesta?.",
       "image": "office.jpg",
       "options": [
         {
