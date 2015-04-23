@@ -25,13 +25,13 @@ export default React.createClass({
       )
     });
 
-	var stepName;
+    var stepName;
     var stepId = this.props.id;
-	if ((stepId) == 0) {
-	   stepName = "Alkutilanne:";
-	}
-	else
-       stepName = "Steppi " + this.props.id + ", tilanne";
+    if ((stepId) == 0) {
+       stepName = "Alkutilanne:";
+    }}
+    else
+      stepName = "Steppi " + this.props.id + ", tilanne";
 
     return (
       <div>
