@@ -11,6 +11,7 @@ import { default as PerspectiveSelector } from 'components/perspective-selector'
 import { default as Problem } from 'components/problem';
 import { default as Feedback } from 'components/feedback';
 import { default as View } from 'components/view';
+import { default as Sidebar } from 'components/sidebar';
 import { default as UserProfile } from 'components/user-profile';
 import { default as Login } from 'components/login';
 import { default as IconButton } from 'components/icon-button';
@@ -29,6 +30,7 @@ export {
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
     Feedback as Feedback,
+    Sidebar as Sidebar,
     UserProfile as UserProfile,
     Login as Login,
     View as View,

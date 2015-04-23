@@ -181,7 +181,7 @@ export default React.createClass({
 
     return (
       <View id="step-view">
-        <div className="sidebar">
+        <Sidebar>
           <PersonCard name={name}
                       description={description}
                       image={imagePath(image)}
@@ -191,7 +191,7 @@ export default React.createClass({
           <Accordion tips={tipStore.getTips()}
                      onClick={this.toggleModal}
                      popup={this.popup}/>
-        </div>
+        </Sidebar>
 
         <div className="step-view__container" style={style}>
           <div className="step-view__header">
