@@ -139,6 +139,7 @@ export default React.createClass({
         <Problem
           name={this.props.currentCase.name}
           description={currentStep.description}
+          id={currentStep.id}
           answers={currentStep.answers}
           onSelect={this.showFeedback} />
       );

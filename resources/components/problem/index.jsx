@@ -25,11 +25,18 @@ export default React.createClass({
       )
     });
 
+	var stepName;
+    var stepId = this.props.id;
+	if ((stepId) == 0) {
+	   stepName = "Alkutilanne:";
+	}
+	else
+       stepName = "Steppi " + this.props.id + ", tilanne";
+
     return (
       <div>
         <div className="problem__description">
-          <h2>Kuvaus: </h2>
-          <h3>{this.props.name}</h3>
+          <h2>{stepName}</h2>
           <p>{this.props.description}</p>
           <Button onClick={this.tip}>Vihje</Button>
         </div>
