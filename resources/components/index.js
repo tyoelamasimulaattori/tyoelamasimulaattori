@@ -1,6 +1,7 @@
 import { default as Accordion } from 'components/accordion';
 import { default as Panel } from 'components/accordion';
 import { default as Button } from 'components/button';
+import { default as CaseList } from 'components/case-list';
 import { default as CaseSelector } from 'components/case-selector';
 import { default as Controls } from 'components/controls';
 import { default as Dropdown } from 'components/dropdown';
@@ -20,6 +21,7 @@ export {
     Accordion as Accordion,
     Panel as Panel,
     Button as Button,
+    CaseList as CaseList,
     CaseSelector as CaseSelector,
     Controls as Controls,
     PersonCard as PersonCard,
