@@ -29,7 +29,7 @@ export default React.createClass({
     var stepId = this.props.id;
     if ((stepId) == 0) {
        stepName = "Alkutilanne:";
-    }}
+    }
     else
       stepName = "Steppi " + this.props.id + ", tilanne";
 
