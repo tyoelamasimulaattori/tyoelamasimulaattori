@@ -18,6 +18,9 @@ export default React.createClass({
       loggedIn: loginStore.isLoggedIn()
     };
   },
+  contextTypes: {
+    router: React.PropTypes.func.isRequired
+  },
   logIn() {
     loginActions.showLoginModal();
   },
@@ -45,7 +48,7 @@ export default React.createClass({
         </div>
 
         <Dropdown>
-          <Item>
+          <Item to="editor">
             <i className="fa fa-wrench"></i>
             Tehtävä-editori
           </Item>

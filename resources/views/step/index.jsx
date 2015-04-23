@@ -13,6 +13,7 @@ import {
   Feedback,
   Modal,
   UserProfile,
+  Sidebar,
   Button
 } from 'components';
 
@@ -106,7 +107,7 @@ export default React.createClass({
         </Dialog>
       </Modal>
     )
-	
+
    const helpModal = (
       <Modal hidden={!this.state.isHelpModalOpen} onCloseIntention={this.toggleHelpModal}>
         <Dialog>
