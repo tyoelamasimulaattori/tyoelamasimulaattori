@@ -167,10 +167,5 @@ export default React.createClass({
   },
   componentWillUnmount() {
     this.unsubscribe();
-  },
-  statics: {
-    willTransitionTo: function () {
-      return perspectiveActions.getPerspectives();
-    }
   }
 });

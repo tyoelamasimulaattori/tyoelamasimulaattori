@@ -5,6 +5,7 @@ import { default as Router, Route } from 'react-router';
 import { EditorView, MainView, EndView, CaseView } from 'views';
 
 import { IntroView } from 'views/main';
+import { EditorMainView, EditorNewView } from 'views/editor';
 
 const routes = (
   <Route handler={App} path="/">
@@ -13,7 +14,10 @@ const routes = (
     </Route>
     <Route name="step" path="case/:id/step/:step" handler={CaseView} />
     <Route name="feedback" path="case/:id/step/:step/option/:option" handler={CaseView} />
-    <Route name="editor" path="editor" handler={EditorView} />
+    <Route handler={EditorView}>
+      <Route name="editor" path="editor" handler={EditorMainView} />
+      <Route name="new" path="editor/new" handler={EditorNewView} />
+    </Route>
   </Route>
 );
 
