@@ -1,5 +1,6 @@
 import { default as React } from 'react';
 import { Sidebar, Button, View, UserProfile, CaseList } from 'components';
+import { Header } from 'components/view';
 import { caseStore } from 'stores';
 
 export default React.createClass({
@@ -9,7 +10,7 @@ export default React.createClass({
         <Sidebar>
           <CaseList cases={this.state.cases} />
         </Sidebar>
-        <h1 className="view__header">Tehtävä-editori</h1>
+        <Header>Tehtävä-editori</Header>
       </View>
     );
   },

@@ -14,6 +14,7 @@ import {
 } from 'components';
 
 const { Dialog, Footer } = Modal;
+import { Header } from 'components/view';
 
 import { default as DiscSelectView } from './disc-select';
 import { default as IntroView } from './intro';
@@ -134,7 +135,7 @@ export default React.createClass({
 
     return (
       <View id="start-view">
-        <h1 className="view__header">Valitse näkökulma</h1>
+        <Header>Valitse näkökulma</Header>
         <PerspectiveSelector
           perspectives={perspectives}
           onSelect={this.onPerspectiveSelect}

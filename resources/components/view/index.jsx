@@ -15,3 +15,15 @@ export default React.createClass({
     );
   }
 })
+
+
+export const Header = React.createClass({
+  render() {
+
+    return (
+      <h1 className="view__header" {...this.props}>
+        {this.props.children}
+      </h1>
+    );
+  }
+})
