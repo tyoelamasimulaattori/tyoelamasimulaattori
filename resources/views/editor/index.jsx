@@ -21,10 +21,12 @@ export default React.createClass({
   render() {
     const caseLists = chain(this.state.cases)
       .groupBy('perspective_id').toArray().map((caseGroup) => {
+        const id = caseGroup[0].perspective_id;
         return (
           <CaseList
-            title={this.toPerspectiveName(caseGroup[0].perspective_id)}
-            className={`perspective--${caseGroup[0].perspective_id}`}
+            key={id}
+            title={this.toPerspectiveName(id)}
+            className={`perspective--${id}`}
             cases={caseGroup} />
         )
       }).value();
