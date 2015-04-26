@@ -131,10 +131,10 @@ export default React.createClass({
       </Modal>
    )
     const confModal = (
-      <Modal className="conf-modal"hidden={!this.state.isConfModalOpen} onCloseIntention={this.toggleConfModal}>
+      <Modal hidden={!this.state.isConfModalOpen} onCloseIntention={this.toggleConfModal}>
         <Dialog>
-          <h3>Lopeta peli</h3>
-          <p>
+          <h3 id="conf-modal">Lopeta peli</h3>
+          <p id="conf-modal">
             Haluatko tallentaa pelin?
           </p>
           <Footer>
