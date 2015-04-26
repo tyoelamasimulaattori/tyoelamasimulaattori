@@ -46,7 +46,6 @@
   "dependencies": {
     "classnames": "^1.2.0",
     "lodash": "^3.3.0",
-    "npm": "^2.7.3",
     "react": "^0.13.0",
     "react-bootstrap": "^0.16.0",
     "react-router": "^0.13.1",

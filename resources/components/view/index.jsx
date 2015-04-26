@@ -26,4 +26,4 @@ export const Header = React.createClass({
       </h1>
     );
   }
-})
+});
