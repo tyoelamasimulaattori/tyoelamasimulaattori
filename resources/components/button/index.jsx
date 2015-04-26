@@ -14,7 +14,8 @@ export default React.createClass({
     const classes = classNames({
       'btn': true,
       'btn--primary': !this.props.warning,
-      'btn--warning': this.props.warning
+      'btn--warning': this.props.warning,
+      'btn--active': this.props.active
     });
 
     var props = _.extend({}, this.props, {
