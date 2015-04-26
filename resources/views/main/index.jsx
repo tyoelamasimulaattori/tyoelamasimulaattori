@@ -1,6 +1,7 @@
 import { default as React } from 'react';
 import { findWhere, extend } from 'lodash';
 import { RouteHandler } from 'react-router';
+import { imagePath } from 'filters';
 
 import {
   View,
@@ -99,10 +100,10 @@ export default React.createClass({
     let caseSelector = null;
 
     const modal = (
-      <Modal className="conf-modal"hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
+      <Modal hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
         <Dialog>
-          <h3>Keskeytetty istunto</h3>
-          <p>
+          <h3 id="conf-modal">Keskeytetty istunto</h3>
+          <p id="conf-modal">
             Haluatko jatkaa keskeytettyä istuntoa vai haluatko aloittaa tapauksen uudelleen alusta?
           </p>
           <Footer>
