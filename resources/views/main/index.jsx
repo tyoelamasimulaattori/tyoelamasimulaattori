@@ -1,6 +1,7 @@
 import { default as React } from 'react';
 import { findWhere, extend } from 'lodash';
 import { RouteHandler } from 'react-router';
+import { imagePath } from 'filters';
 
 import {
   View,
