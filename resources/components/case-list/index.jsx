@@ -1,12 +1,18 @@
 import { default as React } from 'react';
 import { imagePath } from 'filters';
-import { compact } from 'lodash';
+import { noop, compact } from 'lodash';
 
 export default React.createClass({
+  getDefaultProps() {
+    return {
+      onSelect: noop
+    };
+  },
+
   render() {
     const cases = this.props.cases.map((c) => {
       return (
-        <li key={c.id}>
+        <li onClick={this.props.onSelect.bind(null, c)} key={c.id}>
           <img src={imagePath(c.image)} />
           {c.name}
         </li>);

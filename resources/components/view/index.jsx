@@ -14,7 +14,22 @@ export default React.createClass({
       </div>
     );
   }
-})
+});
+
+export const Container = React.createClass({
+  render() {
+
+    var props = _.extend({}, this.props, {
+      className: 'view__container'
+    });
+
+    return (
+      <div {...props}>
+        {this.props.children}
+      </div>
+    );
+  }
+});
 
 
 export const Header = React.createClass({
