@@ -10,6 +10,7 @@ import {
   Controls,
   PersonCard,
   Problem,
+  ProgressBar,
   Feedback,
   Modal,
   UserProfile,
@@ -84,7 +85,6 @@ export default React.createClass({
   render() {
     const { name, title, description, image } = this.props.currentCase.person;
     const { currentStep } = this.props;
-
     var problem, feedback;
 
     const modal = (
@@ -192,8 +192,11 @@ export default React.createClass({
           <Accordion tips={tipStore.getTips()}
                      onClick={this.toggleModal}
                      popup={this.popup}/>
-        </Sidebar>
 
+        <h3>Edistyminen:</h3>
+        <ProgressBar steps={this.props.currentCase.steps}
+                     step={currentStep.id}/>
+        </Sidebar>
         <div className="step-view__container" style={style}>
           <div className="step-view__header">
             <IconButton onClick={this.toggleHelpModal}>

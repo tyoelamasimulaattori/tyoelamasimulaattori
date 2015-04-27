@@ -14,6 +14,7 @@ import { default as PersonCard } from 'components/person-card';
 import { default as PerspectiveInfo } from 'components/perspective-info';
 import { default as PerspectiveSelector } from 'components/perspective-selector';
 import { default as Problem } from 'components/problem';
+import { default as ProgressBar } from 'components/progressbar';
 import { default as Sidebar } from 'components/sidebar';
 import { default as UserProfile } from 'components/user-profile';
 import { default as View } from 'components/view';
@@ -35,6 +36,7 @@ export {
     PerspectiveInfo as PerspectiveInfo,
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
+    ProgressBar as ProgressBar,
     Sidebar as Sidebar,
     UserProfile as UserProfile,
     View as View,
