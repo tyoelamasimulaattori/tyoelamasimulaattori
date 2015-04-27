@@ -14,11 +14,10 @@
   text-align center
   position relative
   cursor pointer
-  border-right 3px solid darken(primaryColor, 7)
+  border-left 3px solid darken(primaryColor, 7)
   color #fff
-  box-shadow inset 0px -1px 1px -1px rgba(0, 0, 0, 0.3)
-  &:last-child
-    border-right 1px solid primaryColor
+  &:first-child
+    border-left 0
   p
     margin 0
     font-size 12px
@@ -31,12 +30,14 @@
     cursor default
     background #fff
     color textColor
-    box-shadow 0 0 2px rgba(0, 0, 0, 0.3)
     z-index 1
 
-.perspective:hover
-  background darken(primaryColor, 10)
 
+  &:hover
+    background darken(primaryColor, 10)
+    border-color darken(primaryColor, 10)
+    & + .perspective
+      border-color darken(primaryColor, 10)
 
 
 .perspective--selected:hover
