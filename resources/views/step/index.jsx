@@ -96,7 +96,7 @@ export default React.createClass({
           </p>
           <img src={imagePath("kolmioSelitys.png")} />
           <p>
-            Tämän tapauksen keskeiset alueet ovat arkijohtaminen (työnjako, yhteiso ja tekijä) ja kulttuuri & motivaatio (tekijä, yhteisö ja kohde). Yritä pohtia tilannetta näiden alueiden kautta.
+            Tämän tapauksen keskeiset alueet ovat arkijohtaminen (työnjako, yhteiso ja tekijä) sekä kulttuuri ja motivaatio (tekijä, yhteisö ja kohde). Yritä pohtia tilannetta näistä alueista käsin.
           </p>
           <img src={imagePath("kolmio.png")} />
           <Footer>
@@ -111,20 +111,21 @@ export default React.createClass({
    const helpModal = (
       <Modal hidden={!this.state.isHelpModalOpen} onCloseIntention={this.toggleHelpModal}>
         <Dialog>
-          <h1>Näin pelaat Työelämäsimulaattoria</h1>
+          <h1>Näin pelaat Tilannehallintaa</h1>
           <p>
             <ul>
-               <li>Lue tilanteen eli stepin kuvaus huolellisesti.</li>
-               <li>Valitse parhaiten sopiva vaihtoehto kuvauksen alla olevista vaihtoehdoista.</li>
+               <li>Lue kyseessä olevan tilanteen kuvaus huolellisesti.</li>
+               <li>Valitse parhaiten sopiva vaihtoehto tilanteen kuvauksen alla olevista vaihtoehdoista.</li>
                <li>Vastauksen avuksi voi käyttää vihjettä, joka saat painamalla Vihje-nappulaa kuvauksen alta.</li>
-               <li>Valittuasi vaihtoehdon pääset palautteeseen, joka määrittyy vastaamasi vastauksen mukaan.</li>
+               <li>Myös vasemmalta löytyvästä lisämateriaalipankista saat apua sekä tilanteen ratkaisemiseen että yleistä tietoa johtamisesta ja esimiestoiminnasta.</li>
+               <li>Valittuasi vaihtoehdon pääset palautteeseen, joka määrittyy vastauksesi mukaan.</li>
                <li>Lue palaute huolellisesti.</li>
                <li>Luettuasi palautteen paina Jatka-nappulaa, ja pääset uuteen tilanteeseen eli steppiin.</li>
             </ul>
           </p>
           <Footer>
             <Button onClick={this.toggleHelpModal}>
-              Jatka simulaattoria
+              Takaisin
             </Button>
           </Footer>
         </Dialog>

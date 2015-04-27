@@ -24,14 +24,14 @@ export default React.createClass({
         <Dialog>
           <h1>Demo on päättynyt</h1>
           <p>
-            Tämä demo työelämäsimulaattorista loppuu tähän. Lopullisessa pelissä <br />
+            Tämä demo Tilannehallinta-simulaattoripelistä loppuu tähän. Lopullisessa pelissä <br />
             tulee olemaan monta tapausta, joissa askeleita on paljon enemmän.
           </p>
 
           <p>
             Kiitos kun kokeilit demoa! Paina alla olevaa nappian nähdäksesi<br />
-            valintojesi lopputuloksen. Lopeta-napista simulaattori loppuu ja <br />
-            pääset simulaattorin alkuun, missä voit aloittaa simulaattorin uudelleen.
+            valintojesi lopputuloksen. Lopeta-napista simulaatiopeli loppuu ja <br />
+            pääset pelin alkuun, missä voit aloittaa pelin uudelleen.
           </p>
           <Footer>
             <Button onClick={this.toggleModal}>
