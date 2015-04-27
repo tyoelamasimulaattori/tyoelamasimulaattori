@@ -26,12 +26,14 @@
 
   &.perspective--selected
     border-bottom 0
-    border-right 0
+    border-left 0
     cursor default
     background #fff
     color textColor
     z-index 1
 
+    & + .perspective
+      border-color #fff
 
   &:hover
     background darken(primaryColor, 10)
