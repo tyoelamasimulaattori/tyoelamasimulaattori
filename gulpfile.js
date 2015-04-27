@@ -22,7 +22,7 @@ var config = {
   },
   styles: {
     source: './resources/styles/styles.styl',
-    less: './resources/**/*.less',
+    less: './resources/styles/styles.less',
     watch: './resources/**/*.*',
     destination: './public/css/'
   },
@@ -64,9 +64,11 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
   return es.merge(
     gulp.src(config.styles.less)
-    .pipe(less()),
+    .pipe(less())
+    .on('error', handleError),
     gulp.src(config.styles.source)
       .pipe(stylus({'include css': true}))
+      .on('error', handleError)
   )
   .pipe(concat('styles.css'))
   .pipe(gulp.dest(config.styles.destination))
