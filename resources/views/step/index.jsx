@@ -96,7 +96,7 @@ export default React.createClass({
           </p>
           <img src={imagePath("kolmioSelitys.png")} />
           <p>
-            Tähän tulisi asettaa tarkempi selitys nykyisestä kolmiosta, jotta käyttäjä ymmärtää mitä ihmettä tapahtuu ja miksi.
+            Tämän tapauksen keskeiset alueet ovat arkijohtaminen (työnjako, yhteiso ja tekijä) ja kulttuuri & motivaatio (tekijä, yhteisö ja kohde). Yritä pohtia tilannetta näiden alueiden kautta.
           </p>
           <img src={imagePath("kolmio.png")} />
           <Footer>

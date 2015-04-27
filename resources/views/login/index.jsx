@@ -35,7 +35,7 @@ export default React.createClass({
         <Dialog>
           <h1>Kirjaudu sisään</h1>
           <p>
-            Lorem ipsum Aute occaecat Duis proident Ut Duis veniam in velit labore sed non id eiusmod.
+            Syötä sähköpostiosoitteesi ja salasanasi. Jos sinulla ei ole tiliä tähän palveluun, voit rekisteröitä painamalla alla olevaa linkkiä.
           </p>
           <Form>
             <label>Sähköpostiosoite</label>
