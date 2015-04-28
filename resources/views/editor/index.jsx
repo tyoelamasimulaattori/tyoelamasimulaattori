@@ -7,7 +7,7 @@ import { caseStore, perspectiveStore } from 'stores';
 import { default as EditorEditView} from './edit';
 import { default as EditorMainView} from './main';
 
-import { Container } from 'components/view';
+import { Container, Content, Header } from 'components/view';
 
 const { Dialog, Footer } = Modal;
 
@@ -79,6 +79,7 @@ export default React.createClass({
 
     return (
       <View id="editor-view">
+
         <Sidebar>
           <IconButton to="new">
             <i className="fa fa-plus"></i> Luo uusi
@@ -86,12 +87,16 @@ export default React.createClass({
             {caseLists}
         </Sidebar>
 
-        <IconButton id="helpmodal" onClick={this.toggleHelpModal}>
-          <i className="fa fa-question"></i>
-        </IconButton>
-
         <Container>
-          <RouteHandler {...this.props} />
+          <Header>
+            <IconButton onClick={this.toggleHelpModal}>
+               <i className="fa fa-question"></i>
+            </IconButton>
+            <UserProfile />
+          </Header>
+          <Content>
+            <RouteHandler {...this.props} />
+          </Content>
         </Container>
         {helpModal}
       </View>
