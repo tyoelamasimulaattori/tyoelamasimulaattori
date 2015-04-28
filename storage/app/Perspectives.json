@@ -1,5 +1,4 @@
-[
-{
+[{
   "title": "Johtaminen",
   "description": "Johtamisen kulmakivenä johdon ja esimiesten välinen hyvä vuorovaikutus.",
   "image": "johtaminen.png"
@@ -16,7 +15,7 @@
 },
 {
   "title": "Prosessit ja työtavat",
-  "description": "Prosessien ja työtapojen kulmakivenä työroolien hahmottaminen ja tunnistaminen",
+  "description": "Prosessien ja työtapojen kulmakivenä työroolien hahmottaminen ja tunnistaminen.",
   "image": "prosessit.png"
 },
 {

@@ -17,7 +17,7 @@ export default React.createClass({
         <h2> Näkökulmavalikon käyttö </h2>
        <p>
           Tämän tekstin yläpuolella olevat vaihtoehdot Johtaminen, Esimiestoiminta, Toimintakulttuuri, Prosessit ja työtavat sekä Osaaminen
-          ovat näkökulmia, joiden mukaan simulaattorin tapaukset ovat jaettu. Painamalla yhtä näkökulmista sinulle esitetään joukko tapauksia,
+          ovat näkökulmia, joiden mukaan simulaatiopelin tapaukset ovat jaettu. Painamalla yhtä näkökulmista sinulle esitetään joukko tapauksia,
           joista voit valita yhden pelattavaksi. Jos tapauksen kuvakkeen päällä on lukko, se tarkoittaa, ettei tapaus ole vielä auennut pelattavaksi.
         </p>
 

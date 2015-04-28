@@ -8,7 +8,7 @@ export default React.createClass({
       <div className="editor-main">
         <Header>Tehtävä-editori</Header>
         <p>
-          Lorem ipsum Non in veniam aliqua culpa veniam ex consectetur enim dolore consequat do qui Excepteur consequat nulla enim Excepteur do laborum sit laborum qui amet.
+           Aloita haluamasi casen muokkaaminen painamalla vasemmalta +Luo uusi -nappia, ja sen jälkeen valitse listasta case, jota haluat muokata.
         </p>
         <Button warning id="back" to="/">Takaisin alkunäkymään</Button>
       </div>
