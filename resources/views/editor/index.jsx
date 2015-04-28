@@ -59,13 +59,13 @@ export default React.createClass({
           <h1>Näin käytät Editoria</h1>
           <p>
             <ul>
-               <li>Lue kyseessä olevan tilanteen kuvaus huolellisesti.</li>
-               <li>Valitse parhaiten sopiva vaihtoehto tilanteen kuvauksen alla olevista vaihtoehdoista.</li>
-               <li>Vastauksen avuksi voi käyttää vihjettä, joka saat painamalla Vihje-nappulaa kuvauksen alta.</li>
-               <li>Myös vasemmalta löytyvästä lisämateriaalipankista saat apua sekä tilanteen ratkaisemiseen että yleistä tietoa johtamisesta ja esimiestoiminnasta.</li>
-               <li>Valittuasi vaihtoehdon pääset palautteeseen, joka määrittyy vastauksesi mukaan.</li>
-               <li>Lue palaute huolellisesti.</li>
-               <li>Luettuasi palautteen paina Jatka-nappulaa, ja pääset uuteen tilanteeseen eli steppiin.</li>
+               <li>Paina vasemmalla sivupalkissa olevaa nappia +Luo uusi.</li>
+               <li>Valitse sen jälkeen sivupalkista sen näkökulman alta ja sen niminen case, jonka haluat luoda.</li>
+               <li>Kirjoita kohtaan Henkilö casen päähenkilön nimi ja kohtaan Lyhyt kuvaus sananmukaisesti lyhyt kuvaus henkilöstä (esim. ammatti, perhesuhteet ym).</li>
+               <li>Painamalla +-nappia Vaiheet-sanan alapuolelta voit lisätä casen steppejä haluamasi määrän.</li>
+               <li>Kirjoita kunkin tilanteen kuvaus ja sitä vastaavat vastausvaihtoehdot.</li>
+               <li>Tallenna tekemäsi muutokset painamalla Tallenna-nappia.</li>
+               <li>Voit myös peruuttaa tekemäsi muutokset painamalla Peruuta-nappia.</li>
             </ul>
           </p>
           <Footer>
@@ -86,7 +86,7 @@ export default React.createClass({
             {caseLists}
         </Sidebar>
 
-        <IconButton onClick={this.toggleHelpModal}>
+        <IconButton id="helpmodal" onClick={this.toggleHelpModal}>
           <i className="fa fa-question"></i>
         </IconButton>
 
