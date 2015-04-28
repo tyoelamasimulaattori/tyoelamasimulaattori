@@ -10,7 +10,7 @@ export default React.createClass({
         <p>
           Lorem ipsum Non in veniam aliqua culpa veniam ex consectetur enim dolore consequat do qui Excepteur consequat nulla enim Excepteur do laborum sit laborum qui amet.
         </p>
-        <Button warning className="back" to="/">Takaisin alkunäkymään</Button>
+        <Button warning id="back" to="/">Takaisin alkunäkymään</Button>
       </div>
     );
   }
