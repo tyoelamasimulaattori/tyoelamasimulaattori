@@ -31,14 +31,22 @@ export const Container = React.createClass({
   }
 });
 
-
 export const Header = React.createClass({
   render() {
-
     return (
-      <h1 className="view__header" {...this.props}>
+      <div className="view__header" {...this.props}>
         {this.props.children}
-      </h1>
+      </div>
+    );
+  }
+});
+
+export const Content = React.createClass({
+  render() {
+    return (
+      <div className="view__content" {...this.props}>
+        {this.props.children}
+      </div>
     );
   }
 });

@@ -136,7 +136,7 @@ export default React.createClass({
 
     return (
       <View id="start-view">
-        <Header>Valitse näkökulma</Header>
+        <Header><h1>Valitse näkökulma</h1></Header>
         <PerspectiveSelector
           perspectives={perspectives}
           onSelect={this.onPerspectiveSelect}

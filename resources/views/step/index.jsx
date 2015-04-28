@@ -18,6 +18,7 @@ import {
   Button
 } from 'components';
 
+import { Container, Header } from 'components/view';
 const { Dialog, Footer } = Modal;
 
 import { tipActions } from 'actions';
@@ -199,13 +200,13 @@ export default React.createClass({
         <ProgressBar steps={this.props.currentCase.steps}
                      step={currentStep.id}/>
         </Sidebar>
-        <div className="step-view__container" style={style}>
-          <div className="step-view__header">
+        <Container style={style}>
+          <Header>
             <IconButton onClick={this.toggleHelpModal}>
                <i className="fa fa-question"></i>
             </IconButton>
             <UserProfile />
-          </div>
+          </Header>
           <div className="problem">
             {problem}
             {feedback}
@@ -220,7 +221,7 @@ export default React.createClass({
             {helpModal}
             {modal}
           </div>
-        </div>
+        </Container>
       </View>
     );
   }
