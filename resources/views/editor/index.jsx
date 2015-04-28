@@ -31,8 +31,11 @@ export default React.createClass({
     router: React.PropTypes.func.isRequired
   },
   onCaseSelected(selectedCase) {
+    this.setState({
+      currCase: selectedCase
+    });
     this.context.router.transitionTo('edit', {
-      id: selectedCase.id
+      id: selectedCase.id,
     })
   },
   render() {
@@ -45,7 +48,8 @@ export default React.createClass({
             title={this.toPerspectiveName(id)}
             className={`perspective--${id}`}
             cases={caseGroup}
-            onSelect={this.onCaseSelected} />
+            onSelect={this.onCaseSelected}
+            selected={this.state.currCase}/>
         )
       }).value();
 
@@ -95,12 +99,13 @@ export default React.createClass({
   },
   getInitialState() {
     return this.getState();
-	isHelpModalOpen: false
   },
   getState() {
     return {
       cases: caseStore.getCases(),
-      perspectives: perspectiveStore.getPerspectives()
+      perspectives: perspectiveStore.getPerspectives(),
+      isHelpModalOpen: false,
+      currCase: null
     }
   },
   onDataChange() {

@@ -1,6 +1,7 @@
 import { default as React } from 'react';
 import { imagePath } from 'filters';
 import { noop, compact } from 'lodash';
+import { default as classNames } from 'classnames';
 
 export default React.createClass({
   getDefaultProps() {
@@ -11,8 +12,12 @@ export default React.createClass({
 
   render() {
     const cases = this.props.cases.map((c) => {
+      const classes = classNames({
+        "caselist": true,
+        "caselist--selected": c === this.props.selected
+      });
       return (
-        <li onClick={this.props.onSelect.bind(null, c)} key={c.id}>
+        <li className={classes} onClick={this.props.onSelect.bind(null, c)} key={c.id}>
           <img src={imagePath(c.image)} />
           {c.name}
         </li>);
