@@ -74,8 +74,8 @@ export default React.createClass({
         <Controls>
           <Button>Tallenna</Button>
           <Button warning>Peruuta</Button>
+          <Button warning id="back" to="editor">Takaisin</Button>
         </Controls>
-
       </Form>
     );
   }
