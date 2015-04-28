@@ -48,7 +48,16 @@ export default React.createClass({
           <UserProfile />
         </div>
         <div className="end-view-content">
-          <h1>Tapauksen lopputulos</h1>
+            <div className="row">
+              <div className="column column1-5">
+                 <img src={imagePath("pshp_elaman_tahden.png")} />
+              </div>
+              <div className="column column4-5">
+                <p>
+                  <h1>Tapauksen lopputulos</h1>
+                </p>
+              </div>
+            </div>
 
           <div className="row">
             <div className="column column1-5">

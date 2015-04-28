@@ -184,6 +184,7 @@ export default React.createClass({
     return (
       <View id="step-view">
         <Sidebar>
+          <img src={imagePath("pshp_elaman_tahden.png")} />
           <PersonCard name={name}
                       description={description}
                       image={imagePath(image)}
