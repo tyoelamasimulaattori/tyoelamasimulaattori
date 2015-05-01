@@ -1,5 +1,4 @@
 import { default as React } from 'react';
-import { sample } from 'lodash';
 import { imagePath } from 'filters';
 import { Accordion, Panel } from 'react-bootstrap';
 
@@ -28,48 +27,41 @@ export default React.createClass({
       'trophy',
       'wheelchair'
     ]
-    const tips = this.props.tips.map((tip) => {
+    const tips = this.props.tips.map((tip, i) => {
+
       const header = (
         <span>
-          <i className={`fa fa-${sample(icons)}`} />
+          <i className={`fa fa-${icons[i % icons.length]}`} />
           {tip.name}
         </span>
       );
-      var panel;
 
-      if(tip.image == null && tip.link == null){
-        panel = (
-          <Panel
-            header={header}
-            eventKey={tip.id}
-            key={tip.id}>
-            {tip.text}
-          </Panel>
+      let content = [tip.text];
+
+      if(tip.image && tip.link) {
+        content.push(
+          <img
+            src={imagePath(tip.link)}
+            onClick={this.props.popup.bind(null, tip.link)} />
         );
       }
-      else if(tip.link == null){
-        panel = (
-          <Panel
-            header={header}
-            eventKey={tip.id}
-            key={tip.id}>
-            {tip.text}
-            <img src={imagePath(tip.image)} onClick={this.props.onClick} />
-          </Panel>
-         );
+
+      if(tip.image && !tip.link) {
+        content.push(
+          <img
+            src={imagePath(tip.image)}
+            onClick={this.props.onClick} />
+        );
       }
-      else {
-        panel = (
-          <Panel
-            header={header}
-            eventKey={tip.id}
-            key={tip.id}>
-            {tip.text}
-            <img src={imagePath(tip.link)} onClick={this.props.popup.bind(this,tip.link)} />
-          </Panel>
-        )
-      }
-      return (panel)
+
+      return (
+        <Panel
+          header={header}
+          eventKey={tip.id}
+          key={tip.id}>
+          {content}
+        </Panel>
+      );
     });
     return (
       <div className="accordion">
