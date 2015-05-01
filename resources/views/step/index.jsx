@@ -14,6 +14,8 @@ import {
   Feedback,
   Modal,
   UserProfile,
+  SaveGameModal,
+  GameHelpModal,
   Sidebar,
   Button
 } from 'components';
@@ -27,37 +29,22 @@ import { tipStore } from 'stores';
 export default React.createClass({
   getInitialState() {
     return {
-      isModalOpen: false,
-      isHelpModalOpen: false,
-      isConfModalOpen: false
+      openModal: null
     };
   },
-  toggleModal: function () {
-    this.setState({
-      isModalOpen: !this.state.isModalOpen
-    });
+  toggleModal: function (modalName) {
+    return () => {
+      const nextModal = this.state.openModal === modalName ? null : modalName;
+      this.setState({
+        openModal: nextModal
+      });
+    };
   },
   popup(resource) {
     window.open(imagePath(resource));
   },
-  toggleHelpModal: function () {
-    this.setState({
-      isHelpModalOpen: !this.state.isHelpModalOpen
-    });
-  },
-  toggleConfModal: function () {
-    this.setState({
-      isConfModalOpen: !this.state.isConfModalOpen
-    });
-  },
   contextTypes: {
     router: React.PropTypes.func.isRequired
-  },
-  onQuit() {
-    return confirm('Haluatko varmasti keskeyttää? Tilannettasi ei tallenneta ja siirryt alkunäkymään.');
-  },
-  onSave() {
-    return confirm('Haluatko varmasti lopettaa? Edistymisesi pelissä tallennetaan ja voit siirtyä alkunäkymään.');
   },
   backToStep() {
     let {currentCase, currentStep} = this.props;
@@ -89,7 +76,7 @@ export default React.createClass({
     var problem, feedback;
 
     const modal = (
-      <Modal hidden={!this.state.isModalOpen} onCloseIntention={this.toggleModal}>
+      <Modal hidden={!(this.state.openModal === 'toimintajarjestelma')} onCloseIntention={this.toggleModal('toimintajarjestelma')}>
         <Dialog>
           <h1>Toimintajärjestelmäkuvio</h1>
           <p>
@@ -101,58 +88,13 @@ export default React.createClass({
           </p>
           <img src={imagePath("kolmio.png")} />
           <Footer>
-            <Button onClick={this.toggleModal}>
+            <Button onClick={this.toggleModal('toimintajarjestelma')}>
               Takaisin
             </Button>
           </Footer>
         </Dialog>
       </Modal>
     )
-
-   const helpModal = (
-      <Modal hidden={!this.state.isHelpModalOpen} onCloseIntention={this.toggleHelpModal}>
-        <Dialog>
-          <h1>Näin pelaat Tilannehallintaa</h1>
-          <p>
-            <ul>
-               <li>Lue kyseessä olevan tilanteen kuvaus huolellisesti.</li>
-               <li>Valitse parhaiten sopiva vaihtoehto tilanteen kuvauksen alla olevista vaihtoehdoista.</li>
-               <li>Vastauksen avuksi voi käyttää vihjettä, joka saat painamalla Vihje-nappulaa kuvauksen alta.</li>
-               <li>Myös vasemmalta löytyvästä lisämateriaalipankista saat apua sekä tilanteen ratkaisemiseen että yleistä tietoa johtamisesta ja esimiestoiminnasta.</li>
-               <li>Valittuasi vaihtoehdon pääset palautteeseen, joka määrittyy vastauksesi mukaan.</li>
-               <li>Lue palaute huolellisesti.</li>
-               <li>Luettuasi palautteen paina Jatka-nappulaa, ja pääset uuteen tilanteeseen eli steppiin.</li>
-            </ul>
-          </p>
-          <Footer>
-            <Button onClick={this.toggleHelpModal}>
-              Takaisin
-            </Button>
-          </Footer>
-        </Dialog>
-      </Modal>
-   )
-    const confModal = (
-      <Modal hidden={!this.state.isConfModalOpen} onCloseIntention={this.toggleConfModal}>
-        <Dialog>
-          <h3 id="conf-modal">Lopeta peli</h3>
-          <p id="conf-modal">
-            Haluatko tallentaa pelin?
-          </p>
-          <Footer>
-            <Button to="/">
-              Tallenna
-            </Button>
-            <Button to="/">
-              Älä tallenna
-            </Button>
-            <Button onClick={this.toggleConfModal}>
-              Peruuta
-            </Button>
-          </Footer>
-        </Dialog>
-      </Modal>
-    );
 
     var tips = tipStore.getTips();
 
@@ -193,7 +135,7 @@ export default React.createClass({
 
           <h3>Lisämateriaalit: </h3>
           <Accordion tips={tipStore.getTips()}
-                     onClick={this.toggleModal}
+                     onClick={this.toggleModal('toimintajarjestelma')}
                      popup={this.popup}/>
 
         <h3>Edistyminen:</h3>
@@ -202,7 +144,7 @@ export default React.createClass({
         </Sidebar>
         <Container style={style}>
           <Header>
-            <IconButton onClick={this.toggleHelpModal}>
+            <IconButton onClick={this.toggleModal('game-help')}>
                <i className="fa fa-question"></i>
             </IconButton>
             <UserProfile />
@@ -212,14 +154,21 @@ export default React.createClass({
             {feedback}
             <div className="problem__footer">
               <Controls>
-                 <Button warning onClick={this.toggleConfModal}>
+                 <Button warning onClick={this.toggleModal('save-game')}>
                     Lopeta
                  </Button>
               </Controls>
             </div>
-            {confModal}
-            {helpModal}
             {modal}
+            <GameHelpModal
+              onCancel={this.toggleModal('game-help')}
+              hidden={!(this.state.openModal === 'game-help')}
+              onCloseIntention={this.toggleModal('game-help')} />
+
+            <SaveGameModal
+              hidden={!(this.state.openModal === 'save-game')}
+              onCloseIntention={this.toggleModal('save-game')}
+              onCancel={this.toggleModal('save-game')} />
           </div>
         </Container>
       </View>

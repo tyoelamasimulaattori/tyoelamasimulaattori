@@ -6,6 +6,7 @@ import { default as Controls } from 'components/controls';
 import { default as Dropdown } from 'components/dropdown';
 import { default as Feedback } from 'components/feedback';
 import { default as Form } from 'components/form';
+import { default as GameHelpModal } from 'components/game-help-modal';
 import { default as IconButton } from 'components/icon-button';
 import { default as Login } from 'components/login';
 import { default as Modal } from 'components/modal';
@@ -15,6 +16,7 @@ import { default as PerspectiveInfo } from 'components/perspective-info';
 import { default as PerspectiveSelector } from 'components/perspective-selector';
 import { default as Problem } from 'components/problem';
 import { default as ProgressBar } from 'components/progressbar';
+import { default as SaveGameModal } from 'components/save-game-modal';
 import { default as Sidebar } from 'components/sidebar';
 import { default as UserProfile } from 'components/user-profile';
 import { default as View } from 'components/view';
@@ -28,6 +30,7 @@ export {
     Dropdown as Dropdown,
     Feedback as Feedback,
     Form as Form,
+    GameHelpModal as GameHelpModal,
     IconButton as IconButton,
     Login as Login,
     Modal as Modal,
@@ -37,6 +40,7 @@ export {
     PerspectiveSelector as PerspectiveSelector,
     Problem as Problem,
     ProgressBar as ProgressBar,
+    SaveGameModal as SaveGameModal,
     Sidebar as Sidebar,
     UserProfile as UserProfile,
     View as View,
