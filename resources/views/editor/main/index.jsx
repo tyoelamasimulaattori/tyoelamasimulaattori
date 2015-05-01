@@ -6,7 +6,7 @@ export default React.createClass({
     return (
       <div className="editor-main">
         <p>
-           Aloita haluamasi casen muokkaaminen painamalla vasemmalta +Luo uusi -nappia, ja sen jälkeen valitse listasta case, jota haluat muokata.
+           Luo uusi tapaus painamalla vasemmalta "Luo uusi" -nappia tai valitse listasta tapaus, jota haluat muokata.
         </p>
         <Button warning id="back" to="/">Takaisin alkunäkymään</Button>
       </div>

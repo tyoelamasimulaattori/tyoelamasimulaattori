@@ -59,10 +59,10 @@ export default React.createClass({
           <h1>Näin käytät Editoria</h1>
           <p>
             <ul>
-               <li>Paina vasemmalla sivupalkissa olevaa nappia +Luo uusi.</li>
-               <li>Valitse sen jälkeen sivupalkista sen näkökulman alta ja sen niminen case, jonka haluat luoda.</li>
-               <li>Kirjoita kohtaan Henkilö casen päähenkilön nimi ja kohtaan Lyhyt kuvaus sananmukaisesti lyhyt kuvaus henkilöstä (esim. ammatti, perhesuhteet ym).</li>
-               <li>Painamalla +-nappia Vaiheet-sanan alapuolelta voit lisätä casen steppejä haluamasi määrän.</li>
+               <li>Paina vasemmalla sivupalkissa olevaa nappia +Luo uusi mikäli haluat luoda uuden tapauksen.</li>
+               <li>Voit myös muokata olemassa olevia tapauksia painamalla tapauksen nimeä.</li>
+               <li>Kirjoita kohtaan Henkilö tapauksen päähenkilön nimi ja kohtaan Lyhyt kuvaus sananmukaisesti lyhyt kuvaus henkilöstä (esim. ammatti, perhesuhteet ym).</li>
+               <li>Painamalla +-nappia Vaiheet-sanan alapuolelta voit lisätä haluamasi määrän vaiheita.</li>
                <li>Kirjoita kunkin tilanteen kuvaus ja sitä vastaavat vastausvaihtoehdot.</li>
                <li>Tallenna tekemäsi muutokset painamalla Tallenna-nappia.</li>
                <li>Voit myös peruuttaa tekemäsi muutokset painamalla Peruuta-nappia.</li>
