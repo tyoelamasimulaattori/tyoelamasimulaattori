@@ -2,28 +2,28 @@
   {
     "id": 1,
     "name": "Toimintajärjestelmä",
-    "text": "Tässä on graafinen esitys tämän tapauksen toimintajärjestelmällisestä teemasta. Paina kuvaa saadaksesi lisätietoa toimintajärjestelmästä ja graafisesta esityksestä.",
+    "text": "Tästä löydät graafisen esityksen tämän tapauksen toimintajärjestelmällisestä teemasta. Paina kuvaa saadaksesi lisätietoa toimintajärjestelmästä ja sen graafisesta esityksestä.",
     "image": "kolmio.png",
     "link": null
   },
   {
     "id": 2,
-	  "name": "Työhyvinvoinnin punos",
-    "text": "Tästä löydät tietoa työhyvinvoinnin perustekijöistä, kuten turvallisuudesta, työn ergonomisista tekijöistä, palkkausasioista ja muista vastaavista tekijöistä, joihin työnantajalla on jo olemassa selvät toimintatavat. Saat myös tietoa motivaatiotekijöistä, joilla on vaikutusta työntuloksellisuuteen ja työtyytyväisyyteen. Näitä ovat esim. kannustaminen, innovointi, osallistuminen ja vastuunanto, muutamat mainiten.",
+	"name": "Työhyvinvoinnin punos",
+    "text": "Tästä saat tietoa työhyvinvoinnin perustekijöistä, kuten turvallisuudesta, työn ergonomisista tekijöistä, palkkausasioista ja muista vastaavista tekijöistä, joihin työnantajalla on jo olemassa selvät toimintatavat. Saat myös tietoa motivaatiotekijöistä, joilla on vaikutusta työn tuloksellisuuteen sekä työtyytyväisyyteen. Näitä tekijöitä, muutamat mainiten, ovat esimerkiksi kannustaminen, innovointi, osallistuminen ja vastuunanto.",
     "image": null,
     "link": "herzberg.png"
   },
   {
     "id": 3,
-	  "name": "Valmentava johtaminen",
-    "text": "Linkki GROW-materiaaliin tähän.",
+	"name": "Valmentava johtaminen",
+    "text": "Linkki GROW-materiaaliin tässä.",
     "image": null,
     "link": null
   },
   {
     "id": 4,
-	  "name": "Intra",
-    "text": "Linkki Intra-materiaaliin tähän.",
+	"name": "Intra",
+    "text": "Linkki Intra-materiaaliin tässä.",
     "image": null,
     "link": null
   }

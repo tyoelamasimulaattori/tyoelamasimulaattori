@@ -43,17 +43,16 @@ export default React.createClass({
             Simulaatiopelin tavoite on tarjota interaktiivista koulutusta esimiehille hyödyntäen realistisia työelämän ongelmia, joita ratkoa.
             Simulaatiopeli etenee seuraavalla tavalla:
             <ul>
-              <li>Ensin rekisteröidy tai kirjaudu sisään, jonka jälkeen valitse lähestymisnäkökulmasi annetuista vaihtoehdoista (Valitse näkökulma).</li>
-              <li>Seuraavaksi valitse tapaus, jonka haluat suorittaa. (Valitse tapaus näkökulmasta ...). HUOMIO! Demoversiossa on vain yksi tapaus (tapaus Kaija), joka löytyy Toimintakulttuuri-näkökulman alta.</li>
-              <li>Tapauksen alkaessa sinulle esitetään alkutilanne ja siihen erilaisia vastausvaihtoehtoja. Valitse mielestäsi paras vaihtoehto hyödytäen vihjettä ja lisämateriaalia.</li>
-              <li>Valittuasi vaihtoehdon tapaus etenee palautteeseen ja siitä seuraavaan vaiheeseen. Jatka vaihtoehtojen valitsemista, kunnes pääset tapauksen loppuun.</li>
-              <li>Lopussa sinulle esitetään loppupalaute sekä vastaamasi vastaukset, jonka jälkeen voit joko lopettaa pelin tai aloittaa uuden tapauksen. Valittuasi kumman tahansa pääset simulaatiopelin aloitussivulle.</li>
+              <li>Aloita rekisteröitymällä tai kirjautumalla sisään.</li>
+              <li>Rekisteröidyttyäsi tai kirjauduttuasi valitse lähestymisnäkökulmasi annetuista vaihtoehdoista (Valitse näkökulma).</li>
+              <li>Seuraavaksi valitse tapaus, jonka haluat suorittaa. (Valitse tapaus näkökulmasta ...). HUOMIO! Demoversiossa on avoinna vain yksi tapaus (tapaus Kaija), joka löytyy Toimintakulttuuri-näkökulman alta.</li>
+              <li>Tapauksen alkaessa sinulle esitetään alkutilanne, tilanteeseen liittyvän henkilön kuvaus sekä erilaisia vastausvaihtoehtoja. Valitse mielestäsi paras vaihtoehto hyödytäen annettua vihjettä sekä vasemmasta reunasta löytyviä lisämateriaaleja.</li>
+              <li>Valittuasi vaihtoehdon tapaus etenee palautteeseen ja siitä edelleen seuraavaan vaiheeseen. Jatka vaihtoehtojen valitsemista, kunnes pääset tapauksen loppuun.</li>
+              <li>Lopussa sinulle esitetään loppupalaute sekä vastaamasi vastaukset graafisesti, jonka jälkeen tapaus loppuu, ja pääset aloitusnäkymään. Voit halutessasi valita uuden tapauksen uudesta näkökulmasta, jonka suorittaa.</li>
             </ul>
           </p>
 
           <Footer>
-            <p>Ennen kuin aloitat simulaatiopelin, varmista, että sinulla on oma DiSC-profiili, sillä tulet tarvitsemaan sitä tässä pelissä.</p>
-
             <div className="controls">
               {button}
             </div>

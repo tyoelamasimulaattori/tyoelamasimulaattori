@@ -25,13 +25,13 @@ export default React.createClass({
           <h1>Demo on päättynyt</h1>
           <p>
             Tämä demo Tilannehallinta-simulaattoripelistä loppuu tähän. Lopullisessa pelissä <br />
-            tulee olemaan monta tapausta, joissa askeleita on paljon enemmän.
+            tulee olemaan useampia tapauksia, joissa myös askeleita on paljon enemmän.
           </p>
 
           <p>
             Kiitos kun kokeilit demoa! Paina alla olevaa nappian nähdäksesi<br />
-            valintojesi lopputuloksen. Lopeta-napista simulaatiopeli loppuu ja <br />
-            pääset pelin alkuun, missä voit aloittaa pelin uudelleen.
+            valintojesi tuloksen. Lopeta-napista simulaatiopeli loppuu ja <br />
+            pääset pelin alkuun, missä voit aloittaa pelin uudelleen uudesta näkökulmasta ja uudella tapauksella.
           </p>
           <Footer>
             <Button onClick={this.toggleModal}>

@@ -104,7 +104,7 @@ export default React.createClass({
         <Dialog>
           <h3 id="conf-modal">Keskeytetty istunto</h3>
           <p id="conf-modal">
-            Haluatko jatkaa keskeytettyä istuntoa vai haluatko aloittaa tapauksen uudelleen alusta?
+            Haluatko jatkaa keskeyttämääsi edellistä tapausta vai haluatko aloittaa tapauksen uudelleen alusta?
           </p>
           <Footer>
             <Button onClick={this.onCaseSelectLogin}>
