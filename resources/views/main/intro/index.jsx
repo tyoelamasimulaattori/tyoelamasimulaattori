@@ -53,6 +53,7 @@ export default React.createClass({
           </p>
 
           <Footer>
+            <p>Ennen kuin aloitat simulaatiopelin, varmista, että sinulla on oma DiSC-profiili, sillä tulet tarvitsemaan sitä tässä pelissä.</p>
             <div className="controls">
               {button}
             </div>
