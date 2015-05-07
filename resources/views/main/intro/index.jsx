@@ -18,7 +18,7 @@ export default React.createClass({
   render() {
 
     var button;
-    
+
     if(loginStore.isLoggedIn()) {
       button = (
         <Button to="/">
@@ -56,6 +56,7 @@ export default React.createClass({
             <p>Ennen kuin aloitat simulaatiopelin, varmista, että sinulla on oma DiSC-profiili, sillä tulet tarvitsemaan sitä tässä pelissä.</p>
             <div className="controls">
               {button}
+              <Button to="/"> Jatka kirjautumatta </Button>
             </div>
           </Footer>
         </Dialog>
