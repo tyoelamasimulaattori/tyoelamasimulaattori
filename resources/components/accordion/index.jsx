@@ -38,7 +38,7 @@ export default React.createClass({
 
       let content = [tip.text];
 
-      if(tip.image && tip.link) {
+      if(tip.image == null && tip.link) {
         content.push(
           <img
             src={imagePath(tip.link)}
@@ -46,7 +46,7 @@ export default React.createClass({
         );
       }
 
-      if(tip.image && !tip.link) {
+      if(tip.image && tip.link == null) {
         content.push(
           <img
             src={imagePath(tip.image)}
