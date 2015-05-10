@@ -48,26 +48,16 @@ export default React.createClass({
           <UserProfile />
         </div>
         <div className="end-view-content">
+            <img className="logo" src={imagePath("pshp_elaman_tahden.png")} />
             <div className="row">
-              <div className="column column1-5">
-                 <img src={imagePath("pshp_elaman_tahden.png")} />
-              </div>
-              <div className="column column4-5">
-                <p>
-                  <h1>Tapauksen lopputulos</h1>
-                </p>
-              </div>
+              <h1>Tapauksen lopputulos</h1>
             </div>
 
           <div className="row">
-            <div className="column column1-5">
-               <img src={imagePath(currentStep.image)} />
-            </div>
-            <div className="column column4-5">
-              <p>
-                {currentStep.description}
-              </p>
-            </div>
+            <p>
+              <img src={imagePath(currentStep.image)} />
+              {currentStep.description}
+            </p>
           </div>
           <hr />
           <h2> Tässä valintasi graafisessa muodossa: </h2>
