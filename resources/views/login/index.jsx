@@ -1,4 +1,5 @@
-import { default as React } from 'react';
+import React from 'react';
+import Reflux from 'reflux';
 import { Button, Form, Modal } from 'components';
 import Login from './login';
 import { loginActions } from 'actions';
@@ -7,6 +8,7 @@ import { loginStore } from 'stores';
 const { Dialog, Footer } = Modal;
 
 export default React.createClass({
+  mixins: [Reflux.listenTo(loginStore, 'onDataChange')],
   onCancel() {
     loginActions.closeLoginModal();
   },
@@ -23,12 +25,6 @@ export default React.createClass({
   },
   onDataChange() {
     this.setState(this.getState());
-  },
-  componentDidMount() {
-    this.removeListener = loginStore.listen(this.onDataChange);
-  },
-  componentWillUnmount() {
-    this.removeListener();
   },
   render() {
     return (

@@ -13,7 +13,7 @@ export default React.createClass({
     return () => this.props.onSelect(answer);
   },
   tip() {
-     return confirm ('Mieti, miten voisit tehdä kompromissin, joka sopii kaikille osapuolille.');
+     return confirm('Mieti, miten voisit tehdä kompromissin, joka sopii kaikille osapuolille.');
   },
   render() {
 
@@ -27,11 +27,12 @@ export default React.createClass({
 
     var stepName;
     var stepId = this.props.id;
-    if ((stepId) == 0) {
-       stepName = "Alkutilanne:";
+
+    if(stepId == 0) {
+      stepName = 'Alkutilanne:';
+    } else {
+      stepName = `Vaihe ${stepId}, tilanne:`;
     }
-    else
-      stepName = "Steppi " + this.props.id + ", tilanne:";
 
     return (
       <div>
