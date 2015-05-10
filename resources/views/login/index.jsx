@@ -1,15 +1,16 @@
 import { default as React } from 'react';
 import { Button, Form, Modal } from 'components';
+import Login from './login';
 import { loginActions } from 'actions';
 import { loginStore } from 'stores';
 
 const { Dialog, Footer } = Modal;
 
 export default React.createClass({
-  cancel() {
+  onCancel() {
     loginActions.closeLoginModal();
   },
-  login() {
+  onLogin() {
     loginActions.login();
   },
   getInitialState() {
@@ -32,29 +33,7 @@ export default React.createClass({
   render() {
     return (
       <Modal small hidden={!this.state.loginModalOpen} onCloseIntention={this.cancel}>
-        <Dialog>
-          <h1>Kirjaudu sisään</h1>
-          <p>
-            Syötä sähköpostiosoitteesi ja salasanasi. Jos sinulla ei ole tiliä tähän palveluun, voit rekisteröitä painamalla alla olevaa linkkiä.
-          </p>
-          <Form>
-            <label>Sähköpostiosoite</label>
-            <input type="text" />
-            <label>Salasana</label>
-            <input type="text" />
-          </Form>
-          <Footer>
-            <a href="#">Rekisteröidy</a>
-            <div className="controls">
-              <Button onClick={this.login}>
-                Kirjaudu sisään
-              </Button>
-              <Button onClick={this.cancel}>
-                Peruuta
-              </Button>
-            </div>
-          </Footer>
-        </Dialog>
+        <Login onCancel={this.onCancel} onLogin={this.onLogin} />
       </Modal>
     );
   }
