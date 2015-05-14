@@ -66,10 +66,17 @@ Komentoriviltä pitäisi löytyä nyt komennot `node` ja `npm`
 **Kaikki tiedostot kääntyy nyt automaattisesti ja voit alkaa koodaamaan. Asenna vielä Chromeen [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) - plugin niin saat selaimen reloadaamaan aina uuden käännöksen valmistuessa.**
 
 ## Palvelimen ajaminen PHP:n omalla kehityspalvelimella
+*public/ * hakemistossa
+
 `$ php -S localhost:8080`
 
 ## Frontin testien ajaminen
 `$ npm test`
+
+---
+
+## Koodauskäytännöt
+* [Frontend](https://github.com/tyoelamasimulaattori/tyoelamasimulaattori/blob/master/resources/README.md)
 
 ---
 
